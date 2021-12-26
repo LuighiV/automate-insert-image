@@ -67,7 +67,7 @@ namespace editdocuments
         {
 
 
-            CommandLine.Parser.Default.ParseArguments<Options>(args)
+            _ = Parser.Default.ParseArguments<Options>(args)
                 .WithParsed(RunOptions)
                 .WithNotParsed(HandleParseError);
 
