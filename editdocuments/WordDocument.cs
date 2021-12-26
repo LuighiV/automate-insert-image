@@ -53,11 +53,11 @@ namespace editdocuments
         internal void addPicture(string picture, int LeftOffset = 0, int BottomOffset = 0, int Width = 200,
              int Height=150)
         {
-            //var borders = this.Range.Borders;
-            //Console.WriteLine(borders.DistanceFromLeft);
+
+            var LeftDistance = this.Range.Information[Word.WdInformation.wdHorizontalPositionRelativeToTextBoundary];
             var shape = this.Document.Shapes.AddPicture(picture,
-                Left: LeftOffset,
-                Top: BottomOffset - Height,
+                Left: LeftDistance + LeftOffset,
+                Top: -BottomOffset - Height,
                 Width: Width,
                 Height: Height,
                 Anchor: this.Range);
