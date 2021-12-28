@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -98,9 +99,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
@@ -112,196 +111,242 @@
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 1, 5);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.errorProvider2.SetError(this.tableLayoutPanel1, resources.GetString("tableLayoutPanel1.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel1, resources.GetString("tableLayoutPanel1.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel1, resources.GetString("tableLayoutPanel1.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel1, ((int)(resources.GetObject("tableLayoutPanel1.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel1, ((int)(resources.GetObject("tableLayoutPanel1.IconPadding1"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel1, ((int)(resources.GetObject("tableLayoutPanel1.IconPadding2"))));
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(806, 410);
-            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            resources.ApplyResources(this.label1, "label1");
+            this.errorProvider3.SetError(this.label1, resources.GetString("label1.Error"));
+            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error1"));
+            this.errorProvider2.SetError(this.label1, resources.GetString("label1.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding2"))));
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Type";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.Controls.Add(this.radioButton1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.radioButton2, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(164, 3);
+            this.errorProvider2.SetError(this.tableLayoutPanel2, resources.GetString("tableLayoutPanel2.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel2, resources.GetString("tableLayoutPanel2.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel2, resources.GetString("tableLayoutPanel2.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel2.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel2.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel2.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel2, ((int)(resources.GetObject("tableLayoutPanel2.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel2, ((int)(resources.GetObject("tableLayoutPanel2.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel2, ((int)(resources.GetObject("tableLayoutPanel2.IconPadding2"))));
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(639, 24);
-            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
+            resources.ApplyResources(this.radioButton1, "radioButton1");
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 3);
+            this.errorProvider3.SetError(this.radioButton1, resources.GetString("radioButton1.Error"));
+            this.errorProvider2.SetError(this.radioButton1, resources.GetString("radioButton1.Error1"));
+            this.errorProvider1.SetError(this.radioButton1, resources.GetString("radioButton1.Error2"));
+            this.errorProvider3.SetIconAlignment(this.radioButton1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton1.IconAlignment"))));
+            this.errorProvider2.SetIconAlignment(this.radioButton1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton1.IconAlignment1"))));
+            this.errorProvider1.SetIconAlignment(this.radioButton1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton1.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.radioButton1, ((int)(resources.GetObject("radioButton1.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.radioButton1, ((int)(resources.GetObject("radioButton1.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.radioButton1, ((int)(resources.GetObject("radioButton1.IconPadding2"))));
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(46, 17);
-            this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Files";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(322, 3);
+            resources.ApplyResources(this.radioButton2, "radioButton2");
+            this.errorProvider3.SetError(this.radioButton2, resources.GetString("radioButton2.Error"));
+            this.errorProvider2.SetError(this.radioButton2, resources.GetString("radioButton2.Error1"));
+            this.errorProvider1.SetError(this.radioButton2, resources.GetString("radioButton2.Error2"));
+            this.errorProvider3.SetIconAlignment(this.radioButton2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton2.IconAlignment"))));
+            this.errorProvider2.SetIconAlignment(this.radioButton2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton2.IconAlignment1"))));
+            this.errorProvider1.SetIconAlignment(this.radioButton2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton2.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.radioButton2, ((int)(resources.GetObject("radioButton2.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.radioButton2, ((int)(resources.GetObject("radioButton2.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.radioButton2, ((int)(resources.GetObject("radioButton2.IconPadding2"))));
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "Folders";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 30);
+            resources.ApplyResources(this.label2, "label2");
+            this.errorProvider3.SetError(this.label2, resources.GetString("label2.Error"));
+            this.errorProvider1.SetError(this.label2, resources.GetString("label2.Error1"));
+            this.errorProvider2.SetError(this.label2, resources.GetString("label2.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding2"))));
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 40);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "File/Folder path";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
             this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(164, 33);
+            this.errorProvider2.SetError(this.tableLayoutPanel3, resources.GetString("tableLayoutPanel3.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel3, resources.GetString("tableLayoutPanel3.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel3, resources.GetString("tableLayoutPanel3.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel3.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel3.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel3.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel3, ((int)(resources.GetObject("tableLayoutPanel3.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel3, ((int)(resources.GetObject("tableLayoutPanel3.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel3, ((int)(resources.GetObject("tableLayoutPanel3.IconPadding2"))));
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(639, 34);
-            this.tableLayoutPanel3.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 7);
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.errorProvider2.SetError(this.textBox1, resources.GetString("textBox1.Error"));
+            this.errorProvider3.SetError(this.textBox1, resources.GetString("textBox1.Error1"));
+            this.errorProvider1.SetError(this.textBox1, resources.GetString("textBox1.Error2"));
+            this.errorProvider1.SetIconAlignment(this.textBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox1.IconAlignment"))));
+            this.errorProvider2.SetIconAlignment(this.textBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox1.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.textBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox1.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.textBox1, ((int)(resources.GetObject("textBox1.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.textBox1, ((int)(resources.GetObject("textBox1.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.textBox1, ((int)(resources.GetObject("textBox1.IconPadding2"))));
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(535, 20);
-            this.textBox1.TabIndex = 3;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // button1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(544, 3);
+            resources.ApplyResources(this.button1, "button1");
+            this.errorProvider1.SetError(this.button1, resources.GetString("button1.Error"));
+            this.errorProvider2.SetError(this.button1, resources.GetString("button1.Error1"));
+            this.errorProvider3.SetError(this.button1, resources.GetString("button1.Error2"));
+            this.errorProvider2.SetIconAlignment(this.button1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button1.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.button1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button1.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.button1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button1.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.button1, ((int)(resources.GetObject("button1.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.button1, ((int)(resources.GetObject("button1.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.button1, ((int)(resources.GetObject("button1.IconPadding2"))));
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Explore";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 70);
+            resources.ApplyResources(this.label3, "label3");
+            this.errorProvider3.SetError(this.label3, resources.GetString("label3.Error"));
+            this.errorProvider1.SetError(this.label3, resources.GetString("label3.Error1"));
+            this.errorProvider2.SetError(this.label3, resources.GetString("label3.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding2"))));
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 40);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Picture path";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
             this.tableLayoutPanel4.Controls.Add(this.textBox2, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(164, 73);
+            this.errorProvider2.SetError(this.tableLayoutPanel4, resources.GetString("tableLayoutPanel4.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel4, resources.GetString("tableLayoutPanel4.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel4, resources.GetString("tableLayoutPanel4.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel4.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel4.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel4.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel4, ((int)(resources.GetObject("tableLayoutPanel4.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel4, ((int)(resources.GetObject("tableLayoutPanel4.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel4, ((int)(resources.GetObject("tableLayoutPanel4.IconPadding2"))));
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(639, 34);
-            this.tableLayoutPanel4.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(3, 7);
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.errorProvider2.SetError(this.textBox2, resources.GetString("textBox2.Error"));
+            this.errorProvider3.SetError(this.textBox2, resources.GetString("textBox2.Error1"));
+            this.errorProvider1.SetError(this.textBox2, resources.GetString("textBox2.Error2"));
+            this.errorProvider1.SetIconAlignment(this.textBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox2.IconAlignment"))));
+            this.errorProvider2.SetIconAlignment(this.textBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox2.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.textBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox2.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.textBox2, ((int)(resources.GetObject("textBox2.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.textBox2, ((int)(resources.GetObject("textBox2.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.textBox2, ((int)(resources.GetObject("textBox2.IconPadding2"))));
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(535, 20);
-            this.textBox2.TabIndex = 0;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(544, 3);
+            resources.ApplyResources(this.button2, "button2");
+            this.errorProvider1.SetError(this.button2, resources.GetString("button2.Error"));
+            this.errorProvider2.SetError(this.button2, resources.GetString("button2.Error1"));
+            this.errorProvider3.SetError(this.button2, resources.GetString("button2.Error2"));
+            this.errorProvider2.SetIconAlignment(this.button2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button2.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.button2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button2.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.button2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button2.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.button2, ((int)(resources.GetObject("button2.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.button2, ((int)(resources.GetObject("button2.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.button2, ((int)(resources.GetObject("button2.IconPadding2"))));
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Explore";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
             this.tableLayoutPanel5.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.groupBox2, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(164, 113);
+            this.errorProvider2.SetError(this.tableLayoutPanel5, resources.GetString("tableLayoutPanel5.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel5, resources.GetString("tableLayoutPanel5.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel5, resources.GetString("tableLayoutPanel5.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel5.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel5.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel5.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel5, ((int)(resources.GetObject("tableLayoutPanel5.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel5, ((int)(resources.GetObject("tableLayoutPanel5.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel5, ((int)(resources.GetObject("tableLayoutPanel5.IconPadding2"))));
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(639, 223);
-            this.tableLayoutPanel5.TabIndex = 7;
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.tableLayoutPanel6);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.errorProvider3.SetError(this.groupBox1, resources.GetString("groupBox1.Error"));
+            this.errorProvider2.SetError(this.groupBox1, resources.GetString("groupBox1.Error1"));
+            this.errorProvider1.SetError(this.groupBox1, resources.GetString("groupBox1.Error2"));
+            this.errorProvider3.SetIconAlignment(this.groupBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox1.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.groupBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox1.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.groupBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox1.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.groupBox1, ((int)(resources.GetObject("groupBox1.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.groupBox1, ((int)(resources.GetObject("groupBox1.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.groupBox1, ((int)(resources.GetObject("groupBox1.IconPadding2"))));
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 217);
-            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Properties";
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.11075F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.88925F));
+            resources.ApplyResources(this.tableLayoutPanel6, "tableLayoutPanel6");
             this.tableLayoutPanel6.Controls.Add(this.numericUpDown2, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.numericUpDown1, 1, 0);
@@ -313,110 +358,144 @@
             this.tableLayoutPanel6.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel6.Controls.Add(this.numericUpDown3, 1, 3);
             this.tableLayoutPanel6.Controls.Add(this.checkBox1, 1, 2);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
+            this.errorProvider2.SetError(this.tableLayoutPanel6, resources.GetString("tableLayoutPanel6.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel6, resources.GetString("tableLayoutPanel6.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel6, resources.GetString("tableLayoutPanel6.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel6, ((int)(resources.GetObject("tableLayoutPanel6.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel6, ((int)(resources.GetObject("tableLayoutPanel6.IconPadding1"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel6, ((int)(resources.GetObject("tableLayoutPanel6.IconPadding2"))));
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 6;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(307, 198);
-            this.tableLayoutPanel6.TabIndex = 0;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
             this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Location = new System.Drawing.Point(120, 39);
+            this.errorProvider1.SetError(this.numericUpDown2, resources.GetString("numericUpDown2.Error"));
+            this.errorProvider3.SetError(this.numericUpDown2, resources.GetString("numericUpDown2.Error1"));
+            this.errorProvider2.SetError(this.numericUpDown2, resources.GetString("numericUpDown2.Error2"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown2.IconAlignment"))));
+            this.errorProvider3.SetIconAlignment(this.numericUpDown2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown2.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.numericUpDown2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown2.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.numericUpDown2, ((int)(resources.GetObject("numericUpDown2.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.numericUpDown2, ((int)(resources.GetObject("numericUpDown2.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown2, ((int)(resources.GetObject("numericUpDown2.IconPadding2"))));
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(184, 20);
-            this.numericUpDown2.TabIndex = 5;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 43);
+            resources.ApplyResources(this.label5, "label5");
+            this.errorProvider3.SetError(this.label5, resources.GetString("label5.Error"));
+            this.errorProvider1.SetError(this.label5, resources.GetString("label5.Error1"));
+            this.errorProvider2.SetError(this.label5, resources.GetString("label5.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding2"))));
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Height";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
             this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(120, 6);
+            this.errorProvider1.SetError(this.numericUpDown1, resources.GetString("numericUpDown1.Error"));
+            this.errorProvider3.SetError(this.numericUpDown1, resources.GetString("numericUpDown1.Error1"));
+            this.errorProvider2.SetError(this.numericUpDown1, resources.GetString("numericUpDown1.Error2"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown1.IconAlignment"))));
+            this.errorProvider3.SetIconAlignment(this.numericUpDown1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown1.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.numericUpDown1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown1.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.numericUpDown1, ((int)(resources.GetObject("numericUpDown1.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.numericUpDown1, ((int)(resources.GetObject("numericUpDown1.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown1, ((int)(resources.GetObject("numericUpDown1.IconPadding2"))));
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(184, 20);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 10);
+            resources.ApplyResources(this.label4, "label4");
+            this.errorProvider3.SetError(this.label4, resources.GetString("label4.Error"));
+            this.errorProvider1.SetError(this.label4, resources.GetString("label4.Error1"));
+            this.errorProvider2.SetError(this.label4, resources.GetString("label4.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding2"))));
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Width";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 171);
+            resources.ApplyResources(this.label8, "label8");
+            this.errorProvider3.SetError(this.label8, resources.GetString("label8.Error"));
+            this.errorProvider1.SetError(this.label8, resources.GetString("label8.Error1"));
+            this.errorProvider2.SetError(this.label8, resources.GetString("label8.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding2"))));
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Units";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox1
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.errorProvider1.SetError(this.comboBox1, resources.GetString("comboBox1.Error"));
+            this.errorProvider3.SetError(this.comboBox1, resources.GetString("comboBox1.Error1"));
+            this.errorProvider2.SetError(this.comboBox1, resources.GetString("comboBox1.Error2"));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 167);
+            this.errorProvider3.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.comboBox1, ((int)(resources.GetObject("comboBox1.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.comboBox1, ((int)(resources.GetObject("comboBox1.IconPadding1"))));
+            this.errorProvider2.SetIconPadding(this.comboBox1, ((int)(resources.GetObject("comboBox1.IconPadding2"))));
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 21);
-            this.comboBox1.TabIndex = 9;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 134);
+            resources.ApplyResources(this.label7, "label7");
+            this.errorProvider3.SetError(this.label7, resources.GetString("label7.Error"));
+            this.errorProvider1.SetError(this.label7, resources.GetString("label7.Error1"));
+            this.errorProvider2.SetError(this.label7, resources.GetString("label7.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding2"))));
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "BottomOffset";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.numericUpDown4, "numericUpDown4");
             this.numericUpDown4.DecimalPlaces = 2;
-            this.numericUpDown4.Location = new System.Drawing.Point(120, 130);
+            this.errorProvider1.SetError(this.numericUpDown4, resources.GetString("numericUpDown4.Error"));
+            this.errorProvider3.SetError(this.numericUpDown4, resources.GetString("numericUpDown4.Error1"));
+            this.errorProvider2.SetError(this.numericUpDown4, resources.GetString("numericUpDown4.Error2"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown4.IconAlignment"))));
+            this.errorProvider3.SetIconAlignment(this.numericUpDown4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown4.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.numericUpDown4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown4.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.numericUpDown4, ((int)(resources.GetObject("numericUpDown4.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.numericUpDown4, ((int)(resources.GetObject("numericUpDown4.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown4, ((int)(resources.GetObject("numericUpDown4.IconPadding2"))));
             this.numericUpDown4.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -428,27 +507,35 @@
             0,
             -2147483648});
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(184, 20);
-            this.numericUpDown4.TabIndex = 7;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 101);
+            resources.ApplyResources(this.label6, "label6");
+            this.errorProvider3.SetError(this.label6, resources.GetString("label6.Error"));
+            this.errorProvider1.SetError(this.label6, resources.GetString("label6.Error1"));
+            this.errorProvider2.SetError(this.label6, resources.GetString("label6.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding2"))));
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "LeftOffset";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.numericUpDown3, "numericUpDown3");
             this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Location = new System.Drawing.Point(120, 97);
+            this.errorProvider1.SetError(this.numericUpDown3, resources.GetString("numericUpDown3.Error"));
+            this.errorProvider3.SetError(this.numericUpDown3, resources.GetString("numericUpDown3.Error1"));
+            this.errorProvider2.SetError(this.numericUpDown3, resources.GetString("numericUpDown3.Error2"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown3.IconAlignment"))));
+            this.errorProvider3.SetIconAlignment(this.numericUpDown3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown3.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.numericUpDown3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown3.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.numericUpDown3, ((int)(resources.GetObject("numericUpDown3.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.numericUpDown3, ((int)(resources.GetObject("numericUpDown3.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown3, ((int)(resources.GetObject("numericUpDown3.IconPadding2"))));
             this.numericUpDown3.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -460,163 +547,204 @@
             0,
             -2147483648});
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(184, 20);
-            this.numericUpDown3.TabIndex = 6;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
+            resources.ApplyResources(this.checkBox1, "checkBox1");
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(120, 69);
+            this.errorProvider1.SetError(this.checkBox1, resources.GetString("checkBox1.Error"));
+            this.errorProvider3.SetError(this.checkBox1, resources.GetString("checkBox1.Error1"));
+            this.errorProvider2.SetError(this.checkBox1, resources.GetString("checkBox1.Error2"));
+            this.errorProvider3.SetIconAlignment(this.checkBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("checkBox1.IconAlignment"))));
+            this.errorProvider2.SetIconAlignment(this.checkBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("checkBox1.IconAlignment1"))));
+            this.errorProvider1.SetIconAlignment(this.checkBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("checkBox1.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.checkBox1, ((int)(resources.GetObject("checkBox1.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.checkBox1, ((int)(resources.GetObject("checkBox1.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.checkBox1, ((int)(resources.GetObject("checkBox1.IconPadding2"))));
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(109, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Keep aspect ratio";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(322, 3);
+            this.errorProvider3.SetError(this.groupBox2, resources.GetString("groupBox2.Error"));
+            this.errorProvider2.SetError(this.groupBox2, resources.GetString("groupBox2.Error1"));
+            this.errorProvider1.SetError(this.groupBox2, resources.GetString("groupBox2.Error2"));
+            this.errorProvider3.SetIconAlignment(this.groupBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox2.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.groupBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox2.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.groupBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox2.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.groupBox2, ((int)(resources.GetObject("groupBox2.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.groupBox2, ((int)(resources.GetObject("groupBox2.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.groupBox2, ((int)(resources.GetObject("groupBox2.IconPadding2"))));
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(314, 217);
-            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Preview";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.errorProvider3.SetError(this.pictureBox1, resources.GetString("pictureBox1.Error"));
+            this.errorProvider1.SetError(this.pictureBox1, resources.GetString("pictureBox1.Error1"));
+            this.errorProvider2.SetError(this.pictureBox1, resources.GetString("pictureBox1.Error2"));
+            this.errorProvider1.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment"))));
+            this.errorProvider3.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.pictureBox1, ((int)(resources.GetObject("pictureBox1.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.pictureBox1, ((int)(resources.GetObject("pictureBox1.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.pictureBox1, ((int)(resources.GetObject("pictureBox1.IconPadding2"))));
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(308, 198);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 218);
+            resources.ApplyResources(this.label9, "label9");
+            this.errorProvider3.SetError(this.label9, resources.GetString("label9.Error"));
+            this.errorProvider1.SetError(this.label9, resources.GetString("label9.Error1"));
+            this.errorProvider2.SetError(this.label9, resources.GetString("label9.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label9, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label9.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label9, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label9.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label9, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label9.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label9, ((int)(resources.GetObject("label9.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label9, ((int)(resources.GetObject("label9.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label9, ((int)(resources.GetObject("label9.IconPadding2"))));
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Picture properties";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 351);
+            resources.ApplyResources(this.label10, "label10");
+            this.errorProvider3.SetError(this.label10, resources.GetString("label10.Error"));
+            this.errorProvider1.SetError(this.label10, resources.GetString("label10.Error1"));
+            this.errorProvider2.SetError(this.label10, resources.GetString("label10.Error2"));
+            this.errorProvider2.SetIconAlignment(this.label10, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label10.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.label10, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label10.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.label10, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label10.IconAlignment2"))));
+            this.errorProvider1.SetIconPadding(this.label10, ((int)(resources.GetObject("label10.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.label10, ((int)(resources.GetObject("label10.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.label10, ((int)(resources.GetObject("label10.IconPadding2"))));
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "PlaceHolder";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 320F));
+            resources.ApplyResources(this.tableLayoutPanel7, "tableLayoutPanel7");
             this.tableLayoutPanel7.Controls.Add(this.textBox3, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(164, 342);
+            this.errorProvider2.SetError(this.tableLayoutPanel7, resources.GetString("tableLayoutPanel7.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel7, resources.GetString("tableLayoutPanel7.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel7, resources.GetString("tableLayoutPanel7.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel7.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel7.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel7.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel7, ((int)(resources.GetObject("tableLayoutPanel7.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel7, ((int)(resources.GetObject("tableLayoutPanel7.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel7, ((int)(resources.GetObject("tableLayoutPanel7.IconPadding2"))));
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(639, 32);
-            this.tableLayoutPanel7.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(3, 6);
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.errorProvider2.SetError(this.textBox3, resources.GetString("textBox3.Error"));
+            this.errorProvider3.SetError(this.textBox3, resources.GetString("textBox3.Error1"));
+            this.errorProvider1.SetError(this.textBox3, resources.GetString("textBox3.Error2"));
+            this.errorProvider1.SetIconAlignment(this.textBox3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox3.IconAlignment"))));
+            this.errorProvider2.SetIconAlignment(this.textBox3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox3.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.textBox3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox3.IconAlignment2"))));
+            this.errorProvider3.SetIconPadding(this.textBox3, ((int)(resources.GetObject("textBox3.IconPadding"))));
+            this.errorProvider2.SetIconPadding(this.textBox3, ((int)(resources.GetObject("textBox3.IconPadding1"))));
+            this.errorProvider1.SetIconPadding(this.textBox3, ((int)(resources.GetObject("textBox3.IconPadding2"))));
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(313, 20);
-            this.textBox3.TabIndex = 0;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
             // 
             // tableLayoutPanel8
             // 
-            this.tableLayoutPanel8.ColumnCount = 2;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            resources.ApplyResources(this.tableLayoutPanel8, "tableLayoutPanel8");
             this.tableLayoutPanel8.Controls.Add(this.button3, 1, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(164, 380);
+            this.errorProvider2.SetError(this.tableLayoutPanel8, resources.GetString("tableLayoutPanel8.Error"));
+            this.errorProvider3.SetError(this.tableLayoutPanel8, resources.GetString("tableLayoutPanel8.Error1"));
+            this.errorProvider1.SetError(this.tableLayoutPanel8, resources.GetString("tableLayoutPanel8.Error2"));
+            this.errorProvider3.SetIconAlignment(this.tableLayoutPanel8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel8.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.tableLayoutPanel8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel8.IconAlignment1"))));
+            this.errorProvider2.SetIconAlignment(this.tableLayoutPanel8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel8.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.tableLayoutPanel8, ((int)(resources.GetObject("tableLayoutPanel8.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.tableLayoutPanel8, ((int)(resources.GetObject("tableLayoutPanel8.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.tableLayoutPanel8, ((int)(resources.GetObject("tableLayoutPanel8.IconPadding2"))));
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(639, 32);
-            this.tableLayoutPanel8.TabIndex = 11;
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(509, 4);
+            resources.ApplyResources(this.button3, "button3");
+            this.errorProvider1.SetError(this.button3, resources.GetString("button3.Error"));
+            this.errorProvider2.SetError(this.button3, resources.GetString("button3.Error1"));
+            this.errorProvider3.SetError(this.button3, resources.GetString("button3.Error2"));
+            this.errorProvider2.SetIconAlignment(this.button3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button3.IconAlignment"))));
+            this.errorProvider1.SetIconAlignment(this.button3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button3.IconAlignment1"))));
+            this.errorProvider3.SetIconAlignment(this.button3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button3.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.button3, ((int)(resources.GetObject("button3.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.button3, ((int)(resources.GetObject("button3.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.button3, ((int)(resources.GetObject("button3.IconPadding2"))));
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Generate";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.Filter = "Todos los archivos de Word|*.doc;*.docx|Archivos Word 2007|*.doc|Archivos Word Of" +
-    "fice 365|*.docx";
+            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             this.openFileDialog1.Multiselect = true;
-            this.openFileDialog1.Title = "Open Files";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // folderBrowserDialog1
+            // 
+            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             // 
             // openFileDialog2
             // 
-            this.openFileDialog2.Filter = "Archivos de imagen|*.png;*.jpg;*.gif|Archivos JPG|*.jpg|Archivos PNG|*.png";
+            resources.ApplyResources(this.openFileDialog2, "openFileDialog2");
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.errorProvider2.SetError(this.statusStrip1, resources.GetString("statusStrip1.Error"));
+            this.errorProvider1.SetError(this.statusStrip1, resources.GetString("statusStrip1.Error1"));
+            this.errorProvider3.SetError(this.statusStrip1, resources.GetString("statusStrip1.Error2"));
+            this.errorProvider2.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment"))));
+            this.errorProvider3.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment1"))));
+            this.errorProvider1.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment2"))));
+            this.errorProvider2.SetIconPadding(this.statusStrip1, ((int)(resources.GetObject("statusStrip1.IconPadding"))));
+            this.errorProvider1.SetIconPadding(this.statusStrip1, ((int)(resources.GetObject("statusStrip1.IconPadding1"))));
+            this.errorProvider3.SetIconPadding(this.statusStrip1, ((int)(resources.GetObject("statusStrip1.IconPadding2"))));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 410);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(806, 22);
-            this.statusStrip1.TabIndex = 12;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
-            this.toolStripStatusLabel1.Text = "Ready";
             // 
             // toolStripProgressBar1
             // 
+            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider2, "errorProvider2");
             // 
             // errorProvider3
             // 
             this.errorProvider3.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider3, "errorProvider3");
             // 
             // unitStructBindingSource
             // 
@@ -624,13 +752,11 @@
             // 
             // GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 432);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.statusStrip1);
             this.Name = "GUI";
-            this.Text = "Document Insert Image";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
