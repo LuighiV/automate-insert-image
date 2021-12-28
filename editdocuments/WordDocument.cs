@@ -50,8 +50,8 @@ namespace editdocuments
                 this.Document.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
         }
 
-        internal void addPicture(string picture, int LeftOffset = 0, int BottomOffset = 0, int Width = 200,
-             int Height=150)
+        internal void addPicture(string picture, double LeftOffset = 0, double BottomOffset = 0, double Width = 200,
+             double Height =150)
         {
 
             var LeftDistance = this.Range.Information[Word.WdInformation.wdHorizontalPositionRelativeToTextBoundary];

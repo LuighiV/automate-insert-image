@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using Word = Microsoft.Office.Interop.Word;
 using CommandLine;
 using System.IO;
@@ -11,6 +12,16 @@ namespace editdocuments
 {
     internal class Program
     {
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        const int SW_HIDE = 0;
+        const int SW_SHOW = 5;
+        const int SW_SHOWMINIMIZED = 2;
+
         class Options
         {
             [Option('f', "filename", Default = null, HelpText = "Input files to be processed.")]
@@ -54,23 +65,39 @@ namespace editdocuments
             [Option(
               Default = 0,
               HelpText = "Left offset for picture.")]
-            public int LeftOffset { get; set; }
+            public double LeftOffset { get; set; }
 
             [Option(
               Default = 0,
               HelpText = "Bottom offset for picture.")]
-            public int BottomOffset { get; set; }
+            public double BottomOffset { get; set; }
+
+            [Option(
+             Default = 200,
+             HelpText = "Width for picture.")]
+            public double Width { get; set; }
+
+            [Option(
+              Default = 150,
+              HelpText = "Height for picture.")]
+            public double Height { get; set; }
 
         }
 
+        [STAThread]
         static void Main(string[] args)
         {
 
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, SW_SHOWMINIMIZED);
+            //ShowWindow(handle, SW_HIDE);
 
             _ = Parser.Default.ParseArguments<Options>(args)
                 .WithParsed(RunOptions)
                 .WithNotParsed(HandleParseError);
 
+            var guiForm = new GUI();
+            guiForm.ShowDialog();
         }
 
         static void HandleParseError(IEnumerable<Error> obj)
@@ -89,7 +116,37 @@ namespace editdocuments
 
         static void RunOptions(Options opts)
         {
-            if (opts.Verbose)
+            RunProcess(opts.PicturePath,
+                opts.PlaceHolder,
+                opts.LeftOffset,
+                opts.BottomOffset,
+                opts.Width,
+                opts.Height,
+                opts.InputFolder,
+                opts.InputFiles,
+                opts.WordAppVisible,
+                opts.FolderSave,
+                opts.SubFolderSave,
+                opts.SaveFile,
+                opts.Verbose);
+        }
+
+        public static void RunProcess(
+            string PicturePath,
+            string TextPlaceHolder,
+            double LeftOffset=0,
+            double BottomOffset =0,
+            double Width = 200,
+            double Height = 150,
+            string InputFolder = null,
+            IEnumerable<string> InputFiles = null,
+            bool WordAppVisible = true,
+            string FolderSave = null,
+            string SubFolderSave = null,
+            bool SaveFile = false,
+            bool Verbose = true)
+        {
+            if (Verbose)
             {
                 Console.WriteLine("Start program");
             }
@@ -97,50 +154,42 @@ namespace editdocuments
             var WordApp = new Word.Application();
 
             // If InputFolder defined use this value, otherwise use InputFiles
-            IEnumerable<string> InputFiles;
-            if (opts.InputFolder != null)
+            if (InputFolder != null)
             {
-                InputFiles = GetWordFiles(opts.InputFolder);
+                InputFiles = GetWordFiles(InputFolder);
             }
-            else
-            {
-                InputFiles = opts.InputFiles;
-            }
-            
+
             foreach (var FilePath in InputFiles)
             {
                 // If SubFolderSave defined use this value, otherwise use FolderSave
-                string FolderSave;
-                if (opts.SubFolderSave != null)
+                if (SubFolderSave != null)
                 {
-                    FolderSave = Path.Combine(Path.GetDirectoryName(FilePath), opts.SubFolderSave);
-                }
-                else
-                {
-                    FolderSave = opts.FolderSave;
+                    FolderSave = Path.Combine(Path.GetDirectoryName(FilePath), SubFolderSave);
                 }
 
-                if (!Directory.Exists(FolderSave))
+                if (FolderSave!=null && !Directory.Exists(FolderSave))
                 {
                     Directory.CreateDirectory(FolderSave);
                     Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(FolderSave));
                 }
 
-                RunOnFile(FilePath, 
-                          opts.PicturePath, 
-                          opts.PlaceHolder, 
-                          opts.LeftOffset, 
-                          opts.BottomOffset, 
-                          WordApp, 
-                          opts.WordAppVisible, 
-                          FolderSave, 
-                          opts.SaveFile);
+                RunOnFile(FilePath,
+                          PicturePath,
+                          TextPlaceHolder,
+                          LeftOffset,
+                          BottomOffset,
+                          Width,
+                          Height,
+                          WordApp,
+                          WordAppVisible,
+                          FolderSave,
+                          SaveFile);
             }
-            
+
 
             WordApp.Quit();
 
-            if (opts.Verbose)
+            if (Verbose)
             {
                 Console.WriteLine("Finish program");
             }
@@ -149,8 +198,10 @@ namespace editdocuments
         static void RunOnFile(string FilePath, 
             string PicturePath,
             string TextPlaceHolder,
-            int LeftOffset,
-            int BottomOffset,
+            double LeftOffset,
+            double BottomOffset,
+            double Width,
+            double Height,
             Word.Application WordApp=null,
             bool WordAppVisible=true,
             string FolderSave=null,
@@ -160,7 +211,7 @@ namespace editdocuments
             var WordDocument = new WordDocument(FilePath, WordAppVisible, WordApp);
 
             WordDocument.GetRange(TextPlaceHolder);
-            WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset);
+            WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset, Width, Height);
             WordDocument.SaveAsPDF(FolderSave);
             //Console.ReadKey();
             WordDocument.Close(SaveFile);
