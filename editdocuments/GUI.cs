@@ -209,6 +209,9 @@ namespace editdocuments
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (!ValidateChildren(ValidationConstraints.Enabled))
+                return;
+
             try
             {
                 this.Enabled = false;
@@ -232,8 +235,8 @@ namespace editdocuments
             catch(Exception error)
             {
                 Console.WriteLine(error.ToString());
-                MessageBox.Show("Execution error",
-                    error.ToString(),
+                MessageBox.Show(error.ToString(),
+                    "Execution error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -270,7 +273,17 @@ namespace editdocuments
 
         private bool IsValidSelectedPath()
         {
-            return (this.textBox1.Text != "");
+            return (!String.IsNullOrEmpty(textBox1.Text));
+        }
+
+        private bool IsValidPicturePath()
+        {
+            return (!String.IsNullOrEmpty(textBox2.Text));
+        }
+
+        private bool IsValidPlaceHolder()
+        {
+            return (!String.IsNullOrEmpty(textBox3.Text));
         }
 
         //Reference https://stackoverflow.com/a/56119473
@@ -303,9 +316,52 @@ namespace editdocuments
             pbox.Image = resized;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
         {
 
+            //Console.WriteLine(sender.GetType().Name);
+            if (IsValidSelectedPath())
+            {
+                errorProvider1.SetError(this.textBox1, String.Empty);
+                e.Cancel = false;
+            }
+            else
+            {
+                errorProvider1.SetError(this.textBox1, "It is required a valid path");
+                e.Cancel = true;
+            }
+            
+        }
+
+        private void textBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (IsValidPicturePath())
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(this.textBox2, String.Empty);
+                
+            }
+            else
+            {
+                e.Cancel = true;
+                errorProvider2.SetError(this.textBox2, "It is required a valid picture path");
+                
+            }
+        }
+
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (IsValidPlaceHolder())
+            {
+                errorProvider3.SetError(this.textBox3, String.Empty);
+                e.Cancel = false;
+            }
+            else
+            {
+                errorProvider3.SetError(this.textBox3, "It is required a placeholder");
+                e.Cancel = true;
+            }
         }
     }
 }
