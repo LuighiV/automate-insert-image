@@ -236,7 +236,7 @@ namespace editdocuments
             {
                 Console.WriteLine(error.ToString());
                 MessageBox.Show(error.ToString(),
-                    "Execution error",
+                    Strings.ExecutionErrorTitle,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -246,8 +246,8 @@ namespace editdocuments
                 Cursor.Current = Cursors.Default;
                 Application.UseWaitCursor = false;
 
-                MessageBox.Show("Execution ended in all selected files.",
-                    "Execution completed",
+                MessageBox.Show(Strings.ExecutionCompletedDefaultMessage,
+                    Strings.ExecutionCompletedTitle,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
@@ -328,7 +328,7 @@ namespace editdocuments
             }
             else
             {
-                errorProvider1.SetError(this.textBox1, "It is required a valid path");
+                errorProvider1.SetError(this.textBox1, Strings.TextValidationFilePath);
                 e.Cancel = true;
             }
             
@@ -345,7 +345,7 @@ namespace editdocuments
             else
             {
                 e.Cancel = true;
-                errorProvider2.SetError(this.textBox2, "It is required a valid picture path");
+                errorProvider2.SetError(this.textBox2, Strings.TextValidationPicturePath);
                 
             }
         }
@@ -359,7 +359,7 @@ namespace editdocuments
             }
             else
             {
-                errorProvider3.SetError(this.textBox3, "It is required a placeholder");
+                errorProvider3.SetError(this.textBox3, Strings.TextValidationPlaceholder);
                 e.Cancel = true;
             }
         }

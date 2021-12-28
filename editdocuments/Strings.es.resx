@@ -117,89 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Insertar imagen en Documento</value>
+  <data name="ExecutionCompletedDefaultMessage" xml:space="preserve">
+    <value>La ejecución del programa finalizó en todos los archivos seleccionados.</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Tipo</value>
+  <data name="ExecutionCompletedTitle" xml:space="preserve">
+    <value>Ejecución completada</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 17</value>
+  <data name="ExecutionErrorTitle" xml:space="preserve">
+    <value>Error de ejecución</value>
   </data>
-  <data name="radioButton1.Text" xml:space="preserve">
-    <value>Archivos</value>
+  <data name="TextValidationFilePath" xml:space="preserve">
+    <value>Se requiere un archivo válido.
+Use el botón Explorar para seleccionar uno.</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Dirección de folder/archivos</value>
+  <data name="TextValidationPicturePath" xml:space="preserve">
+    <value>Se require una  figura válida.
+Use el botón Explorar para seleccionar una.</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Explorar</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Dirección de imagen</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Explorar</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Alto</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Ancho</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Unidades</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 127</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 26</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Desplazamiento desde abajo</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 94</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 26</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Desplazamiento desde la izquierda </value>
-  </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 17</value>
-  </data>
-  <data name="checkBox1.Text" xml:space="preserve">
-    <value>Mantener relación de aspecto</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Propiedades</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Vista previa</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Propiedades de imagen</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Marcador de posición</value>
-  </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>Generar</value>
-  </data>
-  <data name="openFileDialog1.Filter" xml:space="preserve">
-    <value>Todos los archivos de Word|*.doc;*.docx|Archivos de Word 2007|*.doc|Archivos de Word Office 365|*.docx</value>
-  </data>
-  <data name="openFileDialog1.Title" xml:space="preserve">
-    <value>Abrir archivos</value>
-  </data>
-  <data name="openFileDialog2.Filter" xml:space="preserve">
-    <value>Todas las imágenes|*.png;*.jpg;*.gif|Archivos JPG|*.jpg|Archivos PNG|*.png</value>
-  </data>
-  <data name="openFileDialog2.Title" xml:space="preserve">
-    <value>Abrir imagen</value>
+  <data name="TextValidationPlaceholder" xml:space="preserve">
+    <value>Se require un marcador de posición no vacío.</value>
   </data>
 </root>
