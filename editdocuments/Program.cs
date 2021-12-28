@@ -30,13 +30,12 @@ namespace editdocuments
             [Option('d', "inputfolder", Default = null, HelpText = "Input folder to be processed.")]
             public string InputFolder { get; set; }
 
-            [Option('p', "picturepath", Required = true, HelpText = "Picture file to be inserted.")]
+            [Option('p', "picturepath", Default = null, HelpText = "Picture file to be inserted.")]
             public string PicturePath { get; set; }
 
-            [Option('H', "placeholder", Required = true, HelpText = "Placeholder where is inserted.")]
+            [Option('H', "placeholder", Default = null, HelpText = "Placeholder where is inserted.")]
             public string PlaceHolder { get; set; }
 
-            
             [Option(
               Default = false,
               HelpText = "Prints all messages to standard output.")]
@@ -92,12 +91,19 @@ namespace editdocuments
             ShowWindow(handle, SW_SHOWMINIMIZED);
             //ShowWindow(handle, SW_HIDE);
 
-            _ = Parser.Default.ParseArguments<Options>(args)
-                .WithParsed(RunOptions)
-                .WithNotParsed(HandleParseError);
+            if (args.Length == 0)
+            {
+                var guiForm = new GUI();
+                guiForm.ShowDialog();
+            }
+            else
+            {
+                var parser = new Parser(with => with.HelpWriter = Console.Error);
+                _ = parser.ParseArguments<Options>(args)
+                    .WithParsed(RunOptions)
+                    .WithNotParsed(HandleParseError);
+            }
 
-            var guiForm = new GUI();
-            guiForm.ShowDialog();
         }
 
         static void HandleParseError(IEnumerable<Error> obj)
@@ -109,13 +115,15 @@ namespace editdocuments
                     Console.WriteLine("Please, provide the required argument");
                     continue;
                 }
-                throw new Exception(error.ToString());
+                // When trigger --help or --version, it returns errors
+                // Console.WriteLine(error.ToString());
             }
             
         }
 
         static void RunOptions(Options opts)
         {
+
             RunProcess(opts.PicturePath,
                 opts.PlaceHolder,
                 opts.LeftOffset,
@@ -159,40 +167,49 @@ namespace editdocuments
                 InputFiles = GetWordFiles(InputFolder);
             }
 
-            foreach (var FilePath in InputFiles)
+            try
             {
-                // If SubFolderSave defined use this value, otherwise use FolderSave
-                if (SubFolderSave != null)
+                foreach (var FilePath in InputFiles)
                 {
-                    FolderSave = Path.Combine(Path.GetDirectoryName(FilePath), SubFolderSave);
+                    // If SubFolderSave defined use this value, otherwise use FolderSave
+                    if (SubFolderSave != null)
+                    {
+                        FolderSave = Path.Combine(Path.GetDirectoryName(FilePath), SubFolderSave);
+                    }
+
+                    if (FolderSave != null && !Directory.Exists(FolderSave))
+                    {
+                        Directory.CreateDirectory(FolderSave);
+                        Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(FolderSave));
+                    }
+
+                    RunOnFile(FilePath,
+                              PicturePath,
+                              TextPlaceHolder,
+                              LeftOffset,
+                              BottomOffset,
+                              Width,
+                              Height,
+                              WordApp,
+                              WordAppVisible,
+                              FolderSave,
+                              SaveFile);
                 }
 
-                if (FolderSave!=null && !Directory.Exists(FolderSave))
+
+                WordApp.Quit();
+
+                if (Verbose)
                 {
-                    Directory.CreateDirectory(FolderSave);
-                    Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(FolderSave));
+                    Console.WriteLine("Finish program");
                 }
-
-                RunOnFile(FilePath,
-                          PicturePath,
-                          TextPlaceHolder,
-                          LeftOffset,
-                          BottomOffset,
-                          Width,
-                          Height,
-                          WordApp,
-                          WordAppVisible,
-                          FolderSave,
-                          SaveFile);
             }
-
-
-            WordApp.Quit();
-
-            if (Verbose)
+            catch(Exception e)
             {
-                Console.WriteLine("Finish program");
+                WordApp.Quit();
+                throw e;
             }
+            
         }
 
         static void RunOnFile(string FilePath, 
@@ -208,15 +225,24 @@ namespace editdocuments
             bool SaveFile=false)
         {
             Console.WriteLine("Process file {0}", FilePath);
+
             var WordDocument = new WordDocument(FilePath, WordAppVisible, WordApp);
+            try
+            {
+                WordDocument.GetRange(TextPlaceHolder);
+                WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset, Width, Height);
+                WordDocument.SaveAsPDF(FolderSave);
+                //Console.ReadKey();
+                WordDocument.Close(SaveFile);
 
-            WordDocument.GetRange(TextPlaceHolder);
-            WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset, Width, Height);
-            WordDocument.SaveAsPDF(FolderSave);
-            //Console.ReadKey();
-            WordDocument.Close(SaveFile);
-
-            Console.WriteLine("Finish processing file {0}", FilePath);
+                Console.WriteLine("Finish processing file {0}", FilePath);
+            }
+            catch(Exception e)
+            {
+                WordDocument.Close(false);
+                throw e;
+            }
+            
         }
 
         public static IEnumerable<string> GetWordFiles(string FolderName)
