@@ -15,8 +15,8 @@ namespace editdocuments{
 
         static Globals()
         {
-            AvailableUnits.Add(new UnitStruct(GUnits.inch, "inch", INCH_FACTOR));
             AvailableUnits.Add(new UnitStruct(GUnits.cm, "cm", CENTIMETER_FACTOR));
+            AvailableUnits.Add(new UnitStruct(GUnits.inch, "inch", INCH_FACTOR));
             AvailableUnits.Add(new UnitStruct(GUnits.pixel, "pixel", PIXEL_FACTOR));
             AvailableUnits.Add(new UnitStruct(GUnits.point, "point", POINT_FACTOR));
         }

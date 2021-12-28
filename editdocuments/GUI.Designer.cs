@@ -71,9 +71,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.unitStructBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.unitStructBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -91,9 +91,9 @@
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.unitStructBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitStructBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -573,14 +573,15 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.Filter = "Archivos Word 2007|*.doc|Archivos Word Office 365|*.docx";
+            this.openFileDialog1.Filter = "Todos los archivos de Word|*.doc;*.docx|Archivos Word 2007|*.doc|Archivos Word Of" +
+    "fice 365|*.docx";
             this.openFileDialog1.Multiselect = true;
             this.openFileDialog1.Title = "Open Files";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // openFileDialog2
             // 
-            this.openFileDialog2.Filter = "Archivos JPG|*.jpg|Archivos PNG|*.png";
+            this.openFileDialog2.Filter = "Archivos de imagen|*.png;*.jpg;*.gif|Archivos JPG|*.jpg|Archivos PNG|*.png";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
             // errorProvider1
@@ -609,10 +610,6 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
-            // unitStructBindingSource
-            // 
-            this.unitStructBindingSource.DataSource = typeof(editdocuments.UnitStruct);
-            // 
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
@@ -620,6 +617,10 @@
             // errorProvider3
             // 
             this.errorProvider3.ContainerControl = this;
+            // 
+            // unitStructBindingSource
+            // 
+            this.unitStructBindingSource.DataSource = typeof(editdocuments.UnitStruct);
             // 
             // GUI
             // 
@@ -654,9 +655,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.unitStructBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitStructBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
