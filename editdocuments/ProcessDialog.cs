@@ -12,9 +12,9 @@ using System.IO;
 
 namespace editdocuments
 {
-    public partial class Process : Form
+    public partial class ProcessDialog : Form
     {
-        public Process()
+        public ProcessDialog()
         {
             InitializeComponent();
             Console.SetOut(new ControlWriter(this.textBox1));

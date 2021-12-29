@@ -23,7 +23,12 @@ namespace editdocuments
             {
                 try
                 {
-                    textbox.Invoke(new MethodInvoker(() => textbox.Text += value));
+                    textbox.Invoke(new MethodInvoker(() => {
+                        if (value == '\n')
+                            textbox.AppendText("\n");
+                        else
+                            textbox.Text += value;
+                    }));
                 }
                 catch (ObjectDisposedException ex)
                 {
@@ -32,11 +37,18 @@ namespace editdocuments
             }
             else
             {
-                textbox.Text += value;
+                if (value == '\n')
+                    textbox.AppendText("\n");
+                else
+                    textbox.Text += value;
             }
 
-            textbox.SelectionStart = textbox.TextLength;
-            textbox.ScrollToCaret();
+            //if (value == '\r')
+            //{
+            //    textbox.SelectionStart = textbox.TextLength;
+            //    textbox.ScrollToCaret();
+            //}
+            
         }
 
         public override void Write(string value)

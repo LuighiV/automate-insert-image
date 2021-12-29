@@ -1,6 +1,6 @@
 ﻿namespace editdocuments
 {
-    partial class Process
+    partial class ProcessDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Process));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessDialog));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -129,12 +129,12 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Process
+            // ProcessDialog
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Process";
+            this.Name = "ProcessDialog";
             this.ShowIcon = false;
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);

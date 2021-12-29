@@ -93,11 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlWriter.cs" />
-    <Compile Include="Process.cs">
+    <Compile Include="ProcessDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Process.Designer.cs">
-      <DependentUpon>Process.cs</DependentUpon>
+    <Compile Include="ProcessDialog.Designer.cs">
+      <DependentUpon>ProcessDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Strings.Designer.cs">
@@ -138,8 +138,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Process.resx">
-      <DependentUpon>Process.cs</DependentUpon>
+    <EmbeddedResource Include="ProcessDialog.resx">
+      <DependentUpon>ProcessDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.es.resx">
       <DependentUpon>GUI.cs</DependentUpon>

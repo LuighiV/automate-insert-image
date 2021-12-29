@@ -85,6 +85,7 @@ namespace editdocuments
         {
             this.SelectedPaths = this.openFileDialog1.FileNames;
             this.textBox1.Text = String.Join(",", this.SelectedPaths);
+            this.textBox1.Enabled = true;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -118,6 +119,8 @@ namespace editdocuments
             InitiateDimensions();
             ConvertUnits();
             UpdateDimensionsInUI();
+
+            this.textBox2.Enabled = true;
 
             this.IgnoreTextChanged = false;
         }
@@ -218,10 +221,8 @@ namespace editdocuments
                 Application.UseWaitCursor = true;
                 this.Cursor = Cursors.WaitCursor;
                 Application.DoEvents();
-                var processForm = new Process();
+                var processForm = new ProcessDialog();
                 processForm.Show();
-
-                processForm.setFilename(this.SelectedPaths.First());
 
                 processForm.RunGUIProcess(this.ImagePath,
                     this.PlaceHolder,
@@ -334,7 +335,7 @@ namespace editdocuments
             else
             {
                 errorProvider1.SetError(this.textBox1, Strings.TextValidationFilePath);
-                e.Cancel = true;
+                e.Cancel = this.button3.Focused;
             }
             
         }
@@ -349,7 +350,7 @@ namespace editdocuments
             }
             else
             {
-                e.Cancel = true;
+                e.Cancel = this.button3.Focused;
                 errorProvider2.SetError(this.textBox2, Strings.TextValidationPicturePath);
                 
             }
@@ -365,7 +366,7 @@ namespace editdocuments
             else
             {
                 errorProvider3.SetError(this.textBox3, Strings.TextValidationPlaceholder);
-                e.Cancel = true;
+                e.Cancel = this.button3.Focused;
             }
         }
     }

@@ -158,6 +158,7 @@
             // 
             resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
@@ -185,6 +186,7 @@
             // 
             resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
