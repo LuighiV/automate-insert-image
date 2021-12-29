@@ -216,9 +216,14 @@ namespace editdocuments
             {
                 this.Enabled = false;
                 Application.UseWaitCursor = true;
-                Cursor.Current = Cursors.WaitCursor;
+                this.Cursor = Cursors.WaitCursor;
                 Application.DoEvents();
-                Program.RunProcess(this.ImagePath,
+                var processForm = new Process();
+                processForm.Show();
+
+                processForm.setFilename(this.SelectedPaths.First());
+
+                processForm.RunGUIProcess(this.ImagePath,
                     this.PlaceHolder,
                     this.ImageLeftOffset.ConvertValue(GUnits.point),
                     this.ImageBottomOffset.ConvertValue(GUnits.point),
@@ -243,7 +248,7 @@ namespace editdocuments
             finally
             {
                 this.Enabled = true;
-                Cursor.Current = Cursors.Default;
+                this.Cursor = Cursors.Default;
                 Application.UseWaitCursor = false;
 
                 MessageBox.Show(Strings.ExecutionCompletedDefaultMessage,

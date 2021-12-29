@@ -156,7 +156,7 @@ namespace editdocuments
         {
             if (Verbose)
             {
-                Console.WriteLine("Start program");
+                Console.WriteLine(Strings.InfoStartProgram);
             }
 
             var WordApp = new Word.Application();
@@ -179,8 +179,8 @@ namespace editdocuments
 
                     if (FolderSave != null && !Directory.Exists(FolderSave))
                     {
-                        Directory.CreateDirectory(FolderSave);
-                        Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(FolderSave));
+                        DirectoryInfo dir = Directory.CreateDirectory(FolderSave);
+                        Console.WriteLine(Strings.InfoCreateDirectorySuccess, dir.FullName, dir.CreationTime);
                     }
 
                     RunOnFile(FilePath,
@@ -201,7 +201,7 @@ namespace editdocuments
 
                 if (Verbose)
                 {
-                    Console.WriteLine("Finish program");
+                    Console.WriteLine(Strings.InfoFinishProgram);
                 }
             }
             catch(Exception e)
@@ -212,7 +212,7 @@ namespace editdocuments
             
         }
 
-        static void RunOnFile(string FilePath, 
+        public static void RunOnFile(string FilePath, 
             string PicturePath,
             string TextPlaceHolder,
             double LeftOffset,
@@ -224,7 +224,7 @@ namespace editdocuments
             string FolderSave=null,
             bool SaveFile=false)
         {
-            Console.WriteLine("Process file {0}", FilePath);
+            Console.WriteLine(Strings.InfoStartFile, FilePath);
 
             var WordDocument = new WordDocument(FilePath, WordAppVisible, WordApp);
             try
@@ -235,7 +235,7 @@ namespace editdocuments
                 //Console.ReadKey();
                 WordDocument.Close(SaveFile);
 
-                Console.WriteLine("Finish processing file {0}", FilePath);
+                Console.WriteLine(Strings.InfoFinishFile, FilePath);
             }
             catch(Exception e)
             {

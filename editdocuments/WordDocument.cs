@@ -38,8 +38,9 @@ namespace editdocuments
             if (FolderName != null)
                 NewName = Path.Combine(FolderName, NewName);
 
-            Console.WriteLine("Current filename: {0}", Name);
+            Console.WriteLine(Strings.InfoFileName, Name);
             this.Document.SaveAs2(FileName: NewName, FileFormat: Word.WdSaveFormat.wdFormatPDF);
+            Console.WriteLine(Strings.InfoSavedPDFFile, NewName);
         }
 
         internal void Close(bool save=true)
@@ -48,6 +49,8 @@ namespace editdocuments
                 this.Document.Close(Word.WdSaveOptions.wdSaveChanges);
             else
                 this.Document.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
+
+            Console.WriteLine(Strings.InfoSaveWordDocument, save ? Strings.InfoYes : Strings.InfoNo);
         }
 
         internal void addPicture(string picture, double LeftOffset = 0, double BottomOffset = 0, double Width = 200,
@@ -69,7 +72,7 @@ namespace editdocuments
             var range = this.Document.Content;
             range.Find.Execute(text);
             this.Range = range;
-            Console.WriteLine(this.Range.Text);
+            Console.WriteLine(Strings.InfoPlaceholder,this.Range.Text);
             return range;
         }
     }

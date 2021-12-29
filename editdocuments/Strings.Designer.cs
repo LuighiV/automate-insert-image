@@ -88,6 +88,132 @@ namespace editdocuments {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Closing MS Word in background.
+        /// </summary>
+        internal static string InfoCloseWord {
+            get {
+                return ResourceManager.GetString("InfoCloseWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a File {0} /{1}.
+        /// </summary>
+        internal static string InfoCounterFile {
+            get {
+                return ResourceManager.GetString("InfoCounterFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The directory {0} was created sucessfully at {1}.
+        /// </summary>
+        internal static string InfoCreateDirectorySuccess {
+            get {
+                return ResourceManager.GetString("InfoCreateDirectorySuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Current file name: {0}.
+        /// </summary>
+        internal static string InfoFileName {
+            get {
+                return ResourceManager.GetString("InfoFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Finish processing file {0}.
+        /// </summary>
+        internal static string InfoFinishFile {
+            get {
+                return ResourceManager.GetString("InfoFinishFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Finish program.
+        /// </summary>
+        internal static string InfoFinishProgram {
+            get {
+                return ResourceManager.GetString("InfoFinishProgram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a no.
+        /// </summary>
+        internal static string InfoNo {
+            get {
+                return ResourceManager.GetString("InfoNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Starting MS Word in background.
+        /// </summary>
+        internal static string InfoOpenWord {
+            get {
+                return ResourceManager.GetString("InfoOpenWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Placeholder set to: {0}.
+        /// </summary>
+        internal static string InfoPlaceholder {
+            get {
+                return ResourceManager.GetString("InfoPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Saved PDF file: {0}.
+        /// </summary>
+        internal static string InfoSavedPDFFile {
+            get {
+                return ResourceManager.GetString("InfoSavedPDFFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save word document: {0}.
+        /// </summary>
+        internal static string InfoSaveWordDocument {
+            get {
+                return ResourceManager.GetString("InfoSaveWordDocument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Processsing file: {0}.
+        /// </summary>
+        internal static string InfoStartFile {
+            get {
+                return ResourceManager.GetString("InfoStartFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Starting program.
+        /// </summary>
+        internal static string InfoStartProgram {
+            get {
+                return ResourceManager.GetString("InfoStartProgram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a yes.
+        /// </summary>
+        internal static string InfoYes {
+            get {
+                return ResourceManager.GetString("InfoYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a It is required a valid file path.
         ///Use the Explorer button to select one..
         /// </summary>
