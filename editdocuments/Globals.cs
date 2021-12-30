@@ -12,7 +12,6 @@ namespace editdocuments{
 
         public static List<UnitStruct> AvailableUnits = new List<UnitStruct>();
 
-
         static Globals()
         {
             AvailableUnits.Add(new UnitStruct(GUnits.cm, "cm", CENTIMETER_FACTOR));

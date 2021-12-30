@@ -39,6 +39,28 @@ namespace editdocuments
 
         }
 
+        public void RunGUIProcess(DataInfo Data, bool Verbose=false)
+        {
+            GUnits tmpUnit = Data.Unit;
+            Data.Unit = GUnits.point;
+            RunGUIProcess(
+            Data.PicturePath,
+            Data.TextPlaceHolder,
+            Data.LeftOffset,
+            Data.BottomOffset,
+            Data.Width,
+            Data.Height,
+            Data.FolderPath,
+            Data.InputFilePaths,
+            Data.WordAppVisible,
+            Data.FolderSave,
+            Data.SubFolderSave,
+            Data.SaveFile,
+            Verbose);
+
+            Data.Unit = tmpUnit;
+        }
+
         public  void RunGUIProcess(
             string PicturePath,
             string TextPlaceHolder,
@@ -48,7 +70,7 @@ namespace editdocuments
             double Height = 150,
             string InputFolder = null,
             IEnumerable<string> InputFiles = null,
-            bool WordAppVisible = true,
+            bool WordAppVisible = false,
             string FolderSave = null,
             string SubFolderSave = null,
             bool SaveFile = false,

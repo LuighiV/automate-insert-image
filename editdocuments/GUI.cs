@@ -14,19 +14,21 @@ namespace editdocuments
     public partial class GUI : Form
     {
 
+        public DataInfo Data = new DataInfo(fromSettings: true);
+
         public bool SelectedFiles = true;
         public bool KeepAspect = true;
         public bool IgnoreTextChanged = false;
-        public IEnumerable<string> SelectedPaths = null;
-        public string FolderPath = null;
-        public string ImagePath = null;
-        public string PlaceHolder = null;
+        //public IEnumerable<string> SelectedPaths = null;
+        //public string FolderPath = null;
+        //public string ImagePath = null;
+        //public string PlaceHolder = null;
         public Image CurrentImage = null;
 
-        public Quantity ImageWidth = Quantity.FromInches(0);
-        public Quantity ImageHeight = Quantity.FromInches(0);
-        public Quantity ImageLeftOffset = Quantity.FromInches(0);
-        public Quantity ImageBottomOffset = Quantity.FromInches(0);
+        //public Quantity ImageWidth = Quantity.FromInches(0);
+        //public Quantity ImageHeight = Quantity.FromInches(0);
+        //public Quantity ImageLeftOffset = Quantity.FromInches(0);
+        //public Quantity ImageBottomOffset = Quantity.FromInches(0);
 
         public GUI()
         {
@@ -42,20 +44,21 @@ namespace editdocuments
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (SelectedFiles)
-            {
-                this.SelectedPaths = this.textBox1.Text.Split(',');
-            }
-            else
-            {
-                this.FolderPath = this.textBox1.Text;
-            }
+            //if (this.Data.IsFilesSelected)
+            //{
+            //    this.SelectedPaths = this.inputPathTextBox.Text.Split(',');
+            //}
+            //else
+            //{
+            //    this.FolderPath = this.inputPathTextBox.Text;
+            //}
+            this.Data.InputPath = this.inputPathTextBox.Text;
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.SelectedFiles)
+            if (this.Data.IsFilesSelected)
             {
                 
                 this.openFileDialog1.ShowDialog();
@@ -65,27 +68,28 @@ namespace editdocuments
                 DialogResult result =  this.folderBrowserDialog1.ShowDialog();
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(this.folderBrowserDialog1.SelectedPath))
                 {
-                    this.FolderPath = this.folderBrowserDialog1.SelectedPath;
-                    this.textBox1.Text = this.FolderPath;
+                    this.Data.InputPath = this.folderBrowserDialog1.SelectedPath;
+                    this.inputPathTextBox.Text = this.Data.InputPath;
                 }
             }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            this.SelectedFiles = true;
+            this.Data.IsFilesSelected= true;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            this.SelectedFiles = false;
+            this.Data.IsFilesSelected = false;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            this.SelectedPaths = this.openFileDialog1.FileNames;
-            this.textBox1.Text = String.Join(",", this.SelectedPaths);
-            this.textBox1.Enabled = true;
+            //this.SelectedPaths = this.openFileDialog1.FileNames;
+            this.inputPathTextBox.Text = String.Join(",", this.openFileDialog1.FileNames);
+            this.Data.InputPath = this.inputPathTextBox.Text;
+            //this.inputPathTextBox.Enabled = true;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -107,12 +111,12 @@ namespace editdocuments
         {
             this.IgnoreTextChanged = true;
 
-            this.ImagePath = this.openFileDialog2.FileName;
-            this.textBox2.Text = this.ImagePath;
+            this.Data.PicturePath = this.openFileDialog2.FileName;
+            this.picturePathTextBox.Text = this.Data.PicturePath;
 
-            this.CurrentImage = new Bitmap(this.ImagePath);
-            this.numericUpDown1.Value = this.CurrentImage.Width;
-            this.numericUpDown2.Value = this.CurrentImage.Height;
+            this.CurrentImage = new Bitmap(this.Data.PicturePath);
+            this.imageWidthNumeric.Value = this.CurrentImage.Width;
+            this.imageHeightNumeric.Value = this.CurrentImage.Height;
 
             fillPictureBox(this.pictureBox1, this.CurrentImage);
 
@@ -120,55 +124,51 @@ namespace editdocuments
             ConvertUnits();
             UpdateDimensionsInUI();
 
-            this.textBox2.Enabled = true;
+            this.picturePathTextBox.Enabled = true;
 
             this.IgnoreTextChanged = false;
         }
 
         private void InitiateDimensions()
         {
-            this.ImageWidth = Quantity.FromPixels((double)this.numericUpDown1.Value);
-            this.ImageHeight = Quantity.FromPixels((double)this.numericUpDown2.Value);
-            this.ImageLeftOffset = Quantity.FromPixels((double)this.numericUpDown3.Value);
-            this.ImageBottomOffset = Quantity.FromPixels((double)this.numericUpDown4.Value);
+            this.Data.Unit = GUnits.pixel;
+            this.Data.Width = (double)this.imageWidthNumeric.Value;
+            this.Data.Height = (double)this.imageHeightNumeric.Value;
+            this.Data.LeftOffset = (double)this.imageLeftOffsetNumeric.Value;
+            this.Data.BottomOffset = (double)this.imageBottomOffsetNumeric.Value;
         }
 
         private void ConvertUnits()
         {
             UnitStruct currentUnit = (UnitStruct) this.comboBox1.SelectedItem;
-            this.ImageWidth.ToUnit(currentUnit.Unit);
-            this.ImageHeight.ToUnit(currentUnit.Unit);
-            this.ImageLeftOffset.ToUnit(currentUnit.Unit);
-            this.ImageBottomOffset.ToUnit(currentUnit.Unit);
+            this.Data.Unit = currentUnit.Unit;
         }
 
         private void UpdateDimensionsInUI()
         {
-            this.numericUpDown1.Value = (decimal)this.ImageWidth.Value;
-            this.numericUpDown2.Value = (decimal)this.ImageHeight.Value;
-            this.numericUpDown3.Value = (decimal)this.ImageLeftOffset.Value;
-            this.numericUpDown4.Value = (decimal)this.ImageBottomOffset.Value;
+            this.imageWidthNumeric.Value = (decimal)this.Data.Width;
+            this.imageHeightNumeric.Value = (decimal)this.Data.Height;
+            this.imageLeftOffsetNumeric.Value = (decimal)this.Data.LeftOffset;
+            this.imageBottomOffsetNumeric.Value = (decimal)this.Data.BottomOffset;
         }
 
-        private void quantityBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.IgnoreTextChanged = true;
             ConvertUnits();
             UpdateDimensionsInUI();
+            this.IgnoreTextChanged = false;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            this.ImagePath = this.textBox2.Text;
+            this.Data.PicturePath= this.picturePathTextBox.Text;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            this.KeepAspect = this.checkBox1.Checked;
+            this.KeepAspect = this.keepAspectCheckBox.Checked;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -176,14 +176,16 @@ namespace editdocuments
             if (this.IgnoreTextChanged)
                 return;
 
-            double aspectRatio = this.ImageWidth.Value / this.ImageHeight.Value;
+            double aspectRatio = this.Data.Width / this.Data.Height;
 
-            this.ImageWidth.Value = (double) this.numericUpDown1.Value;
+            this.Data.Width = (double) this.imageWidthNumeric.Value;
             if (this.KeepAspect)
             {
+
                 this.IgnoreTextChanged = true;
-                this.ImageHeight.Value = this.ImageWidth.Value / aspectRatio;
-                this.numericUpDown2.Value = (decimal)this.ImageHeight.Value;
+                this.Data.Height = this.Data.Width / aspectRatio;
+                this.imageHeightNumeric.Value = (decimal)this.Data.Height;
+                this.imageWidthNumeric.Value = (decimal)this.Data.Width;
                 this.IgnoreTextChanged = false;
             }
         }
@@ -193,21 +195,22 @@ namespace editdocuments
             if (this.IgnoreTextChanged)
                 return;
 
-            double aspectRatio = this.ImageWidth.Value / this.ImageHeight.Value;
+            double aspectRatio = this.Data.Width / this.Data.Height;
 
-            this.ImageHeight.Value = (double)this.numericUpDown2.Value;
+            this.Data.Height = (double)this.imageHeightNumeric.Value;
             if (this.KeepAspect)
             {
                 this.IgnoreTextChanged = true;
-                this.ImageWidth.Value = this.ImageHeight.Value * aspectRatio;
-                this.numericUpDown1.Value = (decimal)this.ImageWidth.Value;
+                this.Data.Width = this.Data.Height * aspectRatio;
+                this.imageWidthNumeric.Value = (decimal)this.Data.Width;
+                this.imageHeightNumeric.Value = (decimal)this.Data.Height;
                 this.IgnoreTextChanged = false;
             }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            this.PlaceHolder = this.textBox3.Text;
+            this.Data.TextPlaceHolder = this.placeHolderTextBox.Text;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -224,19 +227,7 @@ namespace editdocuments
                 var processForm = new ProcessDialog();
                 processForm.Show();
 
-                processForm.RunGUIProcess(this.ImagePath,
-                    this.PlaceHolder,
-                    this.ImageLeftOffset.ConvertValue(GUnits.point),
-                    this.ImageBottomOffset.ConvertValue(GUnits.point),
-                    this.ImageWidth.ConvertValue(GUnits.point),
-                    this.ImageHeight.ConvertValue(GUnits.point),
-                    this.SelectedFiles ? null : this.FolderPath,
-                    this.SelectedFiles ? this.SelectedPaths : null,
-                    false,
-                    null,
-                    "PDF",
-                    false,
-                    true);
+                processForm.RunGUIProcess(this.Data);
             }
             catch(Exception error)
             {
@@ -265,31 +256,31 @@ namespace editdocuments
         {
             if (this.IgnoreTextChanged)
                 return;
-            this.ImageLeftOffset.Value = (double)this.numericUpDown3.Value;
+            this.Data.LeftOffset = (double)this.imageLeftOffsetNumeric.Value;
         }
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
             if (this.IgnoreTextChanged)
                 return;
-            this.ImageBottomOffset.Value = (double)this.numericUpDown4.Value;
+            this.Data.BottomOffset = (double)this.imageBottomOffsetNumeric.Value;
         }
 
         // Funtions to verify data
 
         private bool IsValidSelectedPath()
         {
-            return (!String.IsNullOrEmpty(textBox1.Text));
+            return (!String.IsNullOrEmpty(inputPathTextBox.Text));
         }
 
         private bool IsValidPicturePath()
         {
-            return (!String.IsNullOrEmpty(textBox2.Text));
+            return (!String.IsNullOrEmpty(picturePathTextBox.Text));
         }
 
         private bool IsValidPlaceHolder()
         {
-            return (!String.IsNullOrEmpty(textBox3.Text));
+            return (!String.IsNullOrEmpty(placeHolderTextBox.Text));
         }
 
         //Reference https://stackoverflow.com/a/56119473
@@ -329,13 +320,13 @@ namespace editdocuments
             //Console.WriteLine(sender.GetType().Name);
             if (IsValidSelectedPath())
             {
-                errorProvider1.SetError(this.textBox1, String.Empty);
+                errorProvider1.SetError(this.inputPathTextBox, String.Empty);
                 e.Cancel = false;
             }
             else
             {
-                errorProvider1.SetError(this.textBox1, Strings.TextValidationFilePath);
-                e.Cancel = this.button3.Focused;
+                errorProvider1.SetError(this.inputPathTextBox, Strings.TextValidationFilePath);
+                e.Cancel = this.generateButton.Focused;
             }
             
         }
@@ -345,13 +336,13 @@ namespace editdocuments
             if (IsValidPicturePath())
             {
                 e.Cancel = false;
-                errorProvider2.SetError(this.textBox2, String.Empty);
+                errorProvider2.SetError(this.picturePathTextBox, String.Empty);
                 
             }
             else
             {
-                e.Cancel = this.button3.Focused;
-                errorProvider2.SetError(this.textBox2, Strings.TextValidationPicturePath);
+                e.Cancel = this.generateButton.Focused;
+                errorProvider2.SetError(this.picturePathTextBox, Strings.TextValidationPicturePath);
                 
             }
         }
@@ -360,13 +351,13 @@ namespace editdocuments
         {
             if (IsValidPlaceHolder())
             {
-                errorProvider3.SetError(this.textBox3, String.Empty);
+                errorProvider3.SetError(this.placeHolderTextBox, String.Empty);
                 e.Cancel = false;
             }
             else
             {
-                errorProvider3.SetError(this.textBox3, Strings.TextValidationPlaceholder);
-                e.Cancel = this.button3.Focused;
+                errorProvider3.SetError(this.placeHolderTextBox, Strings.TextValidationPlaceholder);
+                e.Cancel = this.generateButton.Focused;
             }
         }
     }

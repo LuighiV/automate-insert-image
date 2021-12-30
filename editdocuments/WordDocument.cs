@@ -17,11 +17,16 @@ namespace editdocuments
         
         public Word.Range Range { get; set; }
 
-        public WordDocument(string Path, bool visible = false, Word.Application WordApp = null)
+        public WordDocument(string Path, bool visible = false, Word.Application WordApp = null, 
+            bool Verbose = false)
         {
             this.DocumentPath = Path;
             if (WordApp == null)
             {
+                if (Verbose)
+                {
+                    Console.WriteLine(Strings.InfoOpenWord);
+                }
                 WordApp = new Word.Application() { };
             }
             this.WordApp = WordApp;
@@ -30,27 +35,41 @@ namespace editdocuments
 
         }
 
-        internal void SaveAsPDF(string FolderName=null)
+        internal void SaveAsPDF(string FolderName=null, bool Verbose = false)
         {
             string Name = this.Document.Name;
+            if (Verbose)
+            {
+                Console.WriteLine(Strings.InfoFileName, Name);
+            }
+
             string NewName = Path.ChangeExtension(Name, "pdf");
 
             if (FolderName != null)
                 NewName = Path.Combine(FolderName, NewName);
 
-            Console.WriteLine(Strings.InfoFileName, Name);
+
+            
             this.Document.SaveAs2(FileName: NewName, FileFormat: Word.WdSaveFormat.wdFormatPDF);
-            Console.WriteLine(Strings.InfoSavedPDFFile, NewName);
+
+            if (Verbose)
+            {
+                Console.WriteLine(Strings.InfoSavedPDFFile, NewName);
+            }
         }
 
-        internal void Close(bool save=true)
+        internal void Close(bool save=true, bool Verbose=false)
         {
             if (save)
                 this.Document.Close(Word.WdSaveOptions.wdSaveChanges);
             else
                 this.Document.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
 
-            Console.WriteLine(Strings.InfoSaveWordDocument, save ? Strings.InfoYes : Strings.InfoNo);
+            if (Verbose)
+            {
+                Console.WriteLine(Strings.InfoSaveWordDocument, save ? Strings.InfoYes : Strings.InfoNo);
+            }
+            
         }
 
         internal void addPicture(string picture, double LeftOffset = 0, double BottomOffset = 0, double Width = 200,
@@ -67,12 +86,15 @@ namespace editdocuments
             
         }
 
-        public Word.Range GetRange(string text)
+        public Word.Range GetRange(string text, bool Verbose=false)
         {
             var range = this.Document.Content;
             range.Find.Execute(text);
             this.Range = range;
-            Console.WriteLine(Strings.InfoPlaceholder,this.Range.Text);
+            if (Verbose)
+            {
+                Console.WriteLine(Strings.InfoPlaceholder, this.Range.Text);
+            }
             return range;
         }
     }
