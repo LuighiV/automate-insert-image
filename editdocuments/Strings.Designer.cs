@@ -133,6 +133,15 @@ namespace editdocuments {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Finish processing files..
+        /// </summary>
+        internal static string InfoFinishProcessingFiles {
+            get {
+                return ResourceManager.GetString("InfoFinishProcessingFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Finish program.
         /// </summary>
         internal static string InfoFinishProgram {
@@ -192,6 +201,15 @@ namespace editdocuments {
         internal static string InfoStartFile {
             get {
                 return ResourceManager.GetString("InfoStartFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Starting processing {0} files..
+        /// </summary>
+        internal static string InfoStartProcessingFiles {
+            get {
+                return ResourceManager.GetString("InfoStartProcessingFiles", resourceCulture);
             }
         }
         

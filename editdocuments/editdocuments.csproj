@@ -92,6 +92,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Processor.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="ControlWriter.cs" />
     <Compile Include="ProcessDialog.cs">
@@ -156,6 +157,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ProcessDialog.es.resx">
+      <DependentUpon>ProcessDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProcessDialog.resx">
       <DependentUpon>ProcessDialog.cs</DependentUpon>
     </EmbeddedResource>

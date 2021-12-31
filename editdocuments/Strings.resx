@@ -141,6 +141,9 @@
   <data name="InfoFinishFile" xml:space="preserve">
     <value>Finish processing file {0}</value>
   </data>
+  <data name="InfoFinishProcessingFiles" xml:space="preserve">
+    <value>Finish processing files.</value>
+  </data>
   <data name="InfoFinishProgram" xml:space="preserve">
     <value>Finish program</value>
   </data>
@@ -161,6 +164,9 @@
   </data>
   <data name="InfoStartFile" xml:space="preserve">
     <value>Processsing file: {0}</value>
+  </data>
+  <data name="InfoStartProcessingFiles" xml:space="preserve">
+    <value>Starting processing {0} files.</value>
   </data>
   <data name="InfoStartProgram" xml:space="preserve">
     <value>Starting program</value>

@@ -117,72 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ExecutionCompletedDefaultMessage" xml:space="preserve">
-    <value>La ejecución del programa finalizó en todos los archivos seleccionados.</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Cerrar</value>
   </data>
-  <data name="ExecutionCompletedTitle" xml:space="preserve">
-    <value>Ejecución completada</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Archivo actual:</value>
   </data>
-  <data name="ExecutionErrorTitle" xml:space="preserve">
-    <value>Error de ejecución</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Ningún archivo seleccionado</value>
   </data>
-  <data name="InfoCloseWord" xml:space="preserve">
-    <value>Cerrando MS Word en segundo plano</value>
-  </data>
-  <data name="InfoCounterFile" xml:space="preserve">
-    <value>Archivo {0} /{1}</value>
-  </data>
-  <data name="InfoCreateDirectorySuccess" xml:space="preserve">
-    <value>El directorio {0} fue creado correctamente en {1}</value>
-  </data>
-  <data name="InfoFileName" xml:space="preserve">
-    <value>Nombre de archivo actual: {0}</value>
-  </data>
-  <data name="InfoFinishFile" xml:space="preserve">
-    <value>Procesamiento finalizado de archivo {0}</value>
-  </data>
-  <data name="InfoFinishProcessingFiles" xml:space="preserve">
-    <value>Procesamiento de archivos finalizado.</value>
-  </data>
-  <data name="InfoFinishProgram" xml:space="preserve">
-    <value>Programa finalizado</value>
-  </data>
-  <data name="InfoNo" xml:space="preserve">
-    <value>no</value>
-  </data>
-  <data name="InfoOpenWord" xml:space="preserve">
-    <value>Iniciando MS Word en segundo plano</value>
-  </data>
-  <data name="InfoPlaceholder" xml:space="preserve">
-    <value>Marcado de posicion en: {0}</value>
-  </data>
-  <data name="InfoSavedPDFFile" xml:space="preserve">
-    <value>Archivo PDF guardado: {0}</value>
-  </data>
-  <data name="InfoSaveWordDocument" xml:space="preserve">
-    <value>Guardar archivo Word: {0}</value>
-  </data>
-  <data name="InfoStartFile" xml:space="preserve">
-    <value>Procesando archivo: {0}</value>
-  </data>
-  <data name="InfoStartProcessingFiles" xml:space="preserve">
-    <value>Iniciando procesamiento de {0} archivos.</value>
-  </data>
-  <data name="InfoStartProgram" xml:space="preserve">
-    <value>Iniciando programa</value>
-  </data>
-  <data name="InfoYes" xml:space="preserve">
-    <value>sí</value>
-  </data>
-  <data name="TextValidationFilePath" xml:space="preserve">
-    <value>Se requiere un archivo válido.
-Use el botón Explorar para seleccionar uno.</value>
-  </data>
-  <data name="TextValidationPicturePath" xml:space="preserve">
-    <value>Se require una  figura válida.
-Use el botón Explorar para seleccionar una.</value>
-  </data>
-  <data name="TextValidationPlaceholder" xml:space="preserve">
-    <value>Se require un marcador de posición no vacío.</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Procesando archivos</value>
   </data>
 </root>

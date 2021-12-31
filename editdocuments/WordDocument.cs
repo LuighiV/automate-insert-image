@@ -35,7 +35,7 @@ namespace editdocuments
 
         }
 
-        internal void SaveAsPDF(string FolderName=null, bool Verbose = false)
+        internal string SaveAsPDF(string FolderName=null, bool Verbose = false)
         {
             string Name = this.Document.Name;
             if (Verbose)
@@ -56,6 +56,8 @@ namespace editdocuments
             {
                 Console.WriteLine(Strings.InfoSavedPDFFile, NewName);
             }
+
+            return NewName;
         }
 
         internal void Close(bool save=true, bool Verbose=false)
@@ -86,7 +88,7 @@ namespace editdocuments
             
         }
 
-        public Word.Range GetRange(string text, bool Verbose=false)
+        public string GetRange(string text, bool Verbose=false)
         {
             var range = this.Document.Content;
             range.Find.Execute(text);
@@ -95,7 +97,7 @@ namespace editdocuments
             {
                 Console.WriteLine(Strings.InfoPlaceholder, this.Range.Text);
             }
-            return range;
+            return this.Range.Text;
         }
     }
 }

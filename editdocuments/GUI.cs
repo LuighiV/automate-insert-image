@@ -227,7 +227,7 @@ namespace editdocuments
                 var processForm = new ProcessDialog();
                 processForm.Show();
 
-                processForm.RunGUIProcess(this.Data);
+                processForm.RunThreadProcess(this.Data);
             }
             catch(Exception error)
             {
@@ -243,10 +243,10 @@ namespace editdocuments
                 this.Cursor = Cursors.Default;
                 Application.UseWaitCursor = false;
 
-                MessageBox.Show(Strings.ExecutionCompletedDefaultMessage,
-                    Strings.ExecutionCompletedTitle,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                //MessageBox.Show(Strings.ExecutionCompletedDefaultMessage,
+                //    Strings.ExecutionCompletedTitle,
+                //    MessageBoxButtons.OK,
+                //    MessageBoxIcon.Information);
 
             }
 

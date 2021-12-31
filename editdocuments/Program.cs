@@ -157,6 +157,8 @@ namespace editdocuments
             if (Verbose)
             {
                 Console.WriteLine(Strings.InfoStartProgram);
+                Console.WriteLine();
+                Console.WriteLine(Strings.InfoOpenWord);
             }
 
             var WordApp = new Word.Application();
@@ -169,8 +171,15 @@ namespace editdocuments
 
             try
             {
+                int index = 0;
+                int totalElements = InputFiles.Count();
                 foreach (var FilePath in InputFiles)
                 {
+                    if (Verbose)
+                    {
+                        Console.WriteLine(Strings.InfoCounterFile, index + 1, totalElements);
+                        Console.WriteLine();
+                    }
                     // If SubFolderSave defined use this value, otherwise use FolderSave
                     if (SubFolderSave != null)
                     {
@@ -194,8 +203,18 @@ namespace editdocuments
                               WordAppVisible,
                               FolderSave,
                               SaveFile);
+                    if (Verbose)
+                    {
+                        Console.WriteLine("\n\n");
+                    }
+                    index++;
                 }
 
+                if (Verbose)
+                {
+                    Console.WriteLine(Strings.InfoCloseWord);
+                    Console.WriteLine();
+                }
 
                 WordApp.Quit();
 
