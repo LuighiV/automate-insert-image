@@ -123,8 +123,8 @@ namespace editdocuments
 
         static void RunOptions(Options opts)
         {
-
-            RunProcess(opts.PicturePath,
+            var processor = new Processor();
+            processor.RunProcess(opts.PicturePath,
                 opts.PlaceHolder,
                 opts.LeftOffset,
                 opts.BottomOffset,
@@ -137,138 +137,6 @@ namespace editdocuments
                 opts.SubFolderSave,
                 opts.SaveFile,
                 opts.Verbose);
-        }
-
-        public static void RunProcess(
-            string PicturePath,
-            string TextPlaceHolder,
-            double LeftOffset=0,
-            double BottomOffset =0,
-            double Width = 200,
-            double Height = 150,
-            string InputFolder = null,
-            IEnumerable<string> InputFiles = null,
-            bool WordAppVisible = true,
-            string FolderSave = null,
-            string SubFolderSave = null,
-            bool SaveFile = false,
-            bool Verbose = true)
-        {
-            if (Verbose)
-            {
-                Console.WriteLine(Strings.InfoStartProgram);
-                Console.WriteLine();
-                Console.WriteLine(Strings.InfoOpenWord);
-            }
-
-            var WordApp = new Word.Application();
-
-            // If InputFolder defined use this value, otherwise use InputFiles
-            if (InputFolder != null)
-            {
-                InputFiles = GetWordFiles(InputFolder);
-            }
-
-            try
-            {
-                int index = 0;
-                int totalElements = InputFiles.Count();
-                foreach (var FilePath in InputFiles)
-                {
-                    if (Verbose)
-                    {
-                        Console.WriteLine(Strings.InfoCounterFile, index + 1, totalElements);
-                        Console.WriteLine();
-                    }
-                    // If SubFolderSave defined use this value, otherwise use FolderSave
-                    if (SubFolderSave != null)
-                    {
-                        FolderSave = Path.Combine(Path.GetDirectoryName(FilePath), SubFolderSave);
-                    }
-
-                    if (FolderSave != null && !Directory.Exists(FolderSave))
-                    {
-                        DirectoryInfo dir = Directory.CreateDirectory(FolderSave);
-                        Console.WriteLine(Strings.InfoCreateDirectorySuccess, dir.FullName, dir.CreationTime);
-                    }
-
-                    RunOnFile(FilePath,
-                              PicturePath,
-                              TextPlaceHolder,
-                              LeftOffset,
-                              BottomOffset,
-                              Width,
-                              Height,
-                              WordApp,
-                              WordAppVisible,
-                              FolderSave,
-                              SaveFile);
-                    if (Verbose)
-                    {
-                        Console.WriteLine("\n\n");
-                    }
-                    index++;
-                }
-
-                if (Verbose)
-                {
-                    Console.WriteLine(Strings.InfoCloseWord);
-                    Console.WriteLine();
-                }
-
-                WordApp.Quit();
-
-                if (Verbose)
-                {
-                    Console.WriteLine(Strings.InfoFinishProgram);
-                }
-            }
-            catch(Exception e)
-            {
-                WordApp.Quit();
-                throw e;
-            }
-            
-        }
-
-        public static void RunOnFile(string FilePath, 
-            string PicturePath,
-            string TextPlaceHolder,
-            double LeftOffset,
-            double BottomOffset,
-            double Width,
-            double Height,
-            Word.Application WordApp=null,
-            bool WordAppVisible=true,
-            string FolderSave=null,
-            bool SaveFile=false)
-        {
-            Console.WriteLine(Strings.InfoStartFile, FilePath);
-
-            var WordDocument = new WordDocument(FilePath, WordAppVisible, WordApp);
-            try
-            {
-                WordDocument.GetRange(TextPlaceHolder);
-                WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset, Width, Height);
-                WordDocument.SaveAsPDF(FolderSave);
-                //Console.ReadKey();
-                WordDocument.Close(SaveFile);
-
-                Console.WriteLine(Strings.InfoFinishFile, FilePath);
-            }
-            catch(Exception e)
-            {
-                WordDocument.Close(false);
-                throw e;
-            }
-            
-        }
-
-        public static IEnumerable<string> GetWordFiles(string FolderName)
-        {
-            return from f in Directory.EnumerateFiles(FolderName)
-                   where f.EndsWith(".doc") || f.EndsWith(".docx")
-                   select f;
         }
     }
 }

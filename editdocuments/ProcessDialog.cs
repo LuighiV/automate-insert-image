@@ -287,7 +287,7 @@ namespace editdocuments
             // If InputFolder defined use this value, otherwise use InputFiles
             if (InputFolder != null)
             {
-                InputFiles = Program.GetWordFiles(InputFolder);
+                InputFiles = Processor.GetWordFiles(InputFolder);
             }
 
             try
@@ -322,7 +322,7 @@ namespace editdocuments
                         Console.WriteLine(Strings.InfoCreateDirectorySuccess, dir.FullName, dir.CreationTime);
                     }
 
-                    Program.RunOnFile(FilePath,
+                    this.BackgroundProcess.RunOnFile(FilePath,
                               PicturePath,
                               TextPlaceHolder,
                               LeftOffset,
