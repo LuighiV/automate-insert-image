@@ -29,5 +29,11 @@
     <Setting Name="KeepAspect" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="IsSubFolderSelected" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SubFolderSave" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PDF</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

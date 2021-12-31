@@ -18,6 +18,7 @@ namespace editdocuments
             string inputPath = null,
             bool isFilesSelected = true,
             bool wordAppVisible = false,
+            bool isSubFolderSelected = true,
             string folderSave = null,
             string subFolderSave = null,
             bool saveFile = false)
@@ -28,8 +29,9 @@ namespace editdocuments
             InputPath = (fromSettings) ? Properties.Settings.Default.InputPath : inputPath;
             IsFilesSelected = (fromSettings) ? Properties.Settings.Default.IsFilesOptionSelected : isFilesSelected;
             WordAppVisible = wordAppVisible;
-            FolderSave = folderSave;
-            SubFolderSave = subFolderSave;
+            IsSubFolderSelected = (fromSettings) ? Properties.Settings.Default.IsSubFolderSelected : isSubFolderSelected;
+            _FolderSave = folderSave;
+            _SubFolderSave = (fromSettings) ? Properties.Settings.Default.SubFolderSave : subFolderSave;
             SaveFile = saveFile;
  
             _ImageWidth = new Quantity(0,unit);
@@ -49,6 +51,8 @@ namespace editdocuments
         private Quantity _ImageLeftOffset;
         private Quantity _ImageBottomOffset;
         private GUnits _Unit;
+        private string _FolderSave;
+        private string _SubFolderSave;
 
         public GUnits Unit { get { return _Unit; } set { _Unit = value; 
                 _ImageWidth.ToUnit(value);
@@ -66,12 +70,17 @@ namespace editdocuments
         public string InputPath { get; set; }
         public bool IsFilesSelected { get; set; }
         public bool WordAppVisible { get; set; }
-        public string FolderSave { get; set; }
-        public string SubFolderSave { get; set; }
+        public bool IsSubFolderSelected { get; set; }
+
         public bool SaveFile { get; set; }
 
         public IEnumerable<string> InputFilePaths => (IsFilesSelected) ? InputPath.Split(',') : null;
 
         public string FolderPath => (IsFilesSelected) ? null : InputPath;
+
+        public string FolderSave { get => (IsSubFolderSelected)? null:_FolderSave;
+            set => _FolderSave = value; }
+        public string SubFolderSave { get => (IsSubFolderSelected) ? _SubFolderSave:null; 
+            set => _SubFolderSave = value; }
     }
 }

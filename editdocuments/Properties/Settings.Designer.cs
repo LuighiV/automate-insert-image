@@ -130,5 +130,29 @@ namespace editdocuments.Properties {
                 this["KeepAspect"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsSubFolderSelected {
+            get {
+                return ((bool)(this["IsSubFolderSelected"]));
+            }
+            set {
+                this["IsSubFolderSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PDF")]
+        public string SubFolderSave {
+            get {
+                return ((string)(this["SubFolderSave"]));
+            }
+            set {
+                this["SubFolderSave"] = value;
+            }
+        }
     }
 }

@@ -154,7 +154,7 @@
     <value>Iniciando MS Word en segundo plano</value>
   </data>
   <data name="InfoPlaceholder" xml:space="preserve">
-    <value>Marcado de posicion en: {0}</value>
+    <value>Marcador de posicion en: {0}</value>
   </data>
   <data name="InfoSavedPDFFile" xml:space="preserve">
     <value>Archivo PDF guardado: {0}</value>

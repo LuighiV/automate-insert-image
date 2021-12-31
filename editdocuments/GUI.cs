@@ -347,18 +347,33 @@ namespace editdocuments
             }
         }
 
-        private void textBox3_Validating(object sender, CancelEventArgs e)
+        private void placeHolderTextBox_Validating(object sender, CancelEventArgs e)
         {
             if (IsValidPlaceHolder())
             {
-                errorProvider3.SetError(this.placeHolderTextBox, String.Empty);
+                placeHolderErrorProvider.SetError(this.placeHolderTextBox, String.Empty);
                 e.Cancel = false;
             }
             else
             {
-                errorProvider3.SetError(this.placeHolderTextBox, Strings.TextValidationPlaceholder);
+                placeHolderErrorProvider.SetError(this.placeHolderTextBox, Strings.TextValidationPlaceholder);
                 e.Cancel = this.generateButton.Focused;
             }
+        }
+
+        private void subFolderButtonOption_CheckedChanged(object sender, EventArgs e)
+        {
+            this.Data.IsSubFolderSelected = true;
+        }
+
+        private void sameFolderButtonOption_CheckedChanged(object sender, EventArgs e)
+        {
+            this.Data.IsSubFolderSelected = false;
+        }
+
+        private void subFolderTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.Data.SubFolderSave = this.subFolderTextBox.Text;
         }
     }
 }
