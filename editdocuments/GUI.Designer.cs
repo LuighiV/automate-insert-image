@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
-            editdocuments.Properties.Settings settings2 = new editdocuments.Properties.Settings();
+            editdocuments.Properties.Settings settings1 = new editdocuments.Properties.Settings();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -346,36 +346,36 @@
             // filesOptionButton
             // 
             resources.ApplyResources(this.filesOptionButton, "filesOptionButton");
-            settings2.ImageBottomOffset = new decimal(new int[] {
+            settings1.ImageBottomOffset = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            settings2.ImageHeight = new decimal(new int[] {
+            settings1.ImageHeight = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            settings2.ImageLeftOffset = new decimal(new int[] {
+            settings1.ImageLeftOffset = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            settings2.ImageWidth = new decimal(new int[] {
+            settings1.ImageWidth = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            settings2.InputPath = "";
-            settings2.IsFilesOptionSelected = true;
-            settings2.IsSubFolderSelected = true;
-            settings2.KeepAspect = true;
-            settings2.PicturePath = "";
-            settings2.PlaceHolder = "";
-            settings2.SettingsKey = "";
-            settings2.SubFolderSave = "PDF";
-            this.filesOptionButton.Checked = settings2.IsFilesOptionSelected;
-            this.filesOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", settings2, "IsFilesOptionSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            settings1.InputPath = "";
+            settings1.IsFilesOptionSelected = true;
+            settings1.IsSubFolderSelected = true;
+            settings1.KeepAspect = true;
+            settings1.PicturePath = "";
+            settings1.PlaceHolder = "";
+            settings1.SettingsKey = "";
+            settings1.SubFolderSave = "PDF";
+            this.filesOptionButton.Checked = settings1.IsFilesOptionSelected;
+            this.filesOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", settings1, "IsFilesOptionSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.filesOptionButton.Name = "filesOptionButton";
             this.filesOptionButton.TabStop = true;
             this.filesOptionButton.UseVisualStyleBackColor = true;
