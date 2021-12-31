@@ -19,16 +19,7 @@ namespace editdocuments
         public bool SelectedFiles = true;
         public bool KeepAspect = true;
         public bool IgnoreTextChanged = false;
-        //public IEnumerable<string> SelectedPaths = null;
-        //public string FolderPath = null;
-        //public string ImagePath = null;
-        //public string PlaceHolder = null;
         public Image CurrentImage = null;
-
-        //public Quantity ImageWidth = Quantity.FromInches(0);
-        //public Quantity ImageHeight = Quantity.FromInches(0);
-        //public Quantity ImageLeftOffset = Quantity.FromInches(0);
-        //public Quantity ImageBottomOffset = Quantity.FromInches(0);
 
         public GUI()
         {
@@ -37,23 +28,9 @@ namespace editdocuments
             this.comboBox1.DisplayMember = "Literal";
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //if (this.Data.IsFilesSelected)
-            //{
-            //    this.SelectedPaths = this.inputPathTextBox.Text.Split(',');
-            //}
-            //else
-            //{
-            //    this.FolderPath = this.inputPathTextBox.Text;
-            //}
             this.Data.InputPath = this.inputPathTextBox.Text;
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,25 +63,13 @@ namespace editdocuments
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            //this.SelectedPaths = this.openFileDialog1.FileNames;
             this.inputPathTextBox.Text = String.Join(",", this.openFileDialog1.FileNames);
             this.Data.InputPath = this.inputPathTextBox.Text;
-            //this.inputPathTextBox.Enabled = true;
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.openFileDialog2.ShowDialog();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
@@ -185,7 +150,7 @@ namespace editdocuments
                 this.IgnoreTextChanged = true;
                 this.Data.Height = this.Data.Width / aspectRatio;
                 this.imageHeightNumeric.Value = (decimal)this.Data.Height;
-                this.imageWidthNumeric.Value = (decimal)this.Data.Width;
+                this.imageWidthNumeric.Value = (decimal)this.Data.Width; //required to prevent not save data en GUI
                 this.IgnoreTextChanged = false;
             }
         }
@@ -203,7 +168,7 @@ namespace editdocuments
                 this.IgnoreTextChanged = true;
                 this.Data.Width = this.Data.Height * aspectRatio;
                 this.imageWidthNumeric.Value = (decimal)this.Data.Width;
-                this.imageHeightNumeric.Value = (decimal)this.Data.Height;
+                this.imageHeightNumeric.Value = (decimal)this.Data.Height; //required to prevent not save data en GUI
                 this.IgnoreTextChanged = false;
             }
         }
@@ -242,11 +207,6 @@ namespace editdocuments
                 this.Enabled = true;
                 this.Cursor = Cursors.Default;
                 Application.UseWaitCursor = false;
-
-                //MessageBox.Show(Strings.ExecutionCompletedDefaultMessage,
-                //    Strings.ExecutionCompletedTitle,
-                //    MessageBoxButtons.OK,
-                //    MessageBoxIcon.Information);
 
             }
 
@@ -317,7 +277,6 @@ namespace editdocuments
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
 
-            //Console.WriteLine(sender.GetType().Name);
             if (IsValidSelectedPath())
             {
                 errorProvider1.SetError(this.inputPathTextBox, String.Empty);
