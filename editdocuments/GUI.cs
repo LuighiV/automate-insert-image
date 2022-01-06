@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace editdocuments
 {
@@ -21,11 +22,28 @@ namespace editdocuments
         public bool IgnoreTextChanged = false;
         public Image CurrentImage = null;
 
+        public CultureInfo cultureInfo;
+
+        public bool SettingsHasChanged = false;
+
         public GUI()
         {
             InitializeComponent();
             this.comboBox1.DataSource = Globals.AvailableUnits;
             this.comboBox1.DisplayMember = "Literal";
+            this.cultureInfo = CultureInfo.CurrentCulture;
+
+            if(this.cultureInfo.Parent.Name == "es")
+            {
+                this.spanishToolStripMenuItem.Checked = true;
+                this.englishToolStripMenuItem.Checked = false;
+
+            }
+            else
+            {
+                this.spanishToolStripMenuItem.Checked = false;
+                this.englishToolStripMenuItem.Checked = true;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -333,6 +351,108 @@ namespace editdocuments
         private void subFolderTextBox_TextChanged(object sender, EventArgs e)
         {
             this.Data.SubFolderSave = this.subFolderTextBox.Text;
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeToCulture(new CultureInfo("en-US"));
+            this.englishToolStripMenuItem.Checked = true;
+            this.spanishToolStripMenuItem.Checked = false;
+        }
+
+        private void changeToCulture(CultureInfo cultureInfo)
+        {
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(GUI));
+            resources.ApplyResources(this, "$this");
+            applyResources(resources, this.Controls);
+        }
+
+        // reference https://stackoverflow.com/a/7558253
+        private void applyResources(ComponentResourceManager resources, Control.ControlCollection ctls)
+        {
+            foreach (Control ctl in ctls)
+            {
+                resources.ApplyResources(ctl, ctl.Name);
+                applyResources(resources, ctl.Controls);
+            }
+        }
+
+        private void spanishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeToCulture(new CultureInfo("es"));
+            this.englishToolStripMenuItem.Checked = false;
+            this.spanishToolStripMenuItem.Checked = true;
+        }
+
+        private void saveCurrentValuesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Save();
+
+            //Console.WriteLine(Properties.Settings.Default.PicturePath);
+            this.saveCurrentValuesToolStripMenuItem.Enabled = false;
+            this.SettingsHasChanged = false;
+        }
+
+        private void resetToDefaultsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Reset();
+            //Console.WriteLine("Reset settings");
+        }
+
+        private void howToUseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var infoDialog = new InfoDialog(Strings.TitleHowToUse, Files.howToUse);
+            infoDialog.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var infoDialog = new InfoDialog(Strings.TitleAbout, Files.about);
+            infoDialog.Show();
+        }
+
+        private void GUI_Load(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.PropertyChanged += Default_PropertyChanged;
+            Properties.Settings.Default.SettingsSaving += Default_SettingsSaving;
+        }
+
+        private void Default_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.SettingsHasChanged = true;
+            this.saveCurrentValuesToolStripMenuItem.Enabled = true;
+            //Console.WriteLine($"{e.PropertyName}");
+        }
+
+        private void Default_SettingsSaving(object sender, CancelEventArgs e)
+        {
+            //Console.WriteLine("Saving settings");
+        }
+
+        private void GUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (SettingsHasChanged)
+            {
+                DialogResult result = MessageBox.Show(Strings.QuerySaveCurrentValues,
+                    Strings.SaveCurrentValues,
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Information);
+
+                if(result == DialogResult.Yes)
+                {
+                    Properties.Settings.Default.Save();
+                } 
+                else if (result == DialogResult.No)
+                {
+
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

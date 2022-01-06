@@ -30,36 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
-            editdocuments.Properties.Settings settings1 = new editdocuments.Properties.Settings();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.filesOptionButton = new System.Windows.Forms.RadioButton();
             this.folderOptionButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.inputPathTextBox = new System.Windows.Forms.TextBox();
             this.exploreInputPathButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.picturePathTextBox = new System.Windows.Forms.TextBox();
             this.explorePicturePathButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.imageHeightNumeric = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
+            this.imageWidthNumeric = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.imageBottomOffsetNumeric = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
+            this.imageLeftOffsetNumeric = new System.Windows.Forms.NumericUpDown();
+            this.keepAspectCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.placeHolderTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.generateButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.subFolderButtonOption = new System.Windows.Forms.RadioButton();
             this.sameFolderButtonOption = new System.Windows.Forms.RadioButton();
+            this.subFolderTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
@@ -67,19 +77,19 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetToDefaultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveCurrentValuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spanishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.placeHolderErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.filesOptionButton = new System.Windows.Forms.RadioButton();
-            this.inputPathTextBox = new System.Windows.Forms.TextBox();
-            this.picturePathTextBox = new System.Windows.Forms.TextBox();
-            this.imageHeightNumeric = new System.Windows.Forms.NumericUpDown();
-            this.imageWidthNumeric = new System.Windows.Forms.NumericUpDown();
-            this.imageBottomOffsetNumeric = new System.Windows.Forms.NumericUpDown();
-            this.imageLeftOffsetNumeric = new System.Windows.Forms.NumericUpDown();
-            this.keepAspectCheckBox = new System.Windows.Forms.CheckBox();
-            this.placeHolderTextBox = new System.Windows.Forms.TextBox();
-            this.subFolderButtonOption = new System.Windows.Forms.RadioButton();
-            this.subFolderTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -87,6 +97,10 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageHeightNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageWidthNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBottomOffsetNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageLeftOffsetNumeric)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
@@ -94,12 +108,9 @@
             this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.placeHolderErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageHeightNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageWidthNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBottomOffsetNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageLeftOffsetNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -132,6 +143,16 @@
             this.tableLayoutPanel2.Controls.Add(this.folderOptionButton, 1, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
+            // filesOptionButton
+            // 
+            resources.ApplyResources(this.filesOptionButton, "filesOptionButton");
+            this.filesOptionButton.Checked = global::editdocuments.Properties.Settings.Default.IsFilesOptionSelected;
+            this.filesOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsFilesOptionSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.filesOptionButton.Name = "filesOptionButton";
+            this.filesOptionButton.TabStop = true;
+            this.filesOptionButton.UseVisualStyleBackColor = true;
+            this.filesOptionButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // folderOptionButton
             // 
             resources.ApplyResources(this.folderOptionButton, "folderOptionButton");
@@ -151,6 +172,17 @@
             this.tableLayoutPanel3.Controls.Add(this.exploreInputPathButton, 1, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
+            // inputPathTextBox
+            // 
+            resources.ApplyResources(this.inputPathTextBox, "inputPathTextBox");
+            this.inputPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "InputPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.inputPathTextBox.Name = "inputPathTextBox";
+            this.inputPathTextBox.ReadOnly = true;
+            this.inputPathTextBox.TabStop = false;
+            this.inputPathTextBox.Text = global::editdocuments.Properties.Settings.Default.InputPath;
+            this.inputPathTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.inputPathTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
+            // 
             // exploreInputPathButton
             // 
             resources.ApplyResources(this.exploreInputPathButton, "exploreInputPathButton");
@@ -169,6 +201,17 @@
             this.tableLayoutPanel4.Controls.Add(this.picturePathTextBox, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.explorePicturePathButton, 1, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            // 
+            // picturePathTextBox
+            // 
+            resources.ApplyResources(this.picturePathTextBox, "picturePathTextBox");
+            this.picturePathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "PicturePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.picturePathTextBox.Name = "picturePathTextBox";
+            this.picturePathTextBox.ReadOnly = true;
+            this.picturePathTextBox.TabStop = false;
+            this.picturePathTextBox.Text = global::editdocuments.Properties.Settings.Default.PicturePath;
+            this.picturePathTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.picturePathTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
             // explorePicturePathButton
             // 
@@ -207,10 +250,38 @@
             this.tableLayoutPanel6.Controls.Add(this.keepAspectCheckBox, 1, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             // 
+            // imageHeightNumeric
+            // 
+            resources.ApplyResources(this.imageHeightNumeric, "imageHeightNumeric");
+            this.imageHeightNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageHeight", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.imageHeightNumeric.DecimalPlaces = 2;
+            this.imageHeightNumeric.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.imageHeightNumeric.Name = "imageHeightNumeric";
+            this.imageHeightNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageHeight;
+            this.imageHeightNumeric.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
+            // 
+            // imageWidthNumeric
+            // 
+            resources.ApplyResources(this.imageWidthNumeric, "imageWidthNumeric");
+            this.imageWidthNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageWidth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.imageWidthNumeric.DecimalPlaces = 2;
+            this.imageWidthNumeric.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.imageWidthNumeric.Name = "imageWidthNumeric";
+            this.imageWidthNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageWidth;
+            this.imageWidthNumeric.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label4
             // 
@@ -234,10 +305,59 @@
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
+            // imageBottomOffsetNumeric
+            // 
+            resources.ApplyResources(this.imageBottomOffsetNumeric, "imageBottomOffsetNumeric");
+            this.imageBottomOffsetNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageBottomOffset", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.imageBottomOffsetNumeric.DecimalPlaces = 2;
+            this.imageBottomOffsetNumeric.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.imageBottomOffsetNumeric.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.imageBottomOffsetNumeric.Name = "imageBottomOffsetNumeric";
+            this.imageBottomOffsetNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageBottomOffset;
+            this.imageBottomOffsetNumeric.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
+            // 
+            // imageLeftOffsetNumeric
+            // 
+            resources.ApplyResources(this.imageLeftOffsetNumeric, "imageLeftOffsetNumeric");
+            this.imageLeftOffsetNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageLeftOffset", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.imageLeftOffsetNumeric.DecimalPlaces = 2;
+            this.imageLeftOffsetNumeric.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.imageLeftOffsetNumeric.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.imageLeftOffsetNumeric.Name = "imageLeftOffsetNumeric";
+            this.imageLeftOffsetNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageLeftOffset;
+            this.imageLeftOffsetNumeric.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // keepAspectCheckBox
+            // 
+            resources.ApplyResources(this.keepAspectCheckBox, "keepAspectCheckBox");
+            this.keepAspectCheckBox.Checked = global::editdocuments.Properties.Settings.Default.KeepAspect;
+            this.keepAspectCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.keepAspectCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "KeepAspect", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.keepAspectCheckBox.Name = "keepAspectCheckBox";
+            this.keepAspectCheckBox.TabStop = false;
+            this.keepAspectCheckBox.UseVisualStyleBackColor = true;
+            this.keepAspectCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -268,6 +388,15 @@
             this.tableLayoutPanel7.Controls.Add(this.placeHolderTextBox, 0, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             // 
+            // placeHolderTextBox
+            // 
+            resources.ApplyResources(this.placeHolderTextBox, "placeHolderTextBox");
+            this.placeHolderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "PlaceHolder", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.placeHolderTextBox.Name = "placeHolderTextBox";
+            this.placeHolderTextBox.Text = global::editdocuments.Properties.Settings.Default.PlaceHolder;
+            this.placeHolderTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.placeHolderTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.placeHolderTextBox_Validating);
+            // 
             // tableLayoutPanel8
             // 
             resources.ApplyResources(this.tableLayoutPanel8, "tableLayoutPanel8");
@@ -294,12 +423,31 @@
             this.tableLayoutPanel9.Controls.Add(this.subFolderTextBox, 2, 0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             // 
+            // subFolderButtonOption
+            // 
+            resources.ApplyResources(this.subFolderButtonOption, "subFolderButtonOption");
+            this.subFolderButtonOption.Checked = global::editdocuments.Properties.Settings.Default.IsSubFolderSelected;
+            this.subFolderButtonOption.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsSubFolderSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.subFolderButtonOption.Name = "subFolderButtonOption";
+            this.subFolderButtonOption.TabStop = true;
+            this.subFolderButtonOption.UseVisualStyleBackColor = true;
+            this.subFolderButtonOption.CheckedChanged += new System.EventHandler(this.subFolderButtonOption_CheckedChanged);
+            // 
             // sameFolderButtonOption
             // 
             resources.ApplyResources(this.sameFolderButtonOption, "sameFolderButtonOption");
             this.sameFolderButtonOption.Name = "sameFolderButtonOption";
             this.sameFolderButtonOption.UseVisualStyleBackColor = true;
             this.sameFolderButtonOption.CheckedChanged += new System.EventHandler(this.sameFolderButtonOption_CheckedChanged);
+            // 
+            // subFolderTextBox
+            // 
+            resources.ApplyResources(this.subFolderTextBox, "subFolderTextBox");
+            this.subFolderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "SubFolderSave", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.subFolderTextBox.Name = "subFolderTextBox";
+            this.subFolderTextBox.TabStop = false;
+            this.subFolderTextBox.Text = global::editdocuments.Properties.Settings.Default.SubFolderSave;
+            this.subFolderTextBox.TextChanged += new System.EventHandler(this.subFolderTextBox_TextChanged);
             // 
             // openFileDialog1
             // 
@@ -335,6 +483,82 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem,
+            this.optionsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetToDefaultsToolStripMenuItem,
+            this.saveCurrentValuesToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            // 
+            // resetToDefaultsToolStripMenuItem
+            // 
+            this.resetToDefaultsToolStripMenuItem.Name = "resetToDefaultsToolStripMenuItem";
+            resources.ApplyResources(this.resetToDefaultsToolStripMenuItem, "resetToDefaultsToolStripMenuItem");
+            this.resetToDefaultsToolStripMenuItem.Click += new System.EventHandler(this.resetToDefaultsToolStripMenuItem_Click);
+            // 
+            // saveCurrentValuesToolStripMenuItem
+            // 
+            this.saveCurrentValuesToolStripMenuItem.Name = "saveCurrentValuesToolStripMenuItem";
+            resources.ApplyResources(this.saveCurrentValuesToolStripMenuItem, "saveCurrentValuesToolStripMenuItem");
+            this.saveCurrentValuesToolStripMenuItem.Click += new System.EventHandler(this.saveCurrentValuesToolStripMenuItem_Click);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.languageToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            resources.ApplyResources(this.optionsToolStripMenuItem, "optionsToolStripMenuItem");
+            // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.spanishToolStripMenuItem});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // spanishToolStripMenuItem
+            // 
+            this.spanishToolStripMenuItem.Name = "spanishToolStripMenuItem";
+            resources.ApplyResources(this.spanishToolStripMenuItem, "spanishToolStripMenuItem");
+            this.spanishToolStripMenuItem.Click += new System.EventHandler(this.spanishToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.howToUseToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            // 
+            // howToUseToolStripMenuItem
+            // 
+            this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
+            resources.ApplyResources(this.howToUseToolStripMenuItem, "howToUseToolStripMenuItem");
+            this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.howToUseToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
@@ -343,178 +567,17 @@
             // 
             this.placeHolderErrorProvider.ContainerControl = this;
             // 
-            // filesOptionButton
-            // 
-            resources.ApplyResources(this.filesOptionButton, "filesOptionButton");
-            settings1.ImageBottomOffset = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            settings1.ImageHeight = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            settings1.ImageLeftOffset = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            settings1.ImageWidth = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            settings1.InputPath = "";
-            settings1.IsFilesOptionSelected = true;
-            settings1.IsSubFolderSelected = true;
-            settings1.KeepAspect = true;
-            settings1.PicturePath = "";
-            settings1.PlaceHolder = "";
-            settings1.SettingsKey = "";
-            settings1.SubFolderSave = "PDF";
-            this.filesOptionButton.Checked = settings1.IsFilesOptionSelected;
-            this.filesOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", settings1, "IsFilesOptionSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.filesOptionButton.Name = "filesOptionButton";
-            this.filesOptionButton.TabStop = true;
-            this.filesOptionButton.UseVisualStyleBackColor = true;
-            this.filesOptionButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // inputPathTextBox
-            // 
-            resources.ApplyResources(this.inputPathTextBox, "inputPathTextBox");
-            this.inputPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", settings1, "InputPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.inputPathTextBox.Name = "inputPathTextBox";
-            this.inputPathTextBox.ReadOnly = true;
-            this.inputPathTextBox.TabStop = false;
-            this.inputPathTextBox.Text = settings1.InputPath;
-            this.inputPathTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.inputPathTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
-            // 
-            // picturePathTextBox
-            // 
-            resources.ApplyResources(this.picturePathTextBox, "picturePathTextBox");
-            this.picturePathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", settings1, "PicturePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.picturePathTextBox.Name = "picturePathTextBox";
-            this.picturePathTextBox.ReadOnly = true;
-            this.picturePathTextBox.TabStop = false;
-            this.picturePathTextBox.Text = settings1.PicturePath;
-            this.picturePathTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.picturePathTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
-            // 
-            // imageHeightNumeric
-            // 
-            resources.ApplyResources(this.imageHeightNumeric, "imageHeightNumeric");
-            this.imageHeightNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", settings1, "ImageHeight", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageHeightNumeric.DecimalPlaces = 2;
-            this.imageHeightNumeric.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.imageHeightNumeric.Name = "imageHeightNumeric";
-            this.imageHeightNumeric.Value = settings1.ImageHeight;
-            this.imageHeightNumeric.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            // 
-            // imageWidthNumeric
-            // 
-            resources.ApplyResources(this.imageWidthNumeric, "imageWidthNumeric");
-            this.imageWidthNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", settings1, "ImageWidth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageWidthNumeric.DecimalPlaces = 2;
-            this.imageWidthNumeric.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.imageWidthNumeric.Name = "imageWidthNumeric";
-            this.imageWidthNumeric.Value = settings1.ImageWidth;
-            this.imageWidthNumeric.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // imageBottomOffsetNumeric
-            // 
-            resources.ApplyResources(this.imageBottomOffsetNumeric, "imageBottomOffsetNumeric");
-            this.imageBottomOffsetNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", settings1, "ImageBottomOffset", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageBottomOffsetNumeric.DecimalPlaces = 2;
-            this.imageBottomOffsetNumeric.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.imageBottomOffsetNumeric.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.imageBottomOffsetNumeric.Name = "imageBottomOffsetNumeric";
-            this.imageBottomOffsetNumeric.Value = settings1.ImageBottomOffset;
-            this.imageBottomOffsetNumeric.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
-            // 
-            // imageLeftOffsetNumeric
-            // 
-            resources.ApplyResources(this.imageLeftOffsetNumeric, "imageLeftOffsetNumeric");
-            this.imageLeftOffsetNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", settings1, "ImageLeftOffset", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageLeftOffsetNumeric.DecimalPlaces = 2;
-            this.imageLeftOffsetNumeric.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.imageLeftOffsetNumeric.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.imageLeftOffsetNumeric.Name = "imageLeftOffsetNumeric";
-            this.imageLeftOffsetNumeric.Value = settings1.ImageLeftOffset;
-            this.imageLeftOffsetNumeric.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
-            // 
-            // keepAspectCheckBox
-            // 
-            resources.ApplyResources(this.keepAspectCheckBox, "keepAspectCheckBox");
-            this.keepAspectCheckBox.Checked = settings1.KeepAspect;
-            this.keepAspectCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.keepAspectCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", settings1, "KeepAspect", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.keepAspectCheckBox.Name = "keepAspectCheckBox";
-            this.keepAspectCheckBox.TabStop = false;
-            this.keepAspectCheckBox.UseVisualStyleBackColor = true;
-            this.keepAspectCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // placeHolderTextBox
-            // 
-            resources.ApplyResources(this.placeHolderTextBox, "placeHolderTextBox");
-            this.placeHolderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", settings1, "PlaceHolder", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderTextBox.Name = "placeHolderTextBox";
-            this.placeHolderTextBox.Text = settings1.PlaceHolder;
-            this.placeHolderTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.placeHolderTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.placeHolderTextBox_Validating);
-            // 
-            // subFolderButtonOption
-            // 
-            resources.ApplyResources(this.subFolderButtonOption, "subFolderButtonOption");
-            this.subFolderButtonOption.Checked = global::editdocuments.Properties.Settings.Default.IsSubFolderSelected;
-            this.subFolderButtonOption.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsSubFolderSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.subFolderButtonOption.Name = "subFolderButtonOption";
-            this.subFolderButtonOption.TabStop = true;
-            this.subFolderButtonOption.UseVisualStyleBackColor = true;
-            this.subFolderButtonOption.CheckedChanged += new System.EventHandler(this.subFolderButtonOption_CheckedChanged);
-            // 
-            // subFolderTextBox
-            // 
-            resources.ApplyResources(this.subFolderTextBox, "subFolderTextBox");
-            this.subFolderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "SubFolderSave", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.subFolderTextBox.Name = "subFolderTextBox";
-            this.subFolderTextBox.TabStop = false;
-            this.subFolderTextBox.Text = global::editdocuments.Properties.Settings.Default.SubFolderSave;
-            this.subFolderTextBox.TextChanged += new System.EventHandler(this.subFolderTextBox_TextChanged);
-            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUI";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GUI_FormClosing);
+            this.Load += new System.EventHandler(this.GUI_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -527,6 +590,10 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageHeightNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageWidthNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBottomOffsetNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageLeftOffsetNumeric)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -537,12 +604,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.placeHolderErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageHeightNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageWidthNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBottomOffsetNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageLeftOffsetNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,5 +664,16 @@
         private System.Windows.Forms.RadioButton subFolderButtonOption;
         private System.Windows.Forms.RadioButton sameFolderButtonOption;
         private System.Windows.Forms.TextBox subFolderTextBox;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resetToDefaultsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveCurrentValuesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spanishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem howToUseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

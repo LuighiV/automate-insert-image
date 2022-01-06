@@ -232,6 +232,24 @@ namespace editdocuments {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Would you like to save the current settings?.
+        /// </summary>
+        internal static string QuerySaveCurrentValues {
+            get {
+                return ResourceManager.GetString("QuerySaveCurrentValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save current settings.
+        /// </summary>
+        internal static string SaveCurrentValues {
+            get {
+                return ResourceManager.GetString("SaveCurrentValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a It is required a valid file path.
         ///Use the Explorer button to select one..
         /// </summary>
@@ -257,6 +275,24 @@ namespace editdocuments {
         internal static string TextValidationPlaceholder {
             get {
                 return ResourceManager.GetString("TextValidationPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a About.
+        /// </summary>
+        internal static string TitleAbout {
+            get {
+                return ResourceManager.GetString("TitleAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a How to use.
+        /// </summary>
+        internal static string TitleHowToUse {
+            get {
+                return ResourceManager.GetString("TitleHowToUse", resourceCulture);
             }
         }
     }

@@ -88,8 +88,8 @@ namespace editdocuments
         {
 
             var handle = GetConsoleWindow();
-            ShowWindow(handle, SW_SHOWMINIMIZED);
-            //ShowWindow(handle, SW_HIDE);
+            //ShowWindow(handle, SW_SHOWMINIMIZED);
+            ShowWindow(handle, SW_HIDE);
 
             if (args.Length == 0)
             {

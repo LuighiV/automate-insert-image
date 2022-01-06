@@ -117,84 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ExecutionCompletedDefaultMessage" xml:space="preserve">
-    <value>Execution ended in all selected files.</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>assets\about.es.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="ExecutionCompletedTitle" xml:space="preserve">
-    <value>Execution completed</value>
-  </data>
-  <data name="ExecutionErrorTitle" xml:space="preserve">
-    <value>Execution error</value>
-  </data>
-  <data name="InfoCloseWord" xml:space="preserve">
-    <value>Closing MS Word in background</value>
-  </data>
-  <data name="InfoCounterFile" xml:space="preserve">
-    <value>File {0} /{1}</value>
-  </data>
-  <data name="InfoCreateDirectorySuccess" xml:space="preserve">
-    <value>The directory {0} was created sucessfully at {1}</value>
-  </data>
-  <data name="InfoFileName" xml:space="preserve">
-    <value>Current file name: {0}</value>
-  </data>
-  <data name="InfoFinishFile" xml:space="preserve">
-    <value>Finish processing file {0}</value>
-  </data>
-  <data name="InfoFinishProcessingFiles" xml:space="preserve">
-    <value>Finish processing files.</value>
-  </data>
-  <data name="InfoFinishProgram" xml:space="preserve">
-    <value>Finish program</value>
-  </data>
-  <data name="InfoNo" xml:space="preserve">
-    <value>no</value>
-  </data>
-  <data name="InfoOpenWord" xml:space="preserve">
-    <value>Starting MS Word in background</value>
-  </data>
-  <data name="InfoPlaceholder" xml:space="preserve">
-    <value>Placeholder set to: {0}</value>
-  </data>
-  <data name="InfoSavedPDFFile" xml:space="preserve">
-    <value>Saved PDF file: {0}</value>
-  </data>
-  <data name="InfoSaveWordDocument" xml:space="preserve">
-    <value>Save word document: {0}</value>
-  </data>
-  <data name="InfoStartFile" xml:space="preserve">
-    <value>Processsing file: {0}</value>
-  </data>
-  <data name="InfoStartProcessingFiles" xml:space="preserve">
-    <value>Starting processing {0} files.</value>
-  </data>
-  <data name="InfoStartProgram" xml:space="preserve">
-    <value>Starting program</value>
-  </data>
-  <data name="InfoYes" xml:space="preserve">
-    <value>yes</value>
-  </data>
-  <data name="QuerySaveCurrentValues" xml:space="preserve">
-    <value>Would you like to save the current settings?</value>
-  </data>
-  <data name="SaveCurrentValues" xml:space="preserve">
-    <value>Save current settings</value>
-  </data>
-  <data name="TextValidationFilePath" xml:space="preserve">
-    <value>It is required a valid file path.
-Use the Explorer button to select one.</value>
-  </data>
-  <data name="TextValidationPicturePath" xml:space="preserve">
-    <value>It is required a valid picture path.
-Use the Explorer button to select one.</value>
-  </data>
-  <data name="TextValidationPlaceholder" xml:space="preserve">
-    <value>It is required a non-empty placeholder.</value>
-  </data>
-  <data name="TitleAbout" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="TitleHowToUse" xml:space="preserve">
-    <value>How to use</value>
+  <data name="howToUse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>assets\howToUse.es.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
