@@ -1,0 +1,15 @@
+﻿items:
+  - name: Home
+    href: index.md
+  - name: About the author
+    href: author.md
+  - name: Download
+    href: download.md
+  - name: Instructions
+    href: instructions.md
+  - name: Privacy
+    href: privacy.md
+  - name: Source code
+    href: source-code.md
+  - name: Terms of use
+    href: terms.md

@@ -1,6 +1,8 @@
 
-- name: Articles
-  href: articles/
+- name: Documentation
+  href: userdocs/
 - name: API Documentation
   href: obj/api/
   homepage: api/index.md
+- name: GitHub
+  href: https://github.com/LuighiV/automateword

@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="userdocs\en\toc.yml" />
+    <Content Include="favicon.ico" />
+    <Content Include="logo.svg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -75,17 +78,36 @@
   <ItemGroup>
     <Content Include="index.md" />
     <Content Include="docfx.json" />
-    <Content Include="articles\toc.md" />
-    <Content Include="articles\intro.md" />
+    <Content Include="userdocs\es\toc.yml" />
+    <Content Include="userdocs\index.md" />
+    <None Include="userdocs\toc.yml" />
     <Content Include="api\index.md" />
     <None Include="packages.config" />
     <Content Include="toc.yml" />
+    <Content Include="userdocs\en\index.md" />
+    <Content Include="userdocs\en\author.md" />
+    <Content Include="userdocs\en\privacy.md" />
+    <Content Include="userdocs\en\source-code.md" />
+    <Content Include="userdocs\en\terms.md" />
+    <Content Include="userdocs\en\download.md" />
+    <Content Include="userdocs\en\instructions.md" />
+    <Content Include="userdocs\es\terms.md" />
+    <Content Include="userdocs\es\download.md" />
+    <Content Include="userdocs\es\index.md" />
+    <Content Include="userdocs\es\instructions.md" />
+    <Content Include="userdocs\es\privacy.md" />
+    <Content Include="userdocs\es\source-code.md" />
+    <Content Include="userdocs\es\author.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="template\custom\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -110,6 +132,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties docfx_1json__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

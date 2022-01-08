@@ -1,0 +1,15 @@
+﻿items:
+  - name: Inicio
+    href: index.md
+  - name: Acerca del autor
+    href: author.md
+  - name: Descarga
+    href: download.md
+  - name: Instrucciones
+    href: instructions.md
+  - name: Privacidad
+    href: privacy.md
+  - name: Código fuente
+    href: source-code.md
+  - name: Términos de uso
+    href: terms.md

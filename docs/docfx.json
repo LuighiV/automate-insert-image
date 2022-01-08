@@ -3,15 +3,15 @@
     {
       "src": [
         {
-          "files": [
-            "*.csproj"
-          ],
-          "cwd": ".",
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "_site/**"
-          ]
+            "src": "../editdocuments",
+            "files": [
+                "editdocuments.csproj"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/bin/**",
+                "_site/**"
+            ]
         }
       ],
       "dest": "obj/api"
@@ -27,10 +27,11 @@
       },
       {
         "files": [
-          "api/*.md",
-          "articles/**.md",
-          "toc.yml",
-          "*.md"
+            "api/*.md",
+            "userdocs/**/*.md",
+            "*.md",
+            "toc.yml",
+            "**/toc.yml"
         ],
         "exclude": [
           "obj/**",
@@ -41,7 +42,9 @@
     "resource": [
       {
         "files": [
-          "images/**"
+            "images/**",
+            "favicon.ico",
+            "logo.svg"
         ],
         "exclude": [
           "obj/**",
@@ -62,7 +65,15 @@
     ],
     "dest": "_site",
     "template": [
-      "default"
-    ]
+        "default",
+        "templates/custom"
+    ],
+    "globalMetadata": {
+        "_appFooter": "<span>Copyright @ 2022 Luighi Viton-Zorrilla, <a href='mailto:lv@luighiviton.com'>lv@luighiviton.com</a><br>Generated with <strong>DocFX</strong></span>",
+        "_enableSearch": "true",
+        "_gitContribute": {
+            "repo": "https://github.com/LuighiV/automateword"
+        }
+    }
   }
 }

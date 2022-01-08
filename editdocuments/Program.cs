@@ -22,6 +22,9 @@ namespace editdocuments
         const int SW_SHOW = 5;
         const int SW_SHOWMINIMIZED = 2;
 
+        /// <summary>
+        /// Class with the options to pass to the command line editordocuments
+        /// </summary>
         class Options
         {
             [Option('f', "filename", Default = null, HelpText = "Input files to be processed.")]
@@ -120,7 +123,10 @@ namespace editdocuments
             }
             
         }
-
+        /// <summary>
+        /// Run the program with the options obtained from the command line
+        /// </summary>
+        /// <param name="opts"> Command line options to pass to the software</param>
         static void RunOptions(Options opts)
         {
             var processor = new Processor();
