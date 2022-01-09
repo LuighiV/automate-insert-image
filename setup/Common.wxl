@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+	<String Id="Company">Luighi Viton-Zorrilla</String>
+
+	<String Id="ProductNameFolder">InsertImageDocument</String>
+	
+	<String Id="ProductName">Insert image in Document</String>
+
+	<String Id="Description">Inserts an image in a MS Word Document Batch</String>
+	
+	<String Id="Comments">This is a command line and GUI application that interfaces with MS Word to insert images in a document batch.</String>
+	
+	<String Id="Keywords">dotnet,core,application,installer</String>
+
+	<String Id="DowngradeErrorMessage">A newer version of InsertImageDocument is already installed.</String>
+	
+	<String Id="LicenseRtf">\assets\terms.rtf</String>
+
+	<String Id="WelcomeEulaDlgBitmap">DialogBitmap</String>
+
+	<String Id="WelcomeDlgBitmap">DialogBitmap</String>
+
+	<String Id="ExitDialogBitmap">DialogBitmap</String>
+
+	<String Id="MaintenanceWelcomeDlgBitmap">DialogBitmap</String>
+
+	<String Id="PrepareDlgBitmap">DialogBitmap</String>
+
+	<String Id="UserExitBitmap">DialogBitmap</String>
+	
+	<String Id="DialogBitmapPath">\assets\background.bmp</String>
+	
+	<String Id="Language">1033</String>
+	
+</WixLocalization>

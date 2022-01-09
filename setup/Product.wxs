@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<!-- Give product a unique ID per platform -->
+	<!-- Reference: https://www.youtube.com/watch?v=6Yf-eDsRrnM -->
+	<?if $(var.Platform)=x64 ?>
+	<?define ProductCode = "{4C88314D-C4FC-4BCC-B24D-F3C12D1C9616}" ?>
+	<?else?>
+	<?define ProductCode = "{0853F32B-A36A-4B99-B739-24D6B4438058}" ?>
+	<?endif?>
+
+	<!-- Fixed upgrade Id -->
+	<?define UpgradeCode = "{6727E4E5-BB54-4F68-928F-3C04F2EBD7F2}" ?>
+	
+	<!-- Define main product -->
+	<Product Id="$(var.ProductCode)" 
+			 Name="!(loc.ProductName)" 
+			 Language="!(loc.Language)" 
+			 Version="$(var.BuildVersion)" 
+			 Manufacturer="!(loc.Company)" 
+			 UpgradeCode="$(var.UpgradeCode)">
+		
+		<Package InstallerVersion="200" 
+				 Compressed="yes" 
+				 InstallScope="perMachine" 
+				 Manufacturer="!(loc.Company)"
+				 Description="!(loc.Description)"
+				 Keywords="!(loc.Keywords)"
+				 Comments="!(loc.Comments)"
+				 Languages="1033,3082"
+				 />
+
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+
+		<!-- Include .cab file into .msi file -->
+		<MediaTemplate  EmbedCab="yes" />
+
+		<!-- Define main app icon -->
+		<Icon Id="icon.ico" SourceFile="$(var.editdocuments.ProjectDir)\logo.ico" />
+
+		<!-- Use the icon.ico icon for this installer (shows up in Add/Remove programs) -->
+		<Property Id="ARPPRODUCTICON">icon.ico</Property>
+		<!-- Help/Support website (shows in the Add/Remove programs) -->
+		<Property Id="ARPURLINFOABOUT">https://iid.projects.luighiviton.com/</Property>
+
+		<!-- Custom UI based on WixUI_minimal-->
+		<UI>
+			<TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+			<TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+			<TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+			<Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+			
+			<DialogRef Id="ErrorDlg" />
+			<DialogRef Id="FatalError" />
+			<DialogRef Id="FilesInUse" />
+			<DialogRef Id="MsiRMFilesInUse" />
+			<DialogRef Id="PrepareDlg" />
+			<DialogRef Id="ProgressDlg" />
+			<DialogRef Id="ResumeDlg" />
+			<DialogRef Id="UserExit" />
+			<DialogRef Id="WelcomeDlg"/>
+			<DialogRef Id="CustomWelcomeEulaDlg"/>
+
+			<Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+
+			<Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+
+			<Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+			<Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+			<Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">Installed AND PATCH</Publish>
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">Installed AND PATCH</Publish>
+			
+			<InstallUISequence>
+				<Show Dialog="WelcomeDlg" Before="CustomWelcomeEulaDlg">Installed AND PATCH</Show>
+				<Show Dialog="CustomWelcomeEulaDlg" Before="ProgressDlg">NOT Installed</Show>
+			</InstallUISequence>
+
+		</UI>
+
+		<UIRef Id="WixUI_Common" />
+		<!-- Localizable Bitmap for License Dialog-->
+		<Binary Id="DialogBitmap" SourceFile="$(var.ProjectDir)\!(loc.DialogBitmapPath)" />
+
+		<!-- Change the default installer UI background images and license-->
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\assets\terms.rtf" />
+		<WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\assets\background.bmp" />
+		<WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\assets\banner.bmp" />
+
+		<!-- Define components, shortcuts, files etc... for installer -->
+		<Feature Id="ProductFeature" Title="InsertImageDocument" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="PublishedComponents" />
+		</Feature>
+	</Product>
+</Wix>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmpCC5600A0E0013FC2479752FF2E317D0E" Guid="{EB229BC7-0525-41E2-9B9D-103B04D9DF13}">
+                <File Id="filA37EA31C1F18E8079A0153A07EC2C1F2" KeyPath="yes" Source="$(var.BasePath)\CommandLine.dll" />
+            </Component>
+            <Component Id="cmp1E79642B0C11D101EF141136BB99312D" Guid="{62CBBFFB-6BD8-47A4-9ED3-80E9FFEFF58A}">
+                <File Id="fil15F5E6A23B41DE653F48646CA3EBDF78" KeyPath="yes" Source="$(var.BasePath)\CommandLine.xml" />
+            </Component>
+            <Component Id="cmp19CA0AC905217301E7FFB8157DCBF00A" Guid="{B7B39FB9-A232-49F6-86B5-C7019A0EB0BB}">
+                <File Id="fil6ED7E8AEC9E167AFD5E20E58476451F5" KeyPath="yes" Source="$(var.BasePath)\editdocuments.application" />
+            </Component>
+            <Component Id="cmpCFFE8C3DE968051AA5FF6F338D07641D" Guid="{717EBEEE-EE94-470B-9586-9C3FC82081EC}">
+                <File Id="filD8430AAEE50570CB7970E05905623DEA" KeyPath="yes" Source="$(var.BasePath)\editdocuments.exe" />
+            </Component>
+            <Component Id="cmp34076729AA1ABF5FF57D4FCB885B651F" Guid="{4BE3FEC4-E31A-436C-8AB0-7D8FD4117544}">
+                <File Id="fil75992E3C3F0E220ADBE300C488D931A8" KeyPath="yes" Source="$(var.BasePath)\editdocuments.exe.config" />
+            </Component>
+            <Component Id="cmpB11FB9A4EC9689CE3CB56C938F28DE76" Guid="{A244C591-929E-46D3-9E94-9CEA89C80F4F}">
+                <File Id="fil45823BA30EC02C843A48208ADFFB645B" KeyPath="yes" Source="$(var.BasePath)\editdocuments.exe.manifest" />
+            </Component>
+            <Component Id="cmp45C7A0F5EF8F26DC961125BAE0F88683" Guid="{72B6BB77-0D55-4244-A581-615888DC92F9}">
+                <File Id="filF916FD8C175FDCCA49E763EC964DC2E3" KeyPath="yes" Source="$(var.BasePath)\editdocuments.pdb" />
+            </Component>
+            <Directory Id="dir00122602D311392A9D483BE33FE17DEF" Name="app.publish">
+                <Component Id="cmp54E80F452C4B650989199F02E0E636FC" Guid="{AF7F03DE-7AC0-4346-9A57-9FF38AAA2975}">
+                    <File Id="filEBBCB303C5CB24A5562999DFD6A6EA16" KeyPath="yes" Source="$(var.BasePath)\app.publish\editdocuments.exe" />
+                </Component>
+            </Directory>
+            <Directory Id="dir9AE38F4F5CB5E565E774521E138F44FD" Name="es">
+                <Component Id="cmp706D09D273876B3B45F4CA31D02D7679" Guid="{71C6EA27-5ACA-476A-8178-1C204D02CFDE}">
+                    <File Id="filBF92A8522BA945037DA063E63B9052E8" KeyPath="yes" Source="$(var.BasePath)\es\editdocuments.resources.dll" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="PublishedComponents">
+            <ComponentRef Id="cmpCC5600A0E0013FC2479752FF2E317D0E" />
+            <ComponentRef Id="cmp1E79642B0C11D101EF141136BB99312D" />
+            <ComponentRef Id="cmp19CA0AC905217301E7FFB8157DCBF00A" />
+            <ComponentRef Id="cmpCFFE8C3DE968051AA5FF6F338D07641D" />
+            <ComponentRef Id="cmp34076729AA1ABF5FF57D4FCB885B651F" />
+            <ComponentRef Id="cmpB11FB9A4EC9689CE3CB56C938F28DE76" />
+            <ComponentRef Id="cmp45C7A0F5EF8F26DC961125BAE0F88683" />
+            <ComponentRef Id="cmp54E80F452C4B650989199F02E0E636FC" />
+            <ComponentRef Id="cmp706D09D273876B3B45F4CA31D02D7679" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

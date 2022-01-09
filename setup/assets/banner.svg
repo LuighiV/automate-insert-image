@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="130.43959mm"
+   height="15.345834mm"
+   viewBox="0 0 130.43959 15.345834"
+   version="1.1"
+   id="svg1003"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="banner.svg"
+   inkscape:export-filename="C:\Users\Luighi\source\repos\editdocuments\setup\assets\banner.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs997" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="234.10459"
+     inkscape:cy="113.66808"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1274"
+     inkscape:window-height="728"
+     inkscape:window-x="32"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1582" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1000">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-23.982582,-30.880657)">
+    <rect
+       style="fill:#f2f2f2;stroke-width:0.348096;stroke-dasharray:1.39239, 1.39239"
+       id="rect1580"
+       width="130.43959"
+       height="15.345833"
+       x="23.982582"
+       y="30.880657" />
+    <g
+       id="g864"
+       transform="matrix(1.1666676,0,0,1.1666676,135.54855,4.2018152)">
+      <rect
+         ry="1.3229173"
+         y="25.135416"
+         x="5.2916665"
+         height="7.9375005"
+         width="7.9375"
+         id="rect839"
+         style="fill:#ffffff;stroke:none;stroke-width:0.348096;stroke-dasharray:1.39239, 1.39239" />
+      <g
+         transform="translate(-0.11763617,0.13684163)"
+         id="g854">
+        <text
+           xml:space="preserve"
+           style="font-size:7.05556px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#008000;stroke-width:0.264583"
+           x="5.564219"
+           y="30.989597"
+           id="text844"><tspan
+             sodipodi:role="line"
+             id="tspan842"
+             x="5.564219"
+             y="30.989597"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke-width:0.264583">I</tspan></text>
+        <text
+           id="text848"
+           y="31.981785"
+           x="7.2651124"
+           style="font-size:7.05556px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#ff0000;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
+             y="31.981785"
+             x="7.2651124"
+             id="tspan846"
+             sodipodi:role="line">I</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0000ff;stroke-width:0.264583"
+           x="9.3549089"
+           y="30.899551"
+           id="text852"><tspan
+             sodipodi:role="line"
+             id="tspan850"
+             x="9.3549089"
+             y="30.899551"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0000ff;stroke-width:0.264583">D</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
