@@ -1,9 +1,13 @@
 # Descarga
 
-El último software proporcionado es un ejecutable msi que contiene todos los archivos necesarios para ejecutarlo.
+El último software proporcionado es un ejecutable .msi que contiene todos los archivos necesarios para ejecutarlo.
 Solo necesita descargarlo y ejecutarlo para instalarlo en su sistema. Solo funciona en Windows y requiere
 el software MS Word del paquete Office 365 instalado en su computadora.
 
+Para descargar la última versión, por favor, haga clic en el siguiente enlace:
+
+<a href="https://github.com/LuighiV/automateword/releases/download/v1.0.0.3/IIDInstaller-1.0.0.3-Release-x64-es-es.msi" 
+   class="downloadButton"> <i class="fa fa-download"></i> Descargar última versión (en-ES) </a> 
 
 ## Nuevas características
 

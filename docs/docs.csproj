@@ -67,9 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="template\custom\partials\head.tmpl.partial" />
     <None Include="userdocs\en\toc.yml" />
     <Content Include="favicon.ico" />
     <Content Include="logo.svg" />
+    <Content Include="template\custom\styles\custom.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
-    <Folder Include="template\custom\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
