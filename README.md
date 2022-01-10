@@ -1,5 +1,7 @@
 # Insert image in Document
 
+![Documentation](https://github.com/LuighiV/automateword/actions/workflows/docfx.yml/badge.svg)
+
 ## About
 
 This is an open-source software developed to automate the insertion of images in a set of MS Word documents. It could be useful to insert a signature to various documents at a specific position in them.
