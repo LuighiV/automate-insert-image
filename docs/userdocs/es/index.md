@@ -5,7 +5,7 @@ y exportarlos a archivos PDF.
 
 ## Motivación
 
-El software fue desarrollado en base a un requisito de mi madre, quien es profesora y directora encargada de su institución y requiría
+El software fue desarrollado en base a un requisito de mi madre, quien es profesora y directora encargada de su institución y requería
 insertar una imagen en un conjunto de documentos de MS Word en una posición específica. Entonces, como esta tarea puede llevar mucho tiempo,
 desarrollé este software para facilitar la inserción de imágenes y la creación de archivos PDF basados ​​en los documentos modificados.
 

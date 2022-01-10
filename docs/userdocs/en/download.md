@@ -6,8 +6,8 @@ the MS Word software from the Office 365 package installed in you computer.
 
 To download the latest version, please, click on the following link:
 
-<a href="https://github.com/LuighiV/automateword/releases/download/v1.0.0.3/IIDInstaller-1.0.0.3-Release-x64-en-us.msi" 
-   class="downloadButton"> <i class="fa fa-download"></i> Download latest version (en-US) </a> 
+<a href="https://github.com/LuighiV/automateword/releases/download/v1.0.0.3/IIDInstaller-1.0.0.3-Release-x64.msi" 
+   class="downloadButton"> <i class="fa fa-download"></i> Download latest version </a> 
 
 ## New features
 
