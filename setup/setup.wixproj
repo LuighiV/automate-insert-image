@@ -59,6 +59,9 @@
     <EmbeddedResource Include="Common.es.wxl" />
     <EmbeddedResource Include="Common.wxl" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+  </ItemGroup>
   <PropertyGroup>
     <InstallerPlatform>x64</InstallerPlatform>
     <Platform>x64</Platform>
@@ -87,20 +90,18 @@
     <GetAssemblyIdentity AssemblyFiles="..\editdocuments\bin\$(Configuration)\editdocuments.exe">
       <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
     </GetAssemblyIdentity>
-	
-	<!-- Package the mst files into unique file: Avoit error transform failed
+    <!-- Package the mst files into unique file: Avoit error transform failed
 	  Based on: 
 	  - http://www.installsite.org/pages/en/msi/articles/embeddedlang/
 	  - https://www.codeproject.com/Articles/103749/Creating-a-Localized-Windows-Installer-Bootstrap-3
 	  Uses tools from Wix and Windows Tools SDK  https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
 	-->
-	<!-- Create the mst file with transform info -->
-	<Exec Command="&quot;$(WIX)bin\torch.exe&quot;  &quot;bin\$(Platform)\$(Configuration)\$(OutputName).msi&quot; &quot;bin\$(Platform)\$(Configuration)\es-ES\$(OutputName).msi&quot; -o &quot;bin\$(Platform)\$(Configuration)\es-ES.mst&quot;" />
-	<!-- Create the packaged msi with mst info, with script wisubstg grabbed from Windows SDK -->
-	<Exec Command="cscript.exe tools\WiSubStg.vbs bin\$(Platform)\$(Configuration)\$(OutputName).msi bin\$(Platform)\$(Configuration)\es-ES.mst 3082" />
-	<Exec Command="cscript.exe tools\WiSubStg.vbs bin\$(Platform)\$(Configuration)\es-ES\$(OutputName).msi bin\$(Platform)\$(Configuration)\es-ES.mst 3082" />
-	  
-	<!-- Rename and move final MSI -->
+    <!-- Create the mst file with transform info -->
+    <Exec Command="&quot;$(WIX)bin\torch.exe&quot;  &quot;bin\$(Platform)\$(Configuration)\$(OutputName).msi&quot; &quot;bin\$(Platform)\$(Configuration)\es-ES\$(OutputName).msi&quot; -o &quot;bin\$(Platform)\$(Configuration)\es-ES.mst&quot;" />
+    <!-- Create the packaged msi with mst info, with script wisubstg grabbed from Windows SDK -->
+    <Exec Command="cscript.exe tools\WiSubStg.vbs bin\$(Platform)\$(Configuration)\$(OutputName).msi bin\$(Platform)\$(Configuration)\es-ES.mst 3082" />
+    <Exec Command="cscript.exe tools\WiSubStg.vbs bin\$(Platform)\$(Configuration)\es-ES\$(OutputName).msi bin\$(Platform)\$(Configuration)\es-ES.mst 3082" />
+    <!-- Rename and move final MSI -->
     <Exec Command="if not exist Installs mkdir Installs" />
     <Exec Command="move bin\$(Platform)\$(Configuration)\$(OutputName).msi Installs\IIDInstaller-%(AssemblyVersion.Version)-$(Configuration)-$(Platform).msi" />
     <Exec Command="move bin\$(Platform)\$(Configuration)\es-ES\$(OutputName).msi Installs\IIDInstaller-%(AssemblyVersion.Version)-$(Configuration)-$(Platform)-es-es.msi" />
