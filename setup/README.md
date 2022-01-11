@@ -7,15 +7,15 @@ The installer is designed to be localizable for two languages: english and spani
 
 For the creation it was mainly based on:
 
-- Youtube tutorial: https://www.youtube.com/watch?v=6Yf-eDsRrnM
-- Repository reference: https://github.com/angelsix/youtube/tree/develop/C%23%20General/Windows%20Installer%20Wix%20DotNet%20Core
+- Youtube tutorial: [How To Create Windows Installer MSI - .Net Core Wix](https://www.youtube.com/watch?v=6Yf-eDsRrnM)
+- Repository reference: [Windows Installer Wix DotNet Core](https://github.com/angelsix/youtube/tree/develop/C%23%20General/Windows%20Installer%20Wix%20DotNet%20Core)
 
 For the localization it was required to embed the mst language database as otherwise, an error occurs,
 advertising about a wrong transfors when executing in machines which doesn't have the target 
 language installed.
 
 The reference how to obtain  the report is in: https://stackoverflow.com/q/18795351
-adn requires the following command:
+and requires the following command:
 
 ```
 msiexec /i IIDInstaller.msi /l*vx install.log
@@ -37,7 +37,7 @@ MSI (c) (04:10) [23:46:56:096]: Windows Installer installed the product. Product
 MSI (c) (04:10) [23:46:56:098]: MainEngineThread is returning 1624
 ```
 
-To solve I followed the references:
+To solve it, I followed the references:
 - https://stackoverflow.com/a/22405700
 - http://www.installsite.org/pages/en/msi/articles/embeddedlang/
 - https://www.codeproject.com/Articles/103749/Creating-a-Localized-Windows-Installer-Bootstrap-3
@@ -46,4 +46,4 @@ To solve I followed the references:
 The procedure to package the msi with the language database requires of the Windows SDK that can
 be downloaded from https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/.
 
-In the project I included the script WiSubStg.vb under tools folder, grabbed from the SDK repository.
+In the project, I included the script WiSubStg.vb under tools folder, grabbed from the SDK repository.
