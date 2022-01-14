@@ -88,7 +88,7 @@ namespace editdocuments
             
         }
 
-        public string GetRange(string text, bool Verbose=false)
+        public bool GetRange(string text, bool Verbose=false)
         {
             var range = this.Document.Content;
             range.Find.Execute(text);
@@ -97,7 +97,7 @@ namespace editdocuments
             {
                 Console.WriteLine(Strings.InfoPlaceholder, this.Range.Text);
             }
-            return this.Range.Text;
+            return range.Find.Found;
         }
     }
 }

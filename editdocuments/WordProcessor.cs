@@ -16,7 +16,7 @@ namespace editdocuments
 
         }
 
-        public void RunOnFile(string FilePath,
+        public bool RunOnFile(string FilePath,
             string PicturePath,
             string TextPlaceHolder,
             double LeftOffset,
@@ -30,6 +30,7 @@ namespace editdocuments
             bool Verbose = false)
         {
 
+            bool success = true;
             StartProcessingFile?.Invoke(this, new TextArg(FilePath));
             if(Verbose)
                 Console.WriteLine(Strings.InfoStartFile, FilePath);
@@ -37,12 +38,20 @@ namespace editdocuments
             var WordDocument = new WordDocument(FilePath, WordAppVisible, WordApp);
             try
             {
-                string textRange = WordDocument.GetRange(TextPlaceHolder);
-                GotPlaceHolderPosition?.Invoke(this, new TextArg(textRange));
+                if (WordDocument.GetRange(TextPlaceHolder))
+                {
+                    GotPlaceHolderPosition?.Invoke(this, new TextArg(TextPlaceHolder));
 
-                WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset, Width, Height);
-                string pdffilename = WordDocument.SaveAsPDF(FolderSave);
-                PDFSaved?.Invoke(this, new TextArg(pdffilename));
+                    WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset, Width, Height);
+                    string pdffilename = WordDocument.SaveAsPDF(FolderSave);
+                    PDFSaved?.Invoke(this, new TextArg(pdffilename));
+                }
+                else
+                {
+                    TextNotFoundInDocument?.Invoke(this, new TextArg(TextPlaceHolder));
+                    success = false;
+                }
+
                 //Console.ReadKey();
                 WordDocument.Close(SaveFile);
 
@@ -56,7 +65,7 @@ namespace editdocuments
                 WordDocument.Close(false);
                 throw e;
             }
-
+            return success;
         }
 
         public void RunProcess(DataInfo Data, bool Verbose = false)
@@ -118,6 +127,7 @@ namespace editdocuments
             try
             {
                 int index = 0;
+                int count_success = 0;
                 int totalElements = InputFiles.Count();
                 foreach (var FilePath in InputFiles)
                 {
@@ -146,7 +156,7 @@ namespace editdocuments
                         FolderSave = Path.GetDirectoryName(FilePath);
                     }
 
-                    RunOnFile(FilePath,
+                    if(RunOnFile(FilePath,
                               PicturePath,
                               TextPlaceHolder,
                               LeftOffset,
@@ -156,7 +166,11 @@ namespace editdocuments
                               WordApp,
                               WordAppVisible,
                               FolderSave,
-                              SaveFile);
+                              SaveFile))
+                    {
+                        count_success++;
+                    }
+
                     if (Verbose)
                     {
                         Console.WriteLine("\n\n");
@@ -180,6 +194,8 @@ namespace editdocuments
                     Console.WriteLine(Strings.InfoFinishProgram);
                 }
                 FinishProcessing?.Invoke(this, EventArgs.Empty);
+
+                SummarySuccess?.Invoke(this, new CounterArgs(count_success, totalElements));
             }
             catch (Exception e)
             {
@@ -200,11 +216,13 @@ namespace editdocuments
         public event EventHandler<CounterArgs> UpdateCounter;
         public event EventHandler<TextArg> StartProcessingFile;
         public event EventHandler<TextArg> GotPlaceHolderPosition;
+        public event EventHandler<TextArg> TextNotFoundInDocument;
         public event EventHandler<TextArg> PDFSaved;
         public event EventHandler<TextArg> FinishProcessingFile;
         public event EventHandler CloseWordProgram;
         public event EventHandler FinishProcessing;
+        public event EventHandler<CounterArgs> SummarySuccess;
     }
 
- 
+
 }

@@ -46,6 +46,9 @@ namespace editdocuments
                 this.WordProcess.CloseWordProgram += closeWordProgram;
                 this.WordProcess.FinishProcessing += finishProcessing;
 
+                this.WordProcess.TextNotFoundInDocument += textNotFoundInDocument;
+                this.WordProcess.SummarySuccess += printSummarySuccess;
+
 
                 this.BackgroundProcess = this.WordProcess;
             }
