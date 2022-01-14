@@ -313,7 +313,6 @@
             this.errorProvider1.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment1"))));
             this.errorProvider2.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment2"))));
             this.relativeToTextOptionButton.Name = "relativeToTextOptionButton";
-            this.relativeToTextOptionButton.TabStop = true;
             this.relativeToTextOptionButton.UseVisualStyleBackColor = true;
             this.relativeToTextOptionButton.CheckedChanged += new System.EventHandler(this.relativeToTextOptionButton_CheckedChanged);
             this.relativeToTextOptionButton.Click += new System.EventHandler(this.relativeToTextOptionButton_Click);
@@ -650,6 +649,7 @@
             this.errorProvider1.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment2"))));
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.SizeChanged += new System.EventHandler(this.pictureBox1_SizeChanged);
             // 
             // tableLayoutPanel4
             // 

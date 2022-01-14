@@ -50,6 +50,12 @@ namespace editdocuments
             enableTextReference(this.relativeToTextOptionButton.Checked);
             enablePageReference(!this.relativeToTextOptionButton.Checked);
 
+            if (IsValidPicturePath())
+            {
+                this.CurrentImage = new Bitmap(this.picturePathTextBox.Text);
+                fillPictureBox(this.pictureBox1, this.CurrentImage);
+            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -288,15 +294,15 @@ namespace editdocuments
 
             if (source_is_wider)
             {
-                float size_ratio = (float)pbox.Height / bmp.Height;
-                int sample_width = (int)(pbox.Width / size_ratio);
-                src_rect = new Rectangle((bmp.Width - sample_width) / 2, 0, sample_width, bmp.Height);
-            }
-            else
-            {
                 float size_ratio = (float)pbox.Width / bmp.Width;
                 int sample_height = (int)(pbox.Height / size_ratio);
                 src_rect = new Rectangle(0, (bmp.Height - sample_height) / 2, bmp.Width, sample_height);
+            }
+            else
+            {
+                float size_ratio = (float)pbox.Height / bmp.Height;
+                int sample_width = (int)(pbox.Width / size_ratio);
+                src_rect = new Rectangle((bmp.Width - sample_width) / 2, 0, sample_width, bmp.Height);
             }
 
             g.DrawImage(bmp, dest_rect, src_rect, GraphicsUnit.Pixel);
@@ -579,6 +585,14 @@ namespace editdocuments
             {
                 subFolderErrorProvider.SetError(this.subFolderTextBox, Strings.TextValidationSubFolder);
                 e.Cancel = this.generateButton.Focused;
+            }
+        }
+
+        private void pictureBox1_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.CurrentImage != null)
+            {
+                fillPictureBox(this.pictureBox1, this.CurrentImage);
             }
         }
     }

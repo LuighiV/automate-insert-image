@@ -1577,7 +1577,7 @@
     <value>509, 3</value>
   </data>
   <data name="generateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 21</value>
+    <value>127, 28</value>
   </data>
   <data name="generateButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1610,13 +1610,13 @@
     <value>TopLeft</value>
   </data>
   <data name="tableLayoutPanel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 540</value>
+    <value>164, 533</value>
   </data>
   <data name="tableLayoutPanel8.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tableLayoutPanel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>639, 27</value>
+    <value>639, 34</value>
   </data>
   <data name="tableLayoutPanel8.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1655,7 +1655,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 514</value>
+    <value>3, 508</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 13</value>
@@ -1700,7 +1700,7 @@
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 234</value>
+    <value>3, 233</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 13</value>
@@ -1883,7 +1883,7 @@
     <value>NoControl</value>
   </data>
   <data name="subFolderButtonOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 5</value>
+    <value>198, 3</value>
   </data>
   <data name="subFolderButtonOption.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 17</value>
@@ -1925,7 +1925,7 @@
     <value>NoControl</value>
   </data>
   <data name="sameFolderButtonOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 5</value>
+    <value>3, 3</value>
   </data>
   <data name="sameFolderButtonOption.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 17</value>
@@ -1994,13 +1994,13 @@
     <value>TopLeft</value>
   </data>
   <data name="tableLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 507</value>
+    <value>164, 503</value>
   </data>
   <data name="tableLayoutPanel9.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tableLayoutPanel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>639, 27</value>
+    <value>639, 24</value>
   </data>
   <data name="tableLayoutPanel9.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2657,13 +2657,13 @@
     <value>TopLeft</value>
   </data>
   <data name="tableLayoutPanel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 344</value>
+    <value>164, 343</value>
   </data>
   <data name="tableLayoutPanel7.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="tableLayoutPanel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>639, 157</value>
+    <value>639, 154</value>
   </data>
   <data name="tableLayoutPanel7.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -2870,7 +2870,7 @@
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 143</value>
+    <value>3, 142</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 13</value>
@@ -2909,7 +2909,7 @@
     <value>TopLeft</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 139</value>
+    <value>120, 138</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 21</value>
@@ -3149,7 +3149,7 @@
     <value>6</value>
   </data>
   <data name="tableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 170</value>
+    <value>307, 169</value>
   </data>
   <data name="tableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3185,7 +3185,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 189</value>
+    <value>313, 188</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3224,7 +3224,7 @@
     <value>3, 16</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 170</value>
+    <value>308, 169</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -3260,7 +3260,7 @@
     <value>322, 3</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 189</value>
+    <value>314, 188</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3299,7 +3299,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>639, 195</value>
+    <value>639, 194</value>
   </data>
   <data name="tableLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -3851,7 +3851,7 @@
     <value>NoControl</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 416</value>
+    <value>3, 413</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 13</value>
@@ -3914,7 +3914,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel8" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label9" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel9" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel7" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel5" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel4" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel3" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel10" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label13" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,80" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,40,Absolute,40,Absolute,201,Absolute,163,Absolute,33,Absolute,11" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel8" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label9" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel9" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel7" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel5" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel4" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel3" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel10" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label13" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,80" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,40,Absolute,40,Absolute,200,Absolute,160,Absolute,30,Absolute,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="openWordFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>206, 17</value>
