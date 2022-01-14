@@ -84,14 +84,14 @@ namespace editdocuments
 
         public void buttonSafeEnable(bool enable=true)
         {
-            if (this.button1.InvokeRequired)
+            if (this.closeButton.InvokeRequired)
             {
                 Action safeWrite = delegate { buttonSafeEnable(enable); };
-                this.button1.Invoke(safeWrite);
+                this.closeButton.Invoke(safeWrite);
             }
             else
             {
-                this.button1.Enabled= enable;
+                this.closeButton.Enabled= enable;
             }
         }
 
@@ -115,12 +115,12 @@ namespace editdocuments
                 WriteTextSafe(string.Format(Strings.InfoStartProcessingFiles + Environment.NewLine, 
                     e.Total));
                 WriteTextSafe(Environment.NewLine);
-                SetupProgressBarSafe(e.Total, 1, this.progressBar1);
+                SetupProgressBarSafe(e.Total, 1, this.countProgressBar);
             }
 
-            WriteLabelSafe(e.Value.ToString(), this.label1);
-            WriteLabelSafe(e.Total.ToString(), this.label3);
-            UpdateProgressBarSafe(e.Value, this.progressBar1);
+            WriteLabelSafe(e.Value.ToString(), this.counterValueLabel);
+            WriteLabelSafe(e.Total.ToString(), this.counterTotalLabel);
+            UpdateProgressBarSafe(e.Value, this.countProgressBar);
 
             if(e.Value < e.Total)
             {
@@ -141,7 +141,7 @@ namespace editdocuments
         public void startProcessingFile(object sender, TextArg e)
         {
             WriteTextSafe(string.Format(Strings.InfoStartFile + Environment.NewLine, e.Text));
-            WriteLabelSafe( e.Text,this.label5);
+            WriteLabelSafe( e.Text,this.fileNameLabel);
         }
 
         public void gotPlaceHolderPosition(object sender, TextArg e)
@@ -278,7 +278,7 @@ namespace editdocuments
 
         public void setFilename(string filename)
         {
-            this.label5.Text = filename;
+            this.fileNameLabel.Text = filename;
         }
 
         public void RunThreadProcess(DataInfo Data)
@@ -300,7 +300,7 @@ namespace editdocuments
             threadParameters += () => { successFullFinished(); };
             
             var thread = new Thread(threadParameters);
-            this.button1.Enabled = false;
+            this.closeButton.Enabled = false;
             thread.Start();
             
         }

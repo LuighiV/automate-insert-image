@@ -317,12 +317,12 @@ namespace editdocuments
 
             if (IsValidSelectedPath())
             {
-                errorProvider1.SetError(this.inputPathTextBox, String.Empty);
+                inputPathErrorProvider.SetError(this.inputPathTextBox, String.Empty);
                 e.Cancel = false;
             }
             else
             {
-                errorProvider1.SetError(this.inputPathTextBox, Strings.TextValidationFilePath);
+                inputPathErrorProvider.SetError(this.inputPathTextBox, Strings.TextValidationFilePath);
                 e.Cancel = this.generateButton.Focused;
             }
             
@@ -332,12 +332,12 @@ namespace editdocuments
         {
             if (IsValidPicturePath())
             {
-                errorProvider2.SetError(this.picturePathTextBox, String.Empty);
+                picturePathErrorProvider.SetError(this.picturePathTextBox, String.Empty);
                 e.Cancel = false;
             }
             else
             {
-                errorProvider2.SetError(this.picturePathTextBox, Strings.TextValidationPicturePath);
+                picturePathErrorProvider.SetError(this.picturePathTextBox, Strings.TextValidationPicturePath);
                 e.Cancel = this.generateButton.Focused;
             }
         }

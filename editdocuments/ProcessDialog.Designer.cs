@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessDialog));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.countProgressBar = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.counterTotalLabel = new System.Windows.Forms.Label();
+            this.separatorLabel = new System.Windows.Forms.Label();
+            this.counterValueLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.currentFileLabel = new System.Windows.Forms.Label();
+            this.fileNameLabel = new System.Windows.Forms.Label();
             this.logTextBox = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -52,37 +52,37 @@
             // tableLayoutPanel2
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.progressBar1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.countProgressBar, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
-            // progressBar1
+            // countProgressBar
             // 
-            resources.ApplyResources(this.progressBar1, "progressBar1");
-            this.progressBar1.Name = "progressBar1";
+            resources.ApplyResources(this.countProgressBar, "countProgressBar");
+            this.countProgressBar.Name = "countProgressBar";
             // 
             // tableLayoutPanel4
             // 
             resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
-            this.tableLayoutPanel4.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.counterTotalLabel, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.separatorLabel, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.counterValueLabel, 0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             // 
-            // label3
+            // counterTotalLabel
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.counterTotalLabel, "counterTotalLabel");
+            this.counterTotalLabel.Name = "counterTotalLabel";
             // 
-            // label2
+            // separatorLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.separatorLabel, "separatorLabel");
+            this.separatorLabel.Name = "separatorLabel";
             // 
-            // label1
+            // counterValueLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.counterValueLabel, "counterValueLabel");
+            this.counterValueLabel.Name = "counterValueLabel";
             // 
             // tableLayoutPanel1
             // 
@@ -96,32 +96,32 @@
             // tableLayoutPanel3
             // 
             resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
-            this.tableLayoutPanel3.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.closeButton, 1, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
-            // button1
+            // closeButton
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.closeButton, "closeButton");
+            this.closeButton.Name = "closeButton";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel5
             // 
             resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
-            this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.currentFileLabel, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.fileNameLabel, 0, 1);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             // 
-            // label4
+            // currentFileLabel
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.currentFileLabel, "currentFileLabel");
+            this.currentFileLabel.Name = "currentFileLabel";
             // 
-            // label5
+            // fileNameLabel
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.fileNameLabel, "fileNameLabel");
+            this.fileNameLabel.Name = "fileNameLabel";
             // 
             // logTextBox
             // 
@@ -150,17 +150,17 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar countProgressBar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label counterTotalLabel;
+        private System.Windows.Forms.Label separatorLabel;
+        private System.Windows.Forms.Label counterValueLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label currentFileLabel;
+        private System.Windows.Forms.Label fileNameLabel;
         private System.Windows.Forms.RichTextBox logTextBox;
     }
 }
