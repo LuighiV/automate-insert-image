@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="closeButton.Text" xml:space="preserve">
     <value>Cerrar</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="currentFileLabel.Text" xml:space="preserve">
     <value>Archivo actual:</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Ningún archivo seleccionado</value>
+  <data name="fileNameLabel.Text" xml:space="preserve">
+    <value>Ningún archivo seleccionado.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Procesando archivos</value>

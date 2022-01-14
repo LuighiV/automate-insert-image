@@ -448,7 +448,7 @@
     <value>1</value>
   </data>
   <data name="fileNameLabel.Text" xml:space="preserve">
-    <value>No file name</value>
+    <value>No selected file.</value>
   </data>
   <data name="&gt;&gt;fileNameLabel.Name" xml:space="preserve">
     <value>fileNameLabel</value>

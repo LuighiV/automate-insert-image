@@ -75,7 +75,7 @@
             this.imageLeftOffsetNumeric = new System.Windows.Forms.NumericUpDown();
             this.keepAspectCheckBox = new System.Windows.Forms.CheckBox();
             this.previewGroupBox = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picturePreviewBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.picturePathTextBox = new System.Windows.Forms.TextBox();
             this.explorePicturePathButton = new System.Windows.Forms.Button();
@@ -130,7 +130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBottomOffsetNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageLeftOffsetNumeric)).BeginInit();
             this.previewGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePreviewBox)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -162,8 +162,9 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel10, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.positionLabel, 0, 5);
             this.placeHolderErrorProvider.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.tableLayoutPanel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel1.IconAlignment3"))));
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // tableLayoutPanel8
@@ -180,7 +181,8 @@
             resources.ApplyResources(this.generateButton, "generateButton");
             this.inputPathErrorProvider.SetIconAlignment(this.generateButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("generateButton.IconAlignment"))));
             this.picturePathErrorProvider.SetIconAlignment(this.generateButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("generateButton.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.generateButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("generateButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.generateButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("generateButton.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.generateButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("generateButton.IconAlignment3"))));
             this.generateButton.Name = "generateButton";
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.button3_Click);
@@ -189,40 +191,45 @@
             // 
             resources.ApplyResources(this.savePDFLabel, "savePDFLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.savePDFLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("savePDFLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.savePDFLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("savePDFLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.savePDFLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("savePDFLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.savePDFLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("savePDFLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.savePDFLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("savePDFLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.savePDFLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("savePDFLabel.IconAlignment3"))));
             this.savePDFLabel.Name = "savePDFLabel";
             // 
             // picturePropertiesLabel
             // 
             resources.ApplyResources(this.picturePropertiesLabel, "picturePropertiesLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.picturePropertiesLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePropertiesLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.picturePropertiesLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePropertiesLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.picturePropertiesLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePropertiesLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.picturePropertiesLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePropertiesLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.picturePropertiesLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePropertiesLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.picturePropertiesLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePropertiesLabel.IconAlignment3"))));
             this.picturePropertiesLabel.Name = "picturePropertiesLabel";
             // 
             // picturePathLabel
             // 
             resources.ApplyResources(this.picturePathLabel, "picturePathLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.picturePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.picturePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.picturePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.picturePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.picturePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.picturePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathLabel.IconAlignment3"))));
             this.picturePathLabel.Name = "picturePathLabel";
             // 
             // filePathLabel
             // 
             resources.ApplyResources(this.filePathLabel, "filePathLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.filePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filePathLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.filePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filePathLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.filePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filePathLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.filePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filePathLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.filePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filePathLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.filePathLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filePathLabel.IconAlignment3"))));
             this.filePathLabel.Name = "filePathLabel";
             // 
             // typeLabel
             // 
             resources.ApplyResources(this.typeLabel, "typeLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.typeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("typeLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.typeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("typeLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.typeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("typeLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.typeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("typeLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.typeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("typeLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.typeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("typeLabel.IconAlignment3"))));
             this.typeLabel.Name = "typeLabel";
             // 
             // tableLayoutPanel9
@@ -241,9 +248,10 @@
             resources.ApplyResources(this.subFolderButtonOption, "subFolderButtonOption");
             this.subFolderButtonOption.Checked = global::editdocuments.Properties.Settings.Default.IsSubFolderSelected;
             this.subFolderButtonOption.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsSubFolderSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderErrorProvider.SetIconAlignment(this.subFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderButtonOption.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.subFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderButtonOption.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.subFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderButtonOption.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.subFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderButtonOption.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.subFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderButtonOption.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.subFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderButtonOption.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.subFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderButtonOption.IconAlignment3"))));
             this.subFolderButtonOption.Name = "subFolderButtonOption";
             this.subFolderButtonOption.TabStop = true;
             this.subFolderButtonOption.UseVisualStyleBackColor = true;
@@ -252,9 +260,10 @@
             // sameFolderButtonOption
             // 
             resources.ApplyResources(this.sameFolderButtonOption, "sameFolderButtonOption");
-            this.placeHolderErrorProvider.SetIconAlignment(this.sameFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("sameFolderButtonOption.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.sameFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("sameFolderButtonOption.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.sameFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("sameFolderButtonOption.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.sameFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("sameFolderButtonOption.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.sameFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("sameFolderButtonOption.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.sameFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("sameFolderButtonOption.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.sameFolderButtonOption, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("sameFolderButtonOption.IconAlignment3"))));
             this.sameFolderButtonOption.Name = "sameFolderButtonOption";
             this.sameFolderButtonOption.UseVisualStyleBackColor = true;
             this.sameFolderButtonOption.CheckedChanged += new System.EventHandler(this.sameFolderButtonOption_CheckedChanged);
@@ -264,8 +273,9 @@
             resources.ApplyResources(this.subFolderTextBox, "subFolderTextBox");
             this.subFolderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "SubFolderSave", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.placeHolderErrorProvider.SetIconAlignment(this.subFolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderTextBox.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.subFolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderTextBox.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.subFolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderTextBox.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.subFolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderTextBox.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.subFolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderTextBox.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.subFolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("subFolderTextBox.IconAlignment3"))));
             this.subFolderTextBox.Name = "subFolderTextBox";
             this.subFolderTextBox.TabStop = false;
             this.subFolderTextBox.Text = global::editdocuments.Properties.Settings.Default.SubFolderSave;
@@ -290,8 +300,9 @@
             // 
             resources.ApplyResources(this.pageReferenceLabel, "pageReferenceLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.pageReferenceLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageReferenceLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.pageReferenceLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageReferenceLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.pageReferenceLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageReferenceLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.pageReferenceLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageReferenceLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.pageReferenceLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageReferenceLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.pageReferenceLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageReferenceLabel.IconAlignment3"))));
             this.pageReferenceLabel.Name = "pageReferenceLabel";
             // 
             // tableLayoutPanel11
@@ -309,9 +320,10 @@
             resources.ApplyResources(this.relativeToTextOptionButton, "relativeToTextOptionButton");
             this.relativeToTextOptionButton.Checked = global::editdocuments.Properties.Settings.Default.IsRelativeToTextSelected;
             this.relativeToTextOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsRelativeToTextSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderErrorProvider.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.relativeToTextOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToTextOptionButton.IconAlignment3"))));
             this.relativeToTextOptionButton.Name = "relativeToTextOptionButton";
             this.relativeToTextOptionButton.TabStop = true;
             this.relativeToTextOptionButton.UseVisualStyleBackColor = true;
@@ -323,9 +335,10 @@
             resources.ApplyResources(this.relativeToPageOptionButton, "relativeToPageOptionButton");
             this.relativeToPageOptionButton.Checked = global::editdocuments.Properties.Settings.Default.IsRelativeToPageSelected;
             this.relativeToPageOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsRelativeToPageSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderErrorProvider.SetIconAlignment(this.relativeToPageOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToPageOptionButton.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.relativeToPageOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToPageOptionButton.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.relativeToPageOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToPageOptionButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.relativeToPageOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToPageOptionButton.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.relativeToPageOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToPageOptionButton.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.relativeToPageOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToPageOptionButton.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.relativeToPageOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("relativeToPageOptionButton.IconAlignment3"))));
             this.relativeToPageOptionButton.Name = "relativeToPageOptionButton";
             this.relativeToPageOptionButton.UseVisualStyleBackColor = true;
             this.relativeToPageOptionButton.Click += new System.EventHandler(this.relativeToPageOptionButton_Click);
@@ -334,8 +347,9 @@
             // 
             resources.ApplyResources(this.referenceTypeLabel, "referenceTypeLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.referenceTypeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("referenceTypeLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.referenceTypeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("referenceTypeLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.referenceTypeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("referenceTypeLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.referenceTypeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("referenceTypeLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.referenceTypeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("referenceTypeLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.referenceTypeLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("referenceTypeLabel.IconAlignment3"))));
             this.referenceTypeLabel.Name = "referenceTypeLabel";
             // 
             // placeHolderTextBox
@@ -343,8 +357,9 @@
             resources.ApplyResources(this.placeHolderTextBox, "placeHolderTextBox");
             this.placeHolderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "PlaceHolder", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.placeHolderErrorProvider.SetIconAlignment(this.placeHolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderTextBox.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.placeHolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderTextBox.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.placeHolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderTextBox.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.placeHolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderTextBox.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.placeHolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderTextBox.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.placeHolderTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderTextBox.IconAlignment3"))));
             this.placeHolderTextBox.Name = "placeHolderTextBox";
             this.placeHolderTextBox.Text = global::editdocuments.Properties.Settings.Default.PlaceHolder;
             this.placeHolderTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -354,8 +369,9 @@
             // 
             resources.ApplyResources(this.placeHolderLabel, "placeHolderLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.placeHolderLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.placeHolderLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.placeHolderLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.placeHolderLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.placeHolderLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.placeHolderLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("placeHolderLabel.IconAlignment3"))));
             this.placeHolderLabel.Name = "placeHolderLabel";
             // 
             // tableLayoutPanel12
@@ -429,8 +445,9 @@
             // 
             resources.ApplyResources(this.pageNumberLabel, "pageNumberLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.pageNumberLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageNumberLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.pageNumberLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageNumberLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.pageNumberLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageNumberLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.pageNumberLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageNumberLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.pageNumberLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageNumberLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.pageNumberLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pageNumberLabel.IconAlignment3"))));
             this.pageNumberLabel.Name = "pageNumberLabel";
             // 
             // pageNumberNumeric
@@ -486,8 +503,9 @@
             this.tableLayoutPanel6.Controls.Add(this.imageLeftOffsetNumeric, 1, 3);
             this.tableLayoutPanel6.Controls.Add(this.keepAspectCheckBox, 1, 2);
             this.placeHolderErrorProvider.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.tableLayoutPanel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tableLayoutPanel6.IconAlignment3"))));
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             // 
             // imageHeightNumeric
@@ -495,9 +513,10 @@
             resources.ApplyResources(this.imageHeightNumeric, "imageHeightNumeric");
             this.imageHeightNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageHeight", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.imageHeightNumeric.DecimalPlaces = 2;
-            this.inputPathErrorProvider.SetIconAlignment(this.imageHeightNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageHeightNumeric.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.imageHeightNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageHeightNumeric.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.imageHeightNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageHeightNumeric.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.imageHeightNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageHeightNumeric.IconAlignment"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.imageHeightNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageHeightNumeric.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.imageHeightNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageHeightNumeric.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.imageHeightNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageHeightNumeric.IconAlignment3"))));
             this.imageHeightNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -511,8 +530,9 @@
             // 
             resources.ApplyResources(this.heightLabel, "heightLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.heightLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("heightLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.heightLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("heightLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.heightLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("heightLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.heightLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("heightLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.heightLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("heightLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.heightLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("heightLabel.IconAlignment3"))));
             this.heightLabel.Name = "heightLabel";
             // 
             // imageWidthNumeric
@@ -520,9 +540,10 @@
             resources.ApplyResources(this.imageWidthNumeric, "imageWidthNumeric");
             this.imageWidthNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageWidth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.imageWidthNumeric.DecimalPlaces = 2;
-            this.inputPathErrorProvider.SetIconAlignment(this.imageWidthNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageWidthNumeric.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.imageWidthNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageWidthNumeric.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.imageWidthNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageWidthNumeric.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.imageWidthNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageWidthNumeric.IconAlignment"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.imageWidthNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageWidthNumeric.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.imageWidthNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageWidthNumeric.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.imageWidthNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageWidthNumeric.IconAlignment3"))));
             this.imageWidthNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -536,25 +557,28 @@
             // 
             resources.ApplyResources(this.widthLabel, "widthLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.widthLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("widthLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.widthLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("widthLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.widthLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("widthLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.widthLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("widthLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.widthLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("widthLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.widthLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("widthLabel.IconAlignment3"))));
             this.widthLabel.Name = "widthLabel";
             // 
             // unitsLabel
             // 
             resources.ApplyResources(this.unitsLabel, "unitsLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.unitsLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitsLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.unitsLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitsLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.unitsLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitsLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.unitsLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitsLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.unitsLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitsLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.unitsLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitsLabel.IconAlignment3"))));
             this.unitsLabel.Name = "unitsLabel";
             // 
             // comboBox1
             // 
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.FormattingEnabled = true;
-            this.placeHolderErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment3"))));
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -562,8 +586,9 @@
             // 
             resources.ApplyResources(this.bottomOffsetLabel, "bottomOffsetLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.bottomOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("bottomOffsetLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.bottomOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("bottomOffsetLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.bottomOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("bottomOffsetLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.bottomOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("bottomOffsetLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.bottomOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("bottomOffsetLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.bottomOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("bottomOffsetLabel.IconAlignment3"))));
             this.bottomOffsetLabel.Name = "bottomOffsetLabel";
             // 
             // imageBottomOffsetNumeric
@@ -571,9 +596,10 @@
             resources.ApplyResources(this.imageBottomOffsetNumeric, "imageBottomOffsetNumeric");
             this.imageBottomOffsetNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageBottomOffset", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.imageBottomOffsetNumeric.DecimalPlaces = 2;
-            this.inputPathErrorProvider.SetIconAlignment(this.imageBottomOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageBottomOffsetNumeric.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.imageBottomOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageBottomOffsetNumeric.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.imageBottomOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageBottomOffsetNumeric.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.imageBottomOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageBottomOffsetNumeric.IconAlignment"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.imageBottomOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageBottomOffsetNumeric.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.imageBottomOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageBottomOffsetNumeric.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.imageBottomOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageBottomOffsetNumeric.IconAlignment3"))));
             this.imageBottomOffsetNumeric.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -592,8 +618,9 @@
             // 
             resources.ApplyResources(this.leftOffsetLabel, "leftOffsetLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.leftOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("leftOffsetLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.leftOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("leftOffsetLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.leftOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("leftOffsetLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.leftOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("leftOffsetLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.leftOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("leftOffsetLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.leftOffsetLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("leftOffsetLabel.IconAlignment3"))));
             this.leftOffsetLabel.Name = "leftOffsetLabel";
             // 
             // imageLeftOffsetNumeric
@@ -601,9 +628,10 @@
             resources.ApplyResources(this.imageLeftOffsetNumeric, "imageLeftOffsetNumeric");
             this.imageLeftOffsetNumeric.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::editdocuments.Properties.Settings.Default, "ImageLeftOffset", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.imageLeftOffsetNumeric.DecimalPlaces = 2;
-            this.inputPathErrorProvider.SetIconAlignment(this.imageLeftOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageLeftOffsetNumeric.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.imageLeftOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageLeftOffsetNumeric.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.imageLeftOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageLeftOffsetNumeric.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.imageLeftOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageLeftOffsetNumeric.IconAlignment"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.imageLeftOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageLeftOffsetNumeric.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.imageLeftOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageLeftOffsetNumeric.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.imageLeftOffsetNumeric, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("imageLeftOffsetNumeric.IconAlignment3"))));
             this.imageLeftOffsetNumeric.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -624,9 +652,10 @@
             this.keepAspectCheckBox.Checked = global::editdocuments.Properties.Settings.Default.KeepAspect;
             this.keepAspectCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.keepAspectCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "KeepAspect", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderErrorProvider.SetIconAlignment(this.keepAspectCheckBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("keepAspectCheckBox.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.keepAspectCheckBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("keepAspectCheckBox.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.keepAspectCheckBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("keepAspectCheckBox.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.keepAspectCheckBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("keepAspectCheckBox.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.keepAspectCheckBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("keepAspectCheckBox.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.keepAspectCheckBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("keepAspectCheckBox.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.keepAspectCheckBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("keepAspectCheckBox.IconAlignment3"))));
             this.keepAspectCheckBox.Name = "keepAspectCheckBox";
             this.keepAspectCheckBox.TabStop = false;
             this.keepAspectCheckBox.UseVisualStyleBackColor = true;
@@ -634,7 +663,7 @@
             // 
             // previewGroupBox
             // 
-            this.previewGroupBox.Controls.Add(this.pictureBox1);
+            this.previewGroupBox.Controls.Add(this.picturePreviewBox);
             resources.ApplyResources(this.previewGroupBox, "previewGroupBox");
             this.inputPathErrorProvider.SetIconAlignment(this.previewGroupBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("previewGroupBox.IconAlignment"))));
             this.picturePathErrorProvider.SetIconAlignment(this.previewGroupBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("previewGroupBox.IconAlignment1"))));
@@ -642,15 +671,16 @@
             this.previewGroupBox.Name = "previewGroupBox";
             this.previewGroupBox.TabStop = false;
             // 
-            // pictureBox1
+            // picturePreviewBox
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.placeHolderErrorProvider.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment2"))));
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.SizeChanged += new System.EventHandler(this.pictureBox1_SizeChanged);
+            resources.ApplyResources(this.picturePreviewBox, "picturePreviewBox");
+            this.placeHolderErrorProvider.SetIconAlignment(this.picturePreviewBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePreviewBox.IconAlignment"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.picturePreviewBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePreviewBox.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.picturePreviewBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePreviewBox.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.picturePreviewBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePreviewBox.IconAlignment3"))));
+            this.picturePreviewBox.Name = "picturePreviewBox";
+            this.picturePreviewBox.TabStop = false;
+            this.picturePreviewBox.SizeChanged += new System.EventHandler(this.pictureBox1_SizeChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -667,8 +697,9 @@
             resources.ApplyResources(this.picturePathTextBox, "picturePathTextBox");
             this.picturePathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "PicturePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.placeHolderErrorProvider.SetIconAlignment(this.picturePathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathTextBox.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.picturePathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathTextBox.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.picturePathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathTextBox.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.picturePathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathTextBox.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.picturePathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathTextBox.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.picturePathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("picturePathTextBox.IconAlignment3"))));
             this.picturePathTextBox.Name = "picturePathTextBox";
             this.picturePathTextBox.ReadOnly = true;
             this.picturePathTextBox.TabStop = false;
@@ -681,7 +712,8 @@
             resources.ApplyResources(this.explorePicturePathButton, "explorePicturePathButton");
             this.inputPathErrorProvider.SetIconAlignment(this.explorePicturePathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("explorePicturePathButton.IconAlignment"))));
             this.picturePathErrorProvider.SetIconAlignment(this.explorePicturePathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("explorePicturePathButton.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.explorePicturePathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("explorePicturePathButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.explorePicturePathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("explorePicturePathButton.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.explorePicturePathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("explorePicturePathButton.IconAlignment3"))));
             this.explorePicturePathButton.Name = "explorePicturePathButton";
             this.explorePicturePathButton.UseVisualStyleBackColor = true;
             this.explorePicturePathButton.Click += new System.EventHandler(this.button2_Click);
@@ -701,8 +733,9 @@
             resources.ApplyResources(this.inputPathTextBox, "inputPathTextBox");
             this.inputPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::editdocuments.Properties.Settings.Default, "InputPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.placeHolderErrorProvider.SetIconAlignment(this.inputPathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("inputPathTextBox.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.inputPathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("inputPathTextBox.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.inputPathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("inputPathTextBox.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.inputPathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("inputPathTextBox.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.inputPathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("inputPathTextBox.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.inputPathTextBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("inputPathTextBox.IconAlignment3"))));
             this.inputPathTextBox.Name = "inputPathTextBox";
             this.inputPathTextBox.ReadOnly = true;
             this.inputPathTextBox.TabStop = false;
@@ -715,7 +748,8 @@
             resources.ApplyResources(this.exploreInputPathButton, "exploreInputPathButton");
             this.inputPathErrorProvider.SetIconAlignment(this.exploreInputPathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("exploreInputPathButton.IconAlignment"))));
             this.picturePathErrorProvider.SetIconAlignment(this.exploreInputPathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("exploreInputPathButton.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.exploreInputPathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("exploreInputPathButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.exploreInputPathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("exploreInputPathButton.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.exploreInputPathButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("exploreInputPathButton.IconAlignment3"))));
             this.exploreInputPathButton.Name = "exploreInputPathButton";
             this.exploreInputPathButton.UseVisualStyleBackColor = true;
             this.exploreInputPathButton.Click += new System.EventHandler(this.button1_Click);
@@ -735,9 +769,10 @@
             resources.ApplyResources(this.filesOptionButton, "filesOptionButton");
             this.filesOptionButton.Checked = global::editdocuments.Properties.Settings.Default.IsFilesOptionSelected;
             this.filesOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsFilesOptionSelected", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderErrorProvider.SetIconAlignment(this.filesOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filesOptionButton.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.filesOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filesOptionButton.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.filesOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filesOptionButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.filesOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filesOptionButton.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.filesOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filesOptionButton.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.filesOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filesOptionButton.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.filesOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("filesOptionButton.IconAlignment3"))));
             this.filesOptionButton.Name = "filesOptionButton";
             this.filesOptionButton.TabStop = true;
             this.filesOptionButton.UseVisualStyleBackColor = true;
@@ -746,9 +781,10 @@
             // folderOptionButton
             // 
             resources.ApplyResources(this.folderOptionButton, "folderOptionButton");
-            this.placeHolderErrorProvider.SetIconAlignment(this.folderOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("folderOptionButton.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.folderOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("folderOptionButton.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.folderOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("folderOptionButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.folderOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("folderOptionButton.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.folderOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("folderOptionButton.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.folderOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("folderOptionButton.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.folderOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("folderOptionButton.IconAlignment3"))));
             this.folderOptionButton.Name = "folderOptionButton";
             this.folderOptionButton.UseVisualStyleBackColor = true;
             this.folderOptionButton.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
@@ -757,8 +793,9 @@
             // 
             resources.ApplyResources(this.documentFormatLabel, "documentFormatLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.documentFormatLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("documentFormatLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.documentFormatLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("documentFormatLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.documentFormatLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("documentFormatLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.documentFormatLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("documentFormatLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.documentFormatLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("documentFormatLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.documentFormatLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("documentFormatLabel.IconAlignment3"))));
             this.documentFormatLabel.Name = "documentFormatLabel";
             // 
             // tableLayoutPanel10
@@ -776,9 +813,10 @@
             resources.ApplyResources(this.wordDocumentOptionButton, "wordDocumentOptionButton");
             this.wordDocumentOptionButton.Checked = global::editdocuments.Properties.Settings.Default.IsWordDocumentType;
             this.wordDocumentOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsWordDocumentType", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderErrorProvider.SetIconAlignment(this.wordDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("wordDocumentOptionButton.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.wordDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("wordDocumentOptionButton.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.wordDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("wordDocumentOptionButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.wordDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("wordDocumentOptionButton.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.wordDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("wordDocumentOptionButton.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.wordDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("wordDocumentOptionButton.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.wordDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("wordDocumentOptionButton.IconAlignment3"))));
             this.wordDocumentOptionButton.Name = "wordDocumentOptionButton";
             this.wordDocumentOptionButton.TabStop = true;
             this.wordDocumentOptionButton.UseVisualStyleBackColor = true;
@@ -790,9 +828,10 @@
             resources.ApplyResources(this.pdfDocumentOptionButton, "pdfDocumentOptionButton");
             this.pdfDocumentOptionButton.Checked = global::editdocuments.Properties.Settings.Default.IsPDFDocumentType;
             this.pdfDocumentOptionButton.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::editdocuments.Properties.Settings.Default, "IsPDFDocumentType", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeHolderErrorProvider.SetIconAlignment(this.pdfDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pdfDocumentOptionButton.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.pdfDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pdfDocumentOptionButton.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.pdfDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pdfDocumentOptionButton.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.pdfDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pdfDocumentOptionButton.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.pdfDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pdfDocumentOptionButton.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.pdfDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pdfDocumentOptionButton.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.pdfDocumentOptionButton, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pdfDocumentOptionButton.IconAlignment3"))));
             this.pdfDocumentOptionButton.Name = "pdfDocumentOptionButton";
             this.pdfDocumentOptionButton.UseVisualStyleBackColor = true;
             this.pdfDocumentOptionButton.CheckedChanged += new System.EventHandler(this.pdfDocumentOptionButton_CheckedChanged);
@@ -802,8 +841,9 @@
             // 
             resources.ApplyResources(this.positionLabel, "positionLabel");
             this.placeHolderErrorProvider.SetIconAlignment(this.positionLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("positionLabel.IconAlignment"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.positionLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("positionLabel.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.positionLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("positionLabel.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.positionLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("positionLabel.IconAlignment1"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.positionLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("positionLabel.IconAlignment2"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.positionLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("positionLabel.IconAlignment3"))));
             this.positionLabel.Name = "positionLabel";
             // 
             // openWordFileDialog
@@ -826,7 +866,8 @@
             // 
             this.picturePathErrorProvider.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment"))));
             this.inputPathErrorProvider.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment1"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment2"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment3"))));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1});
@@ -847,8 +888,9 @@
             // menuStrip1
             // 
             this.placeHolderErrorProvider.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment1"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment2"))));
+            this.subFolderErrorProvider.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment3"))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
             this.optionsToolStripMenuItem,
@@ -978,7 +1020,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBottomOffsetNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageLeftOffsetNumeric)).EndInit();
             this.previewGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePreviewBox)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -1030,7 +1072,7 @@
         private System.Windows.Forms.Label leftOffsetLabel;
         private System.Windows.Forms.Label bottomOffsetLabel;
         private System.Windows.Forms.GroupBox previewGroupBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picturePreviewBox;
         private System.Windows.Forms.Label unitsLabel;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox keepAspectCheckBox;

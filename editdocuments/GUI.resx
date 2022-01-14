@@ -159,10 +159,19 @@
   <data name="statusStrip1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <metadata name="subFolderErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>417, 56</value>
+  </metadata>
+  <data name="subFolderErrorProvider.RightToLeft" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="statusStrip1.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <metadata name="placeHolderErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="statusStrip1.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="statusStrip1.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
@@ -211,6 +220,9 @@
     <value>TopLeft</value>
   </data>
   <data name="menuStrip1.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="menuStrip1.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="resetToDefaultsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -1570,6 +1582,9 @@
   <data name="generateButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="generateButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="generateButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1651,6 +1666,9 @@
   <data name="savePDFLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="savePDFLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="savePDFLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1694,6 +1712,9 @@
     <value>TopLeft</value>
   </data>
   <data name="picturePropertiesLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="picturePropertiesLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="picturePropertiesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -1741,6 +1762,9 @@
   <data name="picturePathLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="picturePathLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="picturePathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1786,6 +1810,9 @@
   <data name="filePathLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="filePathLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="filePathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1829,6 +1856,9 @@
     <value>TopLeft</value>
   </data>
   <data name="typeLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="typeLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="typeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -1879,6 +1909,9 @@
   <data name="subFolderButtonOption.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="subFolderButtonOption.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="subFolderButtonOption.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1921,6 +1954,9 @@
   <data name="sameFolderButtonOption.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="sameFolderButtonOption.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="sameFolderButtonOption.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1958,6 +1994,9 @@
     <value>TopLeft</value>
   </data>
   <data name="subFolderTextBox.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="subFolderTextBox.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="subFolderTextBox.Location" type="System.Drawing.Point, System.Drawing">
@@ -2038,6 +2077,9 @@
   <data name="pageReferenceLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="pageReferenceLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="pageReferenceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2086,6 +2128,9 @@
   <data name="relativeToTextOptionButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="relativeToTextOptionButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="relativeToTextOptionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2126,6 +2171,9 @@
     <value>TopLeft</value>
   </data>
   <data name="relativeToPageOptionButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="relativeToPageOptionButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="relativeToPageOptionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2209,6 +2257,9 @@
   <data name="referenceTypeLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="referenceTypeLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="referenceTypeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2251,6 +2302,9 @@
   <data name="placeHolderTextBox.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="placeHolderTextBox.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="placeHolderTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 35</value>
   </data>
@@ -2285,6 +2339,9 @@
     <value>TopLeft</value>
   </data>
   <data name="placeHolderLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="placeHolderLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="placeHolderLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2530,6 +2587,9 @@
   <data name="pageNumberLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="pageNumberLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="pageNumberLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2701,6 +2761,9 @@
   <data name="imageHeightNumeric.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="imageHeightNumeric.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="imageHeightNumeric.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 29</value>
   </data>
@@ -2738,6 +2801,9 @@
     <value>TopLeft</value>
   </data>
   <data name="heightLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="heightLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="heightLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2782,6 +2848,9 @@
   <data name="imageWidthNumeric.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="imageWidthNumeric.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="imageWidthNumeric.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
   </data>
@@ -2819,6 +2888,9 @@
     <value>TopLeft</value>
   </data>
   <data name="widthLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="widthLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="widthLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2866,6 +2938,9 @@
   <data name="unitsLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="unitsLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="unitsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2908,6 +2983,9 @@
   <data name="comboBox1.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="comboBox1.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 138</value>
   </data>
@@ -2942,6 +3020,9 @@
     <value>TopLeft</value>
   </data>
   <data name="bottomOffsetLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="bottomOffsetLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="bottomOffsetLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2986,6 +3067,9 @@
   <data name="imageBottomOffsetNumeric.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="imageBottomOffsetNumeric.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="imageBottomOffsetNumeric.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 106</value>
   </data>
@@ -3023,6 +3107,9 @@
     <value>TopLeft</value>
   </data>
   <data name="leftOffsetLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="leftOffsetLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="leftOffsetLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -3067,6 +3154,9 @@
   <data name="imageLeftOffsetNumeric.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="imageLeftOffsetNumeric.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="imageLeftOffsetNumeric.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 80</value>
   </data>
@@ -3101,6 +3191,9 @@
     <value>TopLeft</value>
   </data>
   <data name="keepAspectCheckBox.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="keepAspectCheckBox.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="keepAspectCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -3140,6 +3233,9 @@
     <value>TopLeft</value>
   </data>
   <data name="tableLayoutPanel6.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="tableLayoutPanel6.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="tableLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
@@ -3205,43 +3301,46 @@
   <data name="&gt;&gt;propertiesGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="picturePreviewBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="pictureBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="picturePreviewBox.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
-  <data name="pictureBox1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="picturePreviewBox.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
-  <data name="pictureBox1.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="picturePreviewBox.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="picturePreviewBox.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="picturePreviewBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="picturePreviewBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="picturePreviewBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>308, 169</value>
   </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="picturePreviewBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="picturePreviewBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="&gt;&gt;picturePreviewBox.Name" xml:space="preserve">
+    <value>picturePreviewBox</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;picturePreviewBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;picturePreviewBox.Parent" xml:space="preserve">
     <value>previewGroupBox</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;picturePreviewBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="previewGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -3334,6 +3433,9 @@
   <data name="picturePathTextBox.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="picturePathTextBox.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="picturePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 7</value>
   </data>
@@ -3365,6 +3467,9 @@
     <value>TopLeft</value>
   </data>
   <data name="explorePicturePathButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="explorePicturePathButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="explorePicturePathButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -3448,6 +3553,9 @@
   <data name="inputPathTextBox.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="inputPathTextBox.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="inputPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 7</value>
   </data>
@@ -3479,6 +3587,9 @@
     <value>TopLeft</value>
   </data>
   <data name="exploreInputPathButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="exploreInputPathButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="exploreInputPathButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -3562,6 +3673,9 @@
   <data name="filesOptionButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="filesOptionButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="filesOptionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -3599,6 +3713,9 @@
     <value>TopLeft</value>
   </data>
   <data name="folderOptionButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="folderOptionButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="folderOptionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -3682,6 +3799,9 @@
   <data name="documentFormatLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="documentFormatLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="documentFormatLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -3727,6 +3847,9 @@
   <data name="wordDocumentOptionButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="wordDocumentOptionButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="wordDocumentOptionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -3764,6 +3887,9 @@
     <value>TopLeft</value>
   </data>
   <data name="pdfDocumentOptionButton.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="pdfDocumentOptionButton.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="pdfDocumentOptionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -3847,6 +3973,9 @@
   <data name="positionLabel.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
+  <data name="positionLabel.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
   <data name="positionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -3887,6 +4016,9 @@
     <value>TopLeft</value>
   </data>
   <data name="tableLayoutPanel1.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="tableLayoutPanel1.IconAlignment3" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
@@ -3942,11 +4074,5 @@
   </metadata>
   <data name="openPDFFileDialog.Filter" xml:space="preserve">
     <value>PDF files|*.pdf</value>
-  </data>
-  <metadata name="subFolderErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>417, 56</value>
-  </metadata>
-  <data name="subFolderErrorProvider.RightToLeft" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
 </root>

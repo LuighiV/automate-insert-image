@@ -153,6 +153,9 @@
   <data name="InfoOpenWord" xml:space="preserve">
     <value>Iniciando MS Word en segundo plano</value>
   </data>
+  <data name="InfoPageOutOfBounds" xml:space="preserve">
+    <value>Página {0} fuera de los límites del documento. Imagen no insertada.</value>
+  </data>
   <data name="InfoPlaceholder" xml:space="preserve">
     <value>Marcador de posicion en: {0}</value>
   </data>
@@ -170,6 +173,12 @@
   </data>
   <data name="InfoStartProgram" xml:space="preserve">
     <value>Iniciando programa</value>
+  </data>
+  <data name="InfoSummarySuccess" xml:space="preserve">
+    <value>Total de documentos con imagen insertada satisfactoriamente: {0}/{1}</value>
+  </data>
+  <data name="InfoTextNotFound" xml:space="preserve">
+    <value>Texto "{0}" no encontrado en documento. Imagen no insertada.</value>
   </data>
   <data name="InfoYes" xml:space="preserve">
     <value>sí</value>
@@ -190,5 +199,14 @@ Use el botón Explorar para seleccionar una.</value>
   </data>
   <data name="TextValidationPlaceholder" xml:space="preserve">
     <value>Se require un marcador de posición no vacío.</value>
+  </data>
+  <data name="TextValidationSubFolder" xml:space="preserve">
+    <value>Se require un nombre de subcarpeta no vacío.</value>
+  </data>
+  <data name="TitleAbout" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="TitleHowToUse" xml:space="preserve">
+    <value>Cómo usar</value>
   </data>
 </root>

@@ -53,7 +53,7 @@ namespace editdocuments
             if (IsValidPicturePath())
             {
                 this.CurrentImage = new Bitmap(this.picturePathTextBox.Text);
-                fillPictureBox(this.pictureBox1, this.CurrentImage);
+                fillPictureBox(this.picturePreviewBox, this.CurrentImage);
             }
 
         }
@@ -115,7 +115,7 @@ namespace editdocuments
             this.imageWidthNumeric.Value = this.CurrentImage.Width;
             this.imageHeightNumeric.Value = this.CurrentImage.Height;
 
-            fillPictureBox(this.pictureBox1, this.CurrentImage);
+            fillPictureBox(this.picturePreviewBox, this.CurrentImage);
 
             InitiateDimensions();
             ConvertUnits();
@@ -418,6 +418,7 @@ namespace editdocuments
         private void resetToDefaultsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset();
+            this.picturePreviewBox.Image = null; 
             //Console.WriteLine("Reset settings");
         }
 
@@ -592,7 +593,7 @@ namespace editdocuments
         {
             if (this.CurrentImage != null)
             {
-                fillPictureBox(this.pictureBox1, this.CurrentImage);
+                fillPictureBox(this.picturePreviewBox, this.CurrentImage);
             }
         }
     }
