@@ -44,6 +44,12 @@ namespace editdocuments
                 this.spanishToolStripMenuItem.Checked = false;
                 this.englishToolStripMenuItem.Checked = true;
             }
+
+            this.relativeToPageOptionButton.Enabled = !this.wordDocumentOptionButton.Checked;
+            this.sameFolderButtonOption.Enabled = this.wordDocumentOptionButton.Checked;
+            enableTextReference(this.relativeToTextOptionButton.Checked);
+            enablePageReference(!this.relativeToTextOptionButton.Checked);
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -55,8 +61,10 @@ namespace editdocuments
         {
             if (this.Data.IsFilesSelected)
             {
-                
-                this.openFileDialog1.ShowDialog();
+                if (this.Data.Type == DocumentType.Word)
+                    this.openWordFileDialog.ShowDialog();
+                else
+                    this.openPDFFileDialog.ShowDialog();
             }
             else
             {
@@ -81,20 +89,20 @@ namespace editdocuments
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            this.inputPathTextBox.Text = String.Join(",", this.openFileDialog1.FileNames);
+            this.inputPathTextBox.Text = String.Join(",", this.openWordFileDialog.FileNames);
             this.Data.InputPath = this.inputPathTextBox.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.openFileDialog2.ShowDialog();
+            this.openImageFileDialog.ShowDialog();
         }
 
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
         {
             this.IgnoreTextChanged = true;
 
-            this.Data.PicturePath = this.openFileDialog2.FileName;
+            this.Data.PicturePath = this.openImageFileDialog.FileName;
             this.picturePathTextBox.Text = this.Data.PicturePath;
 
             this.CurrentImage = new Bitmap(this.Data.PicturePath);
@@ -261,6 +269,12 @@ namespace editdocuments
             return (!String.IsNullOrEmpty(placeHolderTextBox.Text));
         }
 
+        private bool IsValidSubFolder()
+        {
+            return (!String.IsNullOrEmpty(subFolderTextBox.Text));
+        }
+
+
         //Reference https://stackoverflow.com/a/56119473
         static public void fillPictureBox(PictureBox pbox, Image bmp)
         {
@@ -312,21 +326,20 @@ namespace editdocuments
         {
             if (IsValidPicturePath())
             {
-                e.Cancel = false;
                 errorProvider2.SetError(this.picturePathTextBox, String.Empty);
-                
+                e.Cancel = false;
             }
             else
             {
-                e.Cancel = this.generateButton.Focused;
                 errorProvider2.SetError(this.picturePathTextBox, Strings.TextValidationPicturePath);
-                
+                e.Cancel = this.generateButton.Focused;
             }
         }
 
         private void placeHolderTextBox_Validating(object sender, CancelEventArgs e)
         {
-            if (IsValidPlaceHolder())
+
+            if (IsValidPlaceHolder() | this.relativeToPageOptionButton.Checked)
             {
                 placeHolderErrorProvider.SetError(this.placeHolderTextBox, String.Empty);
                 e.Cancel = false;
@@ -340,7 +353,9 @@ namespace editdocuments
 
         private void subFolderButtonOption_CheckedChanged(object sender, EventArgs e)
         {
+            this.subFolderErrorProvider.SetError(this.subFolderTextBox, String.Empty);
             this.Data.IsSubFolderSelected = true;
+            enableSubFolderTextBox(this.subFolderButtonOption.Checked);
         }
 
         private void sameFolderButtonOption_CheckedChanged(object sender, EventArgs e)
@@ -452,6 +467,118 @@ namespace editdocuments
                 {
                     e.Cancel = true;
                 }
+            }
+        }
+
+        private void pdfDocumentOptionButton_Click(object sender, EventArgs e)
+        {
+            this.pdfDocumentOptionButton.Checked = true;
+            this.subFolderButtonOption.Checked = true;
+            this.Data.Type = DocumentType.PDF;
+        }
+
+        private void wordDocumentOptionButton_Click(object sender, EventArgs e)
+        {
+            this.wordDocumentOptionButton.Checked = true;
+            this.relativeToPageOptionButton.Checked = false;
+            this.relativeToTextOptionButton.Checked = true;
+            this.Data.Type = DocumentType.Word;
+        }
+
+        private void topLeftOptionButton_Click(object sender, EventArgs e)
+        {
+            this.topLeftOptionButton.Checked = true;
+            this.Data.Reference = PageReference.top_left;
+        }
+
+        private void topRightOptionButton_Click(object sender, EventArgs e)
+        {
+            this.topRightOptionButton.Checked = true;
+            this.Data.Reference = PageReference.top_right;
+        }
+
+        private void bottomLeftOptionButton_Click(object sender, EventArgs e)
+        {
+            this.bottomLeftOptionButton.Checked = true;
+            this.Data.Reference = PageReference.bottom_left;
+        }
+
+        private void bottomRightOptionButton_Click(object sender, EventArgs e)
+        {
+            this.bottomRightOptionButton.Checked = true;
+            this.Data.Reference = PageReference.bottom_right;
+        }
+
+        private void relativeToTextOptionButton_Click(object sender, EventArgs e)
+        {
+            this.relativeToTextOptionButton.Checked = true;
+            this.Data.IsAbsolute = false;
+        }
+
+        private void relativeToPageOptionButton_Click(object sender, EventArgs e)
+        {
+            this.relativeToPageOptionButton.Checked = true;
+            this.Data.IsAbsolute = true;
+        }
+
+        private void pageNumberNumeric_ValueChanged(object sender, EventArgs e)
+        {
+            this.Data.PageNumber = (int)this.pageNumberNumeric.Value;
+        }
+
+        private void enableTextReference(bool enable)
+        {
+            this.placeHolderTextBox.Enabled = enable;
+            this.placeHolderLabel.Enabled = enable;
+        }
+
+        private void enablePageReference(bool enable)
+        {
+            this.pageReferenceLabel.Enabled = enable;
+            this.pageNumberLabel.Enabled = enable;
+            this.pageNumberNumeric.Enabled = enable;
+            this.relativeToGroupBox.Enabled = enable;
+        }
+
+        private void enableSubFolderTextBox(bool enable)
+        {
+            this.subFolderTextBox.Enabled = enable;
+        }
+
+        private void wordDocumentOptionButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.relativeToPageOptionButton.Enabled = !this.wordDocumentOptionButton.Checked;
+        }
+
+        private void pdfDocumentOptionButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.sameFolderButtonOption.Enabled = this.wordDocumentOptionButton.Checked;
+        }
+
+        private void relativeToTextOptionButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.placeHolderErrorProvider.SetError(this.placeHolderTextBox, String.Empty);
+            enableTextReference(this.relativeToTextOptionButton.Checked);
+            enablePageReference(!this.relativeToTextOptionButton.Checked);
+        }
+
+        private void openPDFFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            this.inputPathTextBox.Text = String.Join(",", this.openPDFFileDialog.FileNames);
+            this.Data.InputPath = this.inputPathTextBox.Text;
+        }
+
+        private void subFolderTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (IsValidSubFolder() | !this.subFolderButtonOption.Checked)
+            {
+                subFolderErrorProvider.SetError(this.subFolderTextBox, String.Empty);
+                e.Cancel = false;
+            }
+            else
+            {
+                subFolderErrorProvider.SetError(this.subFolderTextBox, Strings.TextValidationSubFolder);
+                e.Cancel = this.generateButton.Focused;
             }
         }
     }

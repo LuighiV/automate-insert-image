@@ -21,7 +21,14 @@ namespace editdocuments
             bool isSubFolderSelected = true,
             string folderSave = null,
             string subFolderSave = null,
-            bool saveFile = false)
+            bool saveFile = false,
+            bool isAbsolute = false,
+            bool bottomLeftSelected = true,
+            bool topLeftSelected = false,
+            bool topRightSelected = false,
+            bool bottomRightSelected = false,
+            int pageNumber = 1,
+            bool isWordDocumentType = true)
         {
             PicturePath = (fromSettings)? Properties.Settings.Default.PicturePath: picturePath;
             TextPlaceHolder = (fromSettings) ? Properties.Settings.Default.PlaceHolder : textPlaceHolder;
@@ -33,12 +40,26 @@ namespace editdocuments
             _FolderSave = folderSave;
             _SubFolderSave = (fromSettings) ? Properties.Settings.Default.SubFolderSave : subFolderSave;
             SaveFile = saveFile;
- 
+
+            IsAbsolute = (fromSettings) ? !Properties.Settings.Default.IsRelativeToTextSelected : isAbsolute;
+            
+            PageNumber = (fromSettings) ? (int) Properties.Settings.Default.PageNumber:  pageNumber;
+
             _ImageWidth = new Quantity(0,unit);
             _ImageHeight = new Quantity(0, unit);
             _ImageLeftOffset = new Quantity(0, unit);
             _ImageBottomOffset = new Quantity(0, unit);
             _Unit = unit;
+
+            Reference = PageReference.bottom_left;
+            Type = DocumentType.Word;
+
+            BottomLeftSelected = (fromSettings) ? Properties.Settings.Default.IsRelativeToTextSelected : bottomLeftSelected;
+            TopLeftSelected = (fromSettings) ? Properties.Settings.Default.IsRelativeToTextSelected : topLeftSelected;
+            TopRightSelected = (fromSettings) ? Properties.Settings.Default.IsRelativeToTextSelected : topRightSelected;
+            BottomRightSelected = (fromSettings) ? Properties.Settings.Default.IsRelativeToTextSelected : bottomRightSelected;
+
+            IsWordDocumentType = (fromSettings) ? Properties.Settings.Default.IsWordDocumentType : isWordDocumentType;
 
             LeftOffset = (fromSettings) ? (double)Properties.Settings.Default.ImageLeftOffset : leftOffset;
             BottomOffset = (fromSettings) ? (double)Properties.Settings.Default.ImageBottomOffset : bottomOffset;
@@ -53,6 +74,7 @@ namespace editdocuments
         private GUnits _Unit;
         private string _FolderSave;
         private string _SubFolderSave;
+
 
         public GUnits Unit { get { return _Unit; } set { _Unit = value; 
                 _ImageWidth.ToUnit(value);
@@ -74,6 +96,14 @@ namespace editdocuments
 
         public bool SaveFile { get; set; }
 
+        public bool IsAbsolute { get; set; }
+
+        public PageReference Reference { get; set; }
+
+        public int PageNumber { get; set; }
+
+        public DocumentType Type { get; set; }
+
         public IEnumerable<string> InputFilePaths => (IsFilesSelected) ? InputPath.Split(',') : null;
 
         public string FolderPath => (IsFilesSelected) ? null : InputPath;
@@ -82,5 +112,70 @@ namespace editdocuments
             set => _FolderSave = value; }
         public string SubFolderSave { get => (IsSubFolderSelected) ? _SubFolderSave:null; 
             set => _SubFolderSave = value; }
+
+
+        public bool BottomLeftSelected
+        {
+            get { return Reference == PageReference.bottom_left; }
+            set
+            {
+                if (value)
+                {
+                    Reference = PageReference.bottom_left;
+                }
+            }
+        }
+
+        public bool TopLeftSelected
+        {
+            get { return Reference == PageReference.top_left; ; }
+            set
+            {
+                if (value)
+                {
+                    Reference = PageReference.top_left;
+                }
+            }
+        }
+
+        public bool TopRightSelected
+        {
+            get { return Reference == PageReference.top_right; }
+            set
+            {
+                if (value)
+                {
+                    Reference = PageReference.top_right;
+                }
+            }
+        }
+
+        public bool BottomRightSelected
+        {
+            get { return Reference == PageReference.bottom_right; ; }
+            set
+            {
+                if (value)
+                {
+                    Reference = PageReference.bottom_right;
+                }
+            }
+        }
+
+        public bool IsWordDocumentType
+        {
+            get { return Type == DocumentType.Word; ; }
+            set
+            {
+                if (value) 
+                {
+                    Type = DocumentType.Word; 
+                }
+                else 
+                { 
+                    Type = DocumentType.PDF;
+                }
+            }
+        }
     }
 }

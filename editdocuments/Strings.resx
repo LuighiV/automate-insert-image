@@ -153,6 +153,9 @@
   <data name="InfoOpenWord" xml:space="preserve">
     <value>Starting MS Word in background</value>
   </data>
+  <data name="InfoPageOutOfBounds" xml:space="preserve">
+    <value>Page {0} is out of the document bounds. Image not inserted.</value>
+  </data>
   <data name="InfoPlaceholder" xml:space="preserve">
     <value>Placeholder set to: {0}</value>
   </data>
@@ -170,6 +173,12 @@
   </data>
   <data name="InfoStartProgram" xml:space="preserve">
     <value>Starting program</value>
+  </data>
+  <data name="InfoSummarySuccess" xml:space="preserve">
+    <value>Total documents with inserted image successfully: {0}/{1}</value>
+  </data>
+  <data name="InfoTextNotFound" xml:space="preserve">
+    <value>Text "{0}" not found in document. Image not inserted.</value>
   </data>
   <data name="InfoYes" xml:space="preserve">
     <value>yes</value>
@@ -190,6 +199,9 @@ Use the Explorer button to select one.</value>
   </data>
   <data name="TextValidationPlaceholder" xml:space="preserve">
     <value>It is required a non-empty placeholder.</value>
+  </data>
+  <data name="TextValidationSubFolder" xml:space="preserve">
+    <value>It is required a non-empty subfolder name.</value>
   </data>
   <data name="TitleAbout" xml:space="preserve">
     <value>About</value>

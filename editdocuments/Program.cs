@@ -129,7 +129,7 @@ namespace editdocuments
         /// <param name="opts"> Command line options to pass to the software</param>
         static void RunOptions(Options opts)
         {
-            var processor = new Processor();
+            var processor = new WordProcessor();
             processor.RunProcess(opts.PicturePath,
                 opts.PlaceHolder,
                 opts.LeftOffset,

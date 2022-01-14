@@ -154,5 +154,113 @@ namespace editdocuments.Properties {
                 this["SubFolderSave"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsWordDocumentType {
+            get {
+                return ((bool)(this["IsWordDocumentType"]));
+            }
+            set {
+                this["IsWordDocumentType"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsRelativeToTextSelected {
+            get {
+                return ((bool)(this["IsRelativeToTextSelected"]));
+            }
+            set {
+                this["IsRelativeToTextSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TopLeftOptionSelected {
+            get {
+                return ((bool)(this["TopLeftOptionSelected"]));
+            }
+            set {
+                this["TopLeftOptionSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool BottomLeftOptionSelected {
+            get {
+                return ((bool)(this["BottomLeftOptionSelected"]));
+            }
+            set {
+                this["BottomLeftOptionSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TopRightOptionSelected {
+            get {
+                return ((bool)(this["TopRightOptionSelected"]));
+            }
+            set {
+                this["TopRightOptionSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool BottomRightOptionSelected {
+            get {
+                return ((bool)(this["BottomRightOptionSelected"]));
+            }
+            set {
+                this["BottomRightOptionSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public decimal PageNumber {
+            get {
+                return ((decimal)(this["PageNumber"]));
+            }
+            set {
+                this["PageNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsPDFDocumentType {
+            get {
+                return ((bool)(this["IsPDFDocumentType"]));
+            }
+            set {
+                this["IsPDFDocumentType"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsRelativeToPageSelected {
+            get {
+                return ((bool)(this["IsRelativeToPageSelected"]));
+            }
+            set {
+                this["IsRelativeToPageSelected"] = value;
+            }
+        }
     }
 }

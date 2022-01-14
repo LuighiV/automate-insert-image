@@ -18,27 +18,71 @@ namespace editdocuments
 
         public bool IsProcessing;
         public Processor BackgroundProcess;
+        public WordProcessor WordProcess;
+        public PDFProcessor PDFProcess;
+
         public ProcessDialog()
         {
             InitializeComponent();
             //Console.SetOut(new ControlWriter(this.textBox1));
 
             //Console.WriteLine("Executing in New Form");
-            this.BackgroundProcess = new Processor();
+            //this.BackgroundProcess = new WordProcessor();
 
-            this.BackgroundProcess.StartProcessing += startProcessing;
-            this.BackgroundProcess.OpenWordProgram += openWordProgram;
-            this.BackgroundProcess.StartProcessingFile += startProcessingFile;
-            this.BackgroundProcess.GotPlaceHolderPosition += gotPlaceHolderPosition;
-            this.BackgroundProcess.UpdateCounter += updateCounter;
-            this.BackgroundProcess.PDFSaved += PDFSaved;
-            this.BackgroundProcess.FinishProcessingFile += finishProcessingFile;
+            //this.BackgroundProcess.StartProcessing += startProcessing;
+            //this.BackgroundProcess.OpenWordProgram += openWordProgram;
+            //this.BackgroundProcess.StartProcessingFile += startProcessingFile;
+            //this.BackgroundProcess.GotPlaceHolderPosition += gotPlaceHolderPosition;
+            //this.BackgroundProcess.UpdateCounter += updateCounter;
+            //this.BackgroundProcess.PDFSaved += PDFSaved;
+            //this.BackgroundProcess.FinishProcessingFile += finishProcessingFile;
 
-            this.BackgroundProcess.CloseWordProgram += closeWordProgram;
-            this.BackgroundProcess.FinishProcessing += finishProcessing;
+            //this.BackgroundProcess.CloseWordProgram += closeWordProgram;
+            //this.BackgroundProcess.FinishProcessing += finishProcessing;
             //this.ControlBox = false;  // Hides controls of window
 
             this.IsProcessing = false;
+        }
+
+        public void  setProcessor(DocumentType type = DocumentType.Word)
+        {
+
+            if(type == DocumentType.Word)
+            {
+                this.WordProcess = new WordProcessor();
+
+                this.WordProcess.StartProcessing += startProcessing;
+                this.WordProcess.OpenWordProgram += openWordProgram;
+                this.WordProcess.StartProcessingFile += startProcessingFile;
+                this.WordProcess.GotPlaceHolderPosition += gotPlaceHolderPosition;
+                this.WordProcess.UpdateCounter += updateCounter;
+                this.WordProcess.PDFSaved += PDFSaved;
+                this.WordProcess.FinishProcessingFile += finishProcessingFile;
+
+                this.WordProcess.CloseWordProgram += closeWordProgram;
+                this.WordProcess.FinishProcessing += finishProcessing;
+
+
+                this.BackgroundProcess = this.WordProcess;
+            }
+            else
+            {
+                this.PDFProcess = new PDFProcessor();
+
+                this.PDFProcess.StartProcessing += startProcessing;
+                this.PDFProcess.StartProcessingFile += startProcessingFile;
+                this.PDFProcess.GotPlaceHolderPosition += gotPlaceHolderPosition;
+                this.PDFProcess.UpdateCounter += updateCounter;
+                this.PDFProcess.PDFSaved += PDFSaved;
+                this.PDFProcess.FinishProcessingFile += finishProcessingFile;
+                this.PDFProcess.FinishProcessing += finishProcessing;
+                this.PDFProcess.TextNotFoundInDocument += textNotFoundInDocument;
+                this.PDFProcess.PageOutOfBounds += pageOutOfBounds;
+                this.PDFProcess.SummarySuccess += printSummarySuccess;
+
+
+                this.BackgroundProcess = this.PDFProcess;
+            }
         }
 
         public void successFullFinished()
@@ -118,6 +162,16 @@ namespace editdocuments
             WriteTextSafe(string.Format(Strings.InfoPlaceholder + Environment.NewLine, e.Text));
         }
 
+        public void textNotFoundInDocument(object sender, TextArg e)
+        {
+            WriteTextSafe(string.Format(Strings.InfoTextNotFound + Environment.NewLine, e.Text));
+        }
+
+        public void pageOutOfBounds(object sender, IntArg e)
+        {
+            WriteTextSafe(string.Format(Strings.InfoPageOutOfBounds + Environment.NewLine, e.Value));
+        }
+
         public void PDFSaved(object sender, TextArg e)
         {
             WriteTextSafe(string.Format(Strings.InfoSavedPDFFile + Environment.NewLine, e.Text));
@@ -140,6 +194,12 @@ namespace editdocuments
         public void finishProcessing(object sender, EventArgs e)
         {
             WriteTextSafe(Strings.InfoFinishProgram + Environment.NewLine);
+            WriteTextSafe(Environment.NewLine);
+        }
+
+        public void printSummarySuccess(object sender, CounterArgs e)
+        {
+            WriteTextSafe(string.Format(Strings.InfoSummarySuccess + Environment.NewLine, e.Value, e.Total));
             WriteTextSafe(Environment.NewLine);
         }
 
@@ -209,14 +269,9 @@ namespace editdocuments
             this.label5.Text = filename;
         }
 
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         public void RunThreadProcess(DataInfo Data)
         {
+            setProcessor(Data.Type);
             var threadParameters = new ThreadStart(delegate
             {
                 try
@@ -238,132 +293,132 @@ namespace editdocuments
             
         }
 
-        public void RunGUIProcess(DataInfo Data, bool Verbose=false)
-        {
-            GUnits tmpUnit = Data.Unit;
-            Data.Unit = GUnits.point;
-            RunGUIProcess(
-            Data.PicturePath,
-            Data.TextPlaceHolder,
-            Data.LeftOffset,
-            Data.BottomOffset,
-            Data.Width,
-            Data.Height,
-            Data.FolderPath,
-            Data.InputFilePaths,
-            Data.WordAppVisible,
-            Data.FolderSave,
-            Data.SubFolderSave,
-            Data.SaveFile,
-            Verbose);
+        //public void RunGUIProcess(DataInfo Data, bool Verbose=false)
+        //{
+        //    GUnits tmpUnit = Data.Unit;
+        //    Data.Unit = GUnits.point;
+        //    RunGUIProcess(
+        //    Data.PicturePath,
+        //    Data.TextPlaceHolder,
+        //    Data.LeftOffset,
+        //    Data.BottomOffset,
+        //    Data.Width,
+        //    Data.Height,
+        //    Data.FolderPath,
+        //    Data.InputFilePaths,
+        //    Data.WordAppVisible,
+        //    Data.FolderSave,
+        //    Data.SubFolderSave,
+        //    Data.SaveFile,
+        //    Verbose);
 
-            Data.Unit = tmpUnit;
-        }
+        //    Data.Unit = tmpUnit;
+        //}
 
-        public  void RunGUIProcess(
-            string PicturePath,
-            string TextPlaceHolder,
-            double LeftOffset = 0,
-            double BottomOffset = 0,
-            double Width = 200,
-            double Height = 150,
-            string InputFolder = null,
-            IEnumerable<string> InputFiles = null,
-            bool WordAppVisible = false,
-            string FolderSave = null,
-            string SubFolderSave = null,
-            bool SaveFile = false,
-            bool Verbose = true)
-        {
-            if (Verbose)
-            {
-                Console.WriteLine(Strings.InfoStartProgram);
-                Console.WriteLine();
-                Console.WriteLine(Strings.InfoOpenWord);
-            }
+        //public  void RunGUIProcess(
+        //    string PicturePath,
+        //    string TextPlaceHolder,
+        //    double LeftOffset = 0,
+        //    double BottomOffset = 0,
+        //    double Width = 200,
+        //    double Height = 150,
+        //    string InputFolder = null,
+        //    IEnumerable<string> InputFiles = null,
+        //    bool WordAppVisible = false,
+        //    string FolderSave = null,
+        //    string SubFolderSave = null,
+        //    bool SaveFile = false,
+        //    bool Verbose = true)
+        //{
+        //    if (Verbose)
+        //    {
+        //        Console.WriteLine(Strings.InfoStartProgram);
+        //        Console.WriteLine();
+        //        Console.WriteLine(Strings.InfoOpenWord);
+        //    }
             
-            var WordApp = new Word.Application();
+        //    var WordApp = new Word.Application();
 
-            // If InputFolder defined use this value, otherwise use InputFiles
-            if (InputFolder != null)
-            {
-                InputFiles = Processor.GetWordFiles(InputFolder);
-            }
+        //    // If InputFolder defined use this value, otherwise use InputFiles
+        //    if (InputFolder != null)
+        //    {
+        //        InputFiles = WordProcessor.GetWordFiles(InputFolder);
+        //    }
 
-            try
-            {
-                int totalElements = InputFiles.Count();
-                this.label3.Text = totalElements.ToString();
-                this.progressBar1.Maximum = totalElements;
-                this.progressBar1.Step = 1;
+        //    try
+        //    {
+        //        int totalElements = InputFiles.Count();
+        //        this.label3.Text = totalElements.ToString();
+        //        this.progressBar1.Maximum = totalElements;
+        //        this.progressBar1.Step = 1;
 
-                int index = 0;
-                this.progressBar1.Value = index;
-                this.label1.Text = index.ToString();
-                foreach (var FilePath in InputFiles)
-                {
-                    if (Verbose)
-                    {
-                        Console.WriteLine(Strings.InfoCounterFile, index + 1, totalElements);
-                        Console.WriteLine();
-                    }
+        //        int index = 0;
+        //        this.progressBar1.Value = index;
+        //        this.label1.Text = index.ToString();
+        //        foreach (var FilePath in InputFiles)
+        //        {
+        //            if (Verbose)
+        //            {
+        //                Console.WriteLine(Strings.InfoCounterFile, index + 1, totalElements);
+        //                Console.WriteLine();
+        //            }
 
-                    setFilename(FilePath);
+        //            setFilename(FilePath);
 
-                    // If SubFolderSave defined use this value, otherwise use FolderSave
-                    if (SubFolderSave != null)
-                    {
-                        FolderSave = Path.Combine(Path.GetDirectoryName(FilePath), SubFolderSave);
-                    }
+        //            // If SubFolderSave defined use this value, otherwise use FolderSave
+        //            if (SubFolderSave != null)
+        //            {
+        //                FolderSave = Path.Combine(Path.GetDirectoryName(FilePath), SubFolderSave);
+        //            }
 
-                    if (FolderSave != null && !Directory.Exists(FolderSave))
-                    {
-                        DirectoryInfo dir= Directory.CreateDirectory(FolderSave);
-                        Console.WriteLine(Strings.InfoCreateDirectorySuccess, dir.FullName, dir.CreationTime);
-                    }
+        //            if (FolderSave != null && !Directory.Exists(FolderSave))
+        //            {
+        //                DirectoryInfo dir= Directory.CreateDirectory(FolderSave);
+        //                Console.WriteLine(Strings.InfoCreateDirectorySuccess, dir.FullName, dir.CreationTime);
+        //            }
 
-                    this.BackgroundProcess.RunOnFile(FilePath,
-                              PicturePath,
-                              TextPlaceHolder,
-                              LeftOffset,
-                              BottomOffset,
-                              Width,
-                              Height,
-                              WordApp,
-                              WordAppVisible,
-                              FolderSave,
-                              SaveFile);
+        //            this.BackgroundProcess.RunOnFile(FilePath,
+        //                      PicturePath,
+        //                      TextPlaceHolder,
+        //                      LeftOffset,
+        //                      BottomOffset,
+        //                      Width,
+        //                      Height,
+        //                      WordApp,
+        //                      WordAppVisible,
+        //                      FolderSave,
+        //                      SaveFile);
                     
-                    if (Verbose)
-                    {
-                        Console.WriteLine(Environment.NewLine + Environment.NewLine);
-                    }
+        //            if (Verbose)
+        //            {
+        //                Console.WriteLine(Environment.NewLine + Environment.NewLine);
+        //            }
                     
-                    index++;
-                    this.progressBar1.Value = index;
-                    this.label1.Text = index.ToString();
-                }
+        //            index++;
+        //            this.progressBar1.Value = index;
+        //            this.label1.Text = index.ToString();
+        //        }
 
-                if (Verbose)
-                {
-                    Console.WriteLine(Strings.InfoCloseWord);
-                    Console.WriteLine();
-                }
+        //        if (Verbose)
+        //        {
+        //            Console.WriteLine(Strings.InfoCloseWord);
+        //            Console.WriteLine();
+        //        }
 
-                WordApp.Quit();
+        //        WordApp.Quit();
 
-                if (Verbose)
-                {
-                    Console.WriteLine(Strings.InfoFinishProgram);
-                }
-            }
-            catch (Exception e)
-            {
-                WordApp.Quit();
-                throw e;
-            }
+        //        if (Verbose)
+        //        {
+        //            Console.WriteLine(Strings.InfoFinishProgram);
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        WordApp.Quit();
+        //        throw e;
+        //    }
 
-        }
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -169,6 +169,15 @@ namespace editdocuments {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Page {0} is out of the document bounds. Image not inserted..
+        /// </summary>
+        internal static string InfoPageOutOfBounds {
+            get {
+                return ResourceManager.GetString("InfoPageOutOfBounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Placeholder set to: {0}.
         /// </summary>
         internal static string InfoPlaceholder {
@@ -219,6 +228,24 @@ namespace editdocuments {
         internal static string InfoStartProgram {
             get {
                 return ResourceManager.GetString("InfoStartProgram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Total documents with inserted image successfully: {0}/{1}.
+        /// </summary>
+        internal static string InfoSummarySuccess {
+            get {
+                return ResourceManager.GetString("InfoSummarySuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Text &quot;{0}&quot; not found in document. Image not inserted..
+        /// </summary>
+        internal static string InfoTextNotFound {
+            get {
+                return ResourceManager.GetString("InfoTextNotFound", resourceCulture);
             }
         }
         
@@ -275,6 +302,15 @@ namespace editdocuments {
         internal static string TextValidationPlaceholder {
             get {
                 return ResourceManager.GetString("TextValidationPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a It is required a non-empty subfolder name..
+        /// </summary>
+        internal static string TextValidationSubFolder {
+            get {
+                return ResourceManager.GetString("TextValidationSubFolder", resourceCulture);
             }
         }
         

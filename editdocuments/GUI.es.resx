@@ -1325,8 +1325,14 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Dirección de carpeta/archivos</value>
   </data>
+  <data name="exploreInputPathButton.Text" xml:space="preserve">
+    <value>Explorar</value>
+  </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Dirección de imagen</value>
+  </data>
+  <data name="explorePicturePathButton.Text" xml:space="preserve">
+    <value>Explorar</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Alto</value>
@@ -1372,6 +1378,9 @@
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Marcador de posición</value>
+  </data>
+  <data name="generateButton.Text" xml:space="preserve">
+    <value>Generar</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>Guardar PDF</value>
