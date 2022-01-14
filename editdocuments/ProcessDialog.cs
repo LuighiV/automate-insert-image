@@ -151,12 +151,12 @@ namespace editdocuments
 
         public void textNotFoundInDocument(object sender, TextArg e)
         {
-            WriteTextSafe(string.Format(Strings.InfoTextNotFound + Environment.NewLine, e.Text));
+            WriteTextSafeColor(string.Format(Strings.InfoTextNotFound + Environment.NewLine, e.Text), Color.Red);
         }
 
         public void pageOutOfBounds(object sender, IntArg e)
         {
-            WriteTextSafe(string.Format(Strings.InfoPageOutOfBounds + Environment.NewLine, e.Value));
+            WriteTextSafeColor(string.Format(Strings.InfoPageOutOfBounds + Environment.NewLine, e.Value), Color.Red);
         }
 
         public void PDFSaved(object sender, TextArg e)
@@ -186,20 +186,45 @@ namespace editdocuments
 
         public void printSummarySuccess(object sender, CounterArgs e)
         {
-            WriteTextSafe(string.Format(Strings.InfoSummarySuccess + Environment.NewLine, e.Value, e.Total));
+            WriteTextSafeColor(string.Format(Strings.InfoSummarySuccess + Environment.NewLine, e.Value, e.Total),Color.Blue);
             WriteTextSafe(Environment.NewLine);
         }
 
         public void WriteTextSafe(string text)
         {
-            if (this.textBox1.InvokeRequired)
+            if (this.logTextBox.InvokeRequired)
             {
                 Action safeWrite = delegate { WriteTextSafe(text); };
-                this.textBox1.Invoke(safeWrite);
+                this.logTextBox.Invoke(safeWrite);
             }
             else{
-                this.textBox1.AppendText(text);
+                this.logTextBox.AppendText(text);
             }
+        }
+
+        public void WriteTextSafeColor(string text, Color color)
+        {
+            if (this.logTextBox.InvokeRequired)
+            {
+                Action safeWrite = delegate { WriteTextSafeColor(text, color); };
+                this.logTextBox.Invoke(safeWrite);
+            }
+            else
+            {
+                AppendText(this.logTextBox, text, color);
+            }
+        }
+
+        // Based on https://stackoverflow.com/a/10587765
+        public void AppendText(RichTextBox textbox, string text, Color color)
+        {
+            textbox.SelectionStart = textbox.TextLength;
+            textbox.SelectionLength = 0;
+
+            var originalcolor = textbox.SelectionColor;
+            textbox.SelectionColor = color;
+            textbox.AppendText(text);
+            textbox.SelectionColor = originalcolor;
         }
 
         public void WriteLabelSafe(string text, Label label)
