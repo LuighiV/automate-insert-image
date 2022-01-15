@@ -137,11 +137,13 @@ namespace editdocuments
 
         private void InitiateDimensions()
         {
+            this.Data.LeftOffset = (double)this.imageLeftOffsetNumeric.Value;
+            this.Data.BottomOffset = (double)this.imageBottomOffsetNumeric.Value;
+
             this.Data.Unit = GUnits.pixel;
             this.Data.Width = (double)this.imageWidthNumeric.Value;
             this.Data.Height = (double)this.imageHeightNumeric.Value;
-            this.Data.LeftOffset = (double)this.imageLeftOffsetNumeric.Value;
-            this.Data.BottomOffset = (double)this.imageBottomOffsetNumeric.Value;
+            
         }
 
         private void ConvertUnits()
