@@ -28,6 +28,8 @@ namespace editdocuments
             this.IsProcessing = false;
         }
 
+        public event EventHandler CloseForm;
+
         public void  setProcessor(DocumentType type = DocumentType.Word)
         {
 
@@ -319,6 +321,7 @@ namespace editdocuments
             else
             {
                 e.Cancel = false;
+                CloseForm?.Invoke(this, EventArgs.Empty);
             }
         }
     }

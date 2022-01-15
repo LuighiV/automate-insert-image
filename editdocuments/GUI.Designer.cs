@@ -68,7 +68,7 @@
             this.imageWidthNumeric = new System.Windows.Forms.NumericUpDown();
             this.widthLabel = new System.Windows.Forms.Label();
             this.unitsLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.unitComboBox = new System.Windows.Forms.ComboBox();
             this.bottomOffsetLabel = new System.Windows.Forms.Label();
             this.imageBottomOffsetNumeric = new System.Windows.Forms.NumericUpDown();
             this.leftOffsetLabel = new System.Windows.Forms.Label();
@@ -95,8 +95,8 @@
             this.openImageFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.inputPathErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetToDefaultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -186,6 +186,8 @@
             this.generateButton.Name = "generateButton";
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.button3_Click);
+            this.generateButton.MouseLeave += new System.EventHandler(this.generateButton_MouseLeave);
+            this.generateButton.MouseHover += new System.EventHandler(this.generateButton_MouseHover);
             // 
             // savePDFLabel
             // 
@@ -256,6 +258,8 @@
             this.subFolderButtonOption.TabStop = true;
             this.subFolderButtonOption.UseVisualStyleBackColor = true;
             this.subFolderButtonOption.CheckedChanged += new System.EventHandler(this.subFolderButtonOption_CheckedChanged);
+            this.subFolderButtonOption.MouseLeave += new System.EventHandler(this.subFolderButtonOption_MouseLeave);
+            this.subFolderButtonOption.MouseHover += new System.EventHandler(this.subFolderButtonOption_MouseHover);
             // 
             // sameFolderButtonOption
             // 
@@ -267,6 +271,8 @@
             this.sameFolderButtonOption.Name = "sameFolderButtonOption";
             this.sameFolderButtonOption.UseVisualStyleBackColor = true;
             this.sameFolderButtonOption.CheckedChanged += new System.EventHandler(this.sameFolderButtonOption_CheckedChanged);
+            this.sameFolderButtonOption.MouseLeave += new System.EventHandler(this.sameFolderButtonOption_MouseLeave);
+            this.sameFolderButtonOption.MouseHover += new System.EventHandler(this.sameFolderButtonOption_MouseHover);
             // 
             // subFolderTextBox
             // 
@@ -280,6 +286,8 @@
             this.subFolderTextBox.TabStop = false;
             this.subFolderTextBox.Text = global::editdocuments.Properties.Settings.Default.SubFolderSave;
             this.subFolderTextBox.TextChanged += new System.EventHandler(this.subFolderTextBox_TextChanged);
+            this.subFolderTextBox.MouseLeave += new System.EventHandler(this.subFolderTextBox_MouseLeave);
+            this.subFolderTextBox.MouseHover += new System.EventHandler(this.subFolderTextBox_MouseHover);
             this.subFolderTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.subFolderTextBox_Validating);
             // 
             // tableLayoutPanel7
@@ -329,6 +337,8 @@
             this.relativeToTextOptionButton.UseVisualStyleBackColor = true;
             this.relativeToTextOptionButton.CheckedChanged += new System.EventHandler(this.relativeToTextOptionButton_CheckedChanged);
             this.relativeToTextOptionButton.Click += new System.EventHandler(this.relativeToTextOptionButton_Click);
+            this.relativeToTextOptionButton.MouseLeave += new System.EventHandler(this.relativeToTextOptionButton_MouseLeave);
+            this.relativeToTextOptionButton.MouseHover += new System.EventHandler(this.relativeToTextOptionButton_MouseHover);
             // 
             // relativeToPageOptionButton
             // 
@@ -342,6 +352,8 @@
             this.relativeToPageOptionButton.Name = "relativeToPageOptionButton";
             this.relativeToPageOptionButton.UseVisualStyleBackColor = true;
             this.relativeToPageOptionButton.Click += new System.EventHandler(this.relativeToPageOptionButton_Click);
+            this.relativeToPageOptionButton.MouseLeave += new System.EventHandler(this.relativeToPageOptionButton_MouseLeave);
+            this.relativeToPageOptionButton.MouseHover += new System.EventHandler(this.relativeToPageOptionButton_MouseHover);
             // 
             // referenceTypeLabel
             // 
@@ -363,6 +375,8 @@
             this.placeHolderTextBox.Name = "placeHolderTextBox";
             this.placeHolderTextBox.Text = global::editdocuments.Properties.Settings.Default.PlaceHolder;
             this.placeHolderTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.placeHolderTextBox.MouseLeave += new System.EventHandler(this.placeHolderTextBox_MouseLeave);
+            this.placeHolderTextBox.MouseHover += new System.EventHandler(this.placeHolderTextBox_MouseHover);
             this.placeHolderTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.placeHolderTextBox_Validating);
             // 
             // placeHolderLabel
@@ -405,6 +419,8 @@
             this.bottomRightOptionButton.Name = "bottomRightOptionButton";
             this.bottomRightOptionButton.UseVisualStyleBackColor = true;
             this.bottomRightOptionButton.Click += new System.EventHandler(this.bottomRightOptionButton_Click);
+            this.bottomRightOptionButton.MouseLeave += new System.EventHandler(this.bottomRightOptionButton_MouseLeave);
+            this.bottomRightOptionButton.MouseHover += new System.EventHandler(this.bottomRightOptionButton_MouseHover);
             // 
             // bottomLeftOptionButton
             // 
@@ -415,6 +431,8 @@
             this.bottomLeftOptionButton.TabStop = true;
             this.bottomLeftOptionButton.UseVisualStyleBackColor = true;
             this.bottomLeftOptionButton.Click += new System.EventHandler(this.bottomLeftOptionButton_Click);
+            this.bottomLeftOptionButton.MouseLeave += new System.EventHandler(this.bottomLeftOptionButton_MouseLeave);
+            this.bottomLeftOptionButton.MouseHover += new System.EventHandler(this.bottomLeftOptionButton_MouseHover);
             // 
             // topRightOptionButton
             // 
@@ -424,6 +442,8 @@
             this.topRightOptionButton.Name = "topRightOptionButton";
             this.topRightOptionButton.UseVisualStyleBackColor = true;
             this.topRightOptionButton.Click += new System.EventHandler(this.topRightOptionButton_Click);
+            this.topRightOptionButton.MouseLeave += new System.EventHandler(this.topRightOptionButton_MouseLeave);
+            this.topRightOptionButton.MouseHover += new System.EventHandler(this.topRightOptionButton_MouseHover);
             // 
             // topLeftOptionButton
             // 
@@ -433,6 +453,8 @@
             this.topLeftOptionButton.Name = "topLeftOptionButton";
             this.topLeftOptionButton.UseVisualStyleBackColor = true;
             this.topLeftOptionButton.Click += new System.EventHandler(this.topLeftOptionButton_Click);
+            this.topLeftOptionButton.MouseLeave += new System.EventHandler(this.topLeftOptionButton_MouseLeave);
+            this.topLeftOptionButton.MouseHover += new System.EventHandler(this.topLeftOptionButton_MouseHover);
             // 
             // tableLayoutPanel14
             // 
@@ -467,6 +489,8 @@
             this.pageNumberNumeric.Name = "pageNumberNumeric";
             this.pageNumberNumeric.Value = global::editdocuments.Properties.Settings.Default.PageNumber;
             this.pageNumberNumeric.ValueChanged += new System.EventHandler(this.pageNumberNumeric_ValueChanged);
+            this.pageNumberNumeric.FontChanged += new System.EventHandler(this.pageNumberNumeric_FontChanged);
+            this.pageNumberNumeric.Enter += new System.EventHandler(this.pageNumberNumeric_Enter);
             // 
             // tableLayoutPanel5
             // 
@@ -496,7 +520,7 @@
             this.tableLayoutPanel6.Controls.Add(this.imageWidthNumeric, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.widthLabel, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.unitsLabel, 0, 5);
-            this.tableLayoutPanel6.Controls.Add(this.comboBox1, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.unitComboBox, 1, 5);
             this.tableLayoutPanel6.Controls.Add(this.bottomOffsetLabel, 0, 4);
             this.tableLayoutPanel6.Controls.Add(this.imageBottomOffsetNumeric, 1, 4);
             this.tableLayoutPanel6.Controls.Add(this.leftOffsetLabel, 0, 3);
@@ -525,6 +549,8 @@
             this.imageHeightNumeric.Name = "imageHeightNumeric";
             this.imageHeightNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageHeight;
             this.imageHeightNumeric.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            this.imageHeightNumeric.Enter += new System.EventHandler(this.imageHeightNumeric_Enter);
+            this.imageHeightNumeric.Leave += new System.EventHandler(this.imageHeightNumeric_Leave);
             // 
             // heightLabel
             // 
@@ -552,6 +578,8 @@
             this.imageWidthNumeric.Name = "imageWidthNumeric";
             this.imageWidthNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageWidth;
             this.imageWidthNumeric.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.imageWidthNumeric.Enter += new System.EventHandler(this.imageWidthNumeric_Enter);
+            this.imageWidthNumeric.Leave += new System.EventHandler(this.imageWidthNumeric_Leave);
             // 
             // widthLabel
             // 
@@ -571,16 +599,18 @@
             this.picturePathErrorProvider.SetIconAlignment(this.unitsLabel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitsLabel.IconAlignment3"))));
             this.unitsLabel.Name = "unitsLabel";
             // 
-            // comboBox1
+            // unitComboBox
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.subFolderErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment"))));
-            this.placeHolderErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment1"))));
-            this.picturePathErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment2"))));
-            this.inputPathErrorProvider.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment3"))));
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            resources.ApplyResources(this.unitComboBox, "unitComboBox");
+            this.unitComboBox.FormattingEnabled = true;
+            this.subFolderErrorProvider.SetIconAlignment(this.unitComboBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitComboBox.IconAlignment"))));
+            this.placeHolderErrorProvider.SetIconAlignment(this.unitComboBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitComboBox.IconAlignment1"))));
+            this.picturePathErrorProvider.SetIconAlignment(this.unitComboBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitComboBox.IconAlignment2"))));
+            this.inputPathErrorProvider.SetIconAlignment(this.unitComboBox, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("unitComboBox.IconAlignment3"))));
+            this.unitComboBox.Name = "unitComboBox";
+            this.unitComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.unitComboBox.MouseLeave += new System.EventHandler(this.unitComboBox_MouseLeave);
+            this.unitComboBox.MouseHover += new System.EventHandler(this.unitComboBox_MouseHover);
             // 
             // bottomOffsetLabel
             // 
@@ -613,6 +643,8 @@
             this.imageBottomOffsetNumeric.Name = "imageBottomOffsetNumeric";
             this.imageBottomOffsetNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageBottomOffset;
             this.imageBottomOffsetNumeric.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            this.imageBottomOffsetNumeric.Enter += new System.EventHandler(this.imageBottomOffsetNumeric_Enter);
+            this.imageBottomOffsetNumeric.Leave += new System.EventHandler(this.imageBottomOffsetNumeric_Leave);
             // 
             // leftOffsetLabel
             // 
@@ -645,6 +677,8 @@
             this.imageLeftOffsetNumeric.Name = "imageLeftOffsetNumeric";
             this.imageLeftOffsetNumeric.Value = global::editdocuments.Properties.Settings.Default.ImageLeftOffset;
             this.imageLeftOffsetNumeric.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            this.imageLeftOffsetNumeric.Enter += new System.EventHandler(this.imageLeftOffsetNumeric_Enter);
+            this.imageLeftOffsetNumeric.Leave += new System.EventHandler(this.imageLeftOffsetNumeric_Leave);
             // 
             // keepAspectCheckBox
             // 
@@ -660,6 +694,8 @@
             this.keepAspectCheckBox.TabStop = false;
             this.keepAspectCheckBox.UseVisualStyleBackColor = true;
             this.keepAspectCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.keepAspectCheckBox.MouseLeave += new System.EventHandler(this.keepAspectCheckBox_MouseLeave);
+            this.keepAspectCheckBox.MouseHover += new System.EventHandler(this.keepAspectCheckBox_MouseHover);
             // 
             // previewGroupBox
             // 
@@ -681,6 +717,8 @@
             this.picturePreviewBox.Name = "picturePreviewBox";
             this.picturePreviewBox.TabStop = false;
             this.picturePreviewBox.SizeChanged += new System.EventHandler(this.pictureBox1_SizeChanged);
+            this.picturePreviewBox.MouseLeave += new System.EventHandler(this.picturePreviewBox_MouseLeave);
+            this.picturePreviewBox.MouseHover += new System.EventHandler(this.picturePreviewBox_MouseHover);
             // 
             // tableLayoutPanel4
             // 
@@ -705,6 +743,8 @@
             this.picturePathTextBox.TabStop = false;
             this.picturePathTextBox.Text = global::editdocuments.Properties.Settings.Default.PicturePath;
             this.picturePathTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.picturePathTextBox.MouseLeave += new System.EventHandler(this.picturePathTextBox_MouseLeave);
+            this.picturePathTextBox.MouseHover += new System.EventHandler(this.picturePathTextBox_MouseHover);
             this.picturePathTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
             // explorePicturePathButton
@@ -717,6 +757,8 @@
             this.explorePicturePathButton.Name = "explorePicturePathButton";
             this.explorePicturePathButton.UseVisualStyleBackColor = true;
             this.explorePicturePathButton.Click += new System.EventHandler(this.button2_Click);
+            this.explorePicturePathButton.MouseLeave += new System.EventHandler(this.explorePicturePathButton_MouseLeave);
+            this.explorePicturePathButton.MouseHover += new System.EventHandler(this.explorePicturePathButton_MouseHover);
             // 
             // tableLayoutPanel3
             // 
@@ -741,6 +783,8 @@
             this.inputPathTextBox.TabStop = false;
             this.inputPathTextBox.Text = global::editdocuments.Properties.Settings.Default.InputPath;
             this.inputPathTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.inputPathTextBox.MouseLeave += new System.EventHandler(this.inputPathTextBox_MouseLeave);
+            this.inputPathTextBox.MouseHover += new System.EventHandler(this.inputPathTextBox_MouseHover);
             this.inputPathTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // exploreInputPathButton
@@ -753,6 +797,8 @@
             this.exploreInputPathButton.Name = "exploreInputPathButton";
             this.exploreInputPathButton.UseVisualStyleBackColor = true;
             this.exploreInputPathButton.Click += new System.EventHandler(this.button1_Click);
+            this.exploreInputPathButton.MouseLeave += new System.EventHandler(this.exploreInputPathButton_MouseLeave);
+            this.exploreInputPathButton.MouseHover += new System.EventHandler(this.exploreInputPathButton_MouseHover);
             // 
             // tableLayoutPanel2
             // 
@@ -777,6 +823,8 @@
             this.filesOptionButton.TabStop = true;
             this.filesOptionButton.UseVisualStyleBackColor = true;
             this.filesOptionButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.filesOptionButton.MouseLeave += new System.EventHandler(this.filesOptionButton_MouseLeave);
+            this.filesOptionButton.MouseHover += new System.EventHandler(this.filesOptionButton_MouseHover);
             // 
             // folderOptionButton
             // 
@@ -788,6 +836,8 @@
             this.folderOptionButton.Name = "folderOptionButton";
             this.folderOptionButton.UseVisualStyleBackColor = true;
             this.folderOptionButton.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.folderOptionButton.MouseLeave += new System.EventHandler(this.folderOptionButton_MouseLeave);
+            this.folderOptionButton.MouseHover += new System.EventHandler(this.folderOptionButton_MouseHover);
             // 
             // documentFormatLabel
             // 
@@ -822,6 +872,8 @@
             this.wordDocumentOptionButton.UseVisualStyleBackColor = true;
             this.wordDocumentOptionButton.CheckedChanged += new System.EventHandler(this.wordDocumentOptionButton_CheckedChanged);
             this.wordDocumentOptionButton.Click += new System.EventHandler(this.wordDocumentOptionButton_Click);
+            this.wordDocumentOptionButton.MouseLeave += new System.EventHandler(this.wordDocumentOptionButton_MouseLeave);
+            this.wordDocumentOptionButton.MouseHover += new System.EventHandler(this.wordDocumentOptionButton_MouseHover);
             // 
             // pdfDocumentOptionButton
             // 
@@ -836,6 +888,8 @@
             this.pdfDocumentOptionButton.UseVisualStyleBackColor = true;
             this.pdfDocumentOptionButton.CheckedChanged += new System.EventHandler(this.pdfDocumentOptionButton_CheckedChanged);
             this.pdfDocumentOptionButton.Click += new System.EventHandler(this.pdfDocumentOptionButton_Click);
+            this.pdfDocumentOptionButton.MouseLeave += new System.EventHandler(this.pdfDocumentOptionButton_MouseLeave);
+            this.pdfDocumentOptionButton.MouseHover += new System.EventHandler(this.pdfDocumentOptionButton_MouseHover);
             // 
             // positionLabel
             // 
@@ -869,21 +923,21 @@
             this.subFolderErrorProvider.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment2"))));
             this.placeHolderErrorProvider.SetIconAlignment(this.statusStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("statusStrip1.IconAlignment3"))));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripProgressBar1});
+            this.toolStripStatus,
+            this.toolStripProgressBar});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatus
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
-            this.toolStripStatusLabel1.Spring = true;
+            this.toolStripStatus.Name = "toolStripStatus";
+            resources.ApplyResources(this.toolStripStatus, "toolStripStatus");
+            this.toolStripStatus.Spring = true;
             // 
-            // toolStripProgressBar1
+            // toolStripProgressBar
             // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
+            this.toolStripProgressBar.Name = "toolStripProgressBar";
+            resources.ApplyResources(this.toolStripProgressBar, "toolStripProgressBar");
             // 
             // menuStrip1
             // 
@@ -1074,7 +1128,7 @@
         private System.Windows.Forms.GroupBox previewGroupBox;
         private System.Windows.Forms.PictureBox picturePreviewBox;
         private System.Windows.Forms.Label unitsLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox unitComboBox;
         private System.Windows.Forms.CheckBox keepAspectCheckBox;
         private System.Windows.Forms.Label picturePropertiesLabel;
         private System.Windows.Forms.Label placeHolderLabel;
@@ -1084,8 +1138,8 @@
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.ErrorProvider inputPathErrorProvider;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatus;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar;
         private System.Windows.Forms.ErrorProvider picturePathErrorProvider;
         private System.Windows.Forms.ErrorProvider placeHolderErrorProvider;
         private System.Windows.Forms.Label savePDFLabel;

@@ -126,6 +126,87 @@
   <data name="ExecutionErrorTitle" xml:space="preserve">
     <value>Execution error</value>
   </data>
+  <data name="HelpBottomLeft" xml:space="preserve">
+    <value>Set the page reference to the bottom left corner of the selected page.</value>
+  </data>
+  <data name="HelpBottomRight" xml:space="preserve">
+    <value>Set the page reference to the bottom right corner of the selected page.</value>
+  </data>
+  <data name="HelpCurrentUnit" xml:space="preserve">
+    <value>Current unit for Width, Height, LeftOffset and BottomOffset. If changed, all values are updated to its equivalence.</value>
+  </data>
+  <data name="HelpGenerate" xml:space="preserve">
+    <value>Click to insert the image in selected files and save resulting documents as PDFs.</value>
+  </data>
+  <data name="HelpImageBottomOffset" xml:space="preserve">
+    <value>Distance from the reference point to the bottom side of the image. Measured in the selected unit.</value>
+  </data>
+  <data name="HelpImageHeight" xml:space="preserve">
+    <value>Current image height in the selected unit.</value>
+  </data>
+  <data name="HelpImageLeftOffset" xml:space="preserve">
+    <value>Distance from the reference point to the left side of the image. Measured in the selected unit.</value>
+  </data>
+  <data name="HelpImagePreview" xml:space="preserve">
+    <value>Image preview for current selected picture.</value>
+  </data>
+  <data name="HelpImageWidth" xml:space="preserve">
+    <value>Current image width in the selected unit.</value>
+  </data>
+  <data name="HelpInputPath" xml:space="preserve">
+    <value>Current input file/folder path. Click on "Explore" to select one.</value>
+  </data>
+  <data name="HelpInputPathExplore" xml:space="preserve">
+    <value>Click to select the files/folder to be processed.</value>
+  </data>
+  <data name="HelpInputPathFiles" xml:space="preserve">
+    <value>Set the input path as a list of files, separated by commas ","</value>
+  </data>
+  <data name="HelpInputPathFolder" xml:space="preserve">
+    <value>Set the input path as a folder.</value>
+  </data>
+  <data name="HelpKeepAspectRatio" xml:space="preserve">
+    <value>Mantain the aspect ratio for the image. If modify width, the height is modified accordingly.</value>
+  </data>
+  <data name="HelpPageNumber" xml:space="preserve">
+    <value>Page number where the image is inserted.</value>
+  </data>
+  <data name="HelpPDFSelection" xml:space="preserve">
+    <value>Select PDF as input document type.</value>
+  </data>
+  <data name="HelpPicturePath" xml:space="preserve">
+    <value>Current picture path. Click on "Explore" to select one.</value>
+  </data>
+  <data name="HelpPicturePathExplore" xml:space="preserve">
+    <value>Click to select the picture to be inserted in document(s).</value>
+  </data>
+  <data name="HelpPlaceHolder" xml:space="preserve">
+    <value>Text to be searched in document and where the image will be placed.</value>
+  </data>
+  <data name="HelpRelativeToPage" xml:space="preserve">
+    <value>Set the reference to the corners in the page. Only for PDF documents.</value>
+  </data>
+  <data name="HelpRelativeToText" xml:space="preserve">
+    <value>Set the reference to a text placeholder in the document.</value>
+  </data>
+  <data name="HelpSameFolder" xml:space="preserve">
+    <value>Save the PDF in the same folder as the original file. Only for Word documents.</value>
+  </data>
+  <data name="HelpSubFolder" xml:space="preserve">
+    <value>Save the PDF in a subfolder relative to the directory of the current file.</value>
+  </data>
+  <data name="HelpSubFolderText" xml:space="preserve">
+    <value>Set the subfolder name to save the generated PDF file.</value>
+  </data>
+  <data name="HelpTopLeft" xml:space="preserve">
+    <value>Set the page reference to the top left corner of the selected page.</value>
+  </data>
+  <data name="HelpTopRight" xml:space="preserve">
+    <value>Set the page reference to the top right corner of the selected page.</value>
+  </data>
+  <data name="HelpWordSelection" xml:space="preserve">
+    <value>Select Word as input document type.</value>
+  </data>
   <data name="InfoCloseWord" xml:space="preserve">
     <value>Closing MS Word in background</value>
   </data>
@@ -173,6 +254,27 @@
   </data>
   <data name="InfoStartProgram" xml:space="preserve">
     <value>Starting program</value>
+  </data>
+  <data name="InfoStatusFileExplorerOpen" xml:space="preserve">
+    <value>File explorer opened.</value>
+  </data>
+  <data name="InfoStatusFolderExplorerOpen" xml:space="preserve">
+    <value>Folder explorer opened.</value>
+  </data>
+  <data name="InfoStatusNewDialogProcessing" xml:space="preserve">
+    <value>The processing is executing in another dialog.</value>
+  </data>
+  <data name="InfoStatusProcessingFinished" xml:space="preserve">
+    <value>The processing has finished.</value>
+  </data>
+  <data name="InfoStatusReady" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="InfoStatusStartProcessing" xml:space="preserve">
+    <value>The processing has started.</value>
+  </data>
+  <data name="InfoStatusValidationError" xml:space="preserve">
+    <value>Some validations were not successful. Please, check the blinking alerts and fix them.</value>
   </data>
   <data name="InfoSummarySuccess" xml:space="preserve">
     <value>Total documents with inserted image successfully: {0}/{1}</value>

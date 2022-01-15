@@ -126,6 +126,87 @@
   <data name="ExecutionErrorTitle" xml:space="preserve">
     <value>Error de ejecución</value>
   </data>
+  <data name="HelpBottomLeft" xml:space="preserve">
+    <value>Establece la referencia de la página a la esquina inferior izquierda de la página seleccionada.</value>
+  </data>
+  <data name="HelpBottomRight" xml:space="preserve">
+    <value>Establece la referencia de la página a la esquina inferior derecha de la página seleccionada.</value>
+  </data>
+  <data name="HelpCurrentUnit" xml:space="preserve">
+    <value>Unidad actual para el Ancho, Alto, Desplazamiento desde la izquierda y  Desplzamiento desde la derecha. Si se modifica, todos los valores se actualizan de acuerdo con su equivalencia.</value>
+  </data>
+  <data name="HelpGenerate" xml:space="preserve">
+    <value>Clic para insertar la imagen en los archivos seleccionados y guardar el resultado como PDFs.</value>
+  </data>
+  <data name="HelpImageBottomOffset" xml:space="preserve">
+    <value>Distancia desde el punto de referencia al lado inferior de la imagen. Medido en la unidad seleccionada.</value>
+  </data>
+  <data name="HelpImageHeight" xml:space="preserve">
+    <value>Alto de imagen actual en unidad de medida seleccionada.</value>
+  </data>
+  <data name="HelpImageLeftOffset" xml:space="preserve">
+    <value>Distancia desde el punto de referencia al lado izquierdo de la imagen. Medido en la unidad seleccionada.</value>
+  </data>
+  <data name="HelpImagePreview" xml:space="preserve">
+    <value>Vista previa de la imagen actual.</value>
+  </data>
+  <data name="HelpImageWidth" xml:space="preserve">
+    <value>Ancho de imagen actual en unidad de medida seleccionada.</value>
+  </data>
+  <data name="HelpInputPath" xml:space="preserve">
+    <value>Dirección de documento(s)/carpeta de entrada. Clic en "Explorar" para seleccionar alguno.</value>
+  </data>
+  <data name="HelpInputPathExplore" xml:space="preserve">
+    <value>Clic para seleccionar documento(s)/carpeta a ser procesado.</value>
+  </data>
+  <data name="HelpInputPathFiles" xml:space="preserve">
+    <value>Establece la dirección de entrada como una lista de archivos, separados por comas ","</value>
+  </data>
+  <data name="HelpInputPathFolder" xml:space="preserve">
+    <value>Establece la dirección de entrada como carpeta.</value>
+  </data>
+  <data name="HelpKeepAspectRatio" xml:space="preserve">
+    <value>Mantiene la relación de aspecto de la imagen. Si se modifica el ancho, el alto cambia automáticamente.</value>
+  </data>
+  <data name="HelpPageNumber" xml:space="preserve">
+    <value>Número de página donde se insertará la imagen.</value>
+  </data>
+  <data name="HelpPDFSelection" xml:space="preserve">
+    <value>Selecciona PDF como tipo de documento de entrada.</value>
+  </data>
+  <data name="HelpPicturePath" xml:space="preserve">
+    <value>Dirección de imagen actual. Clic en "Explorar" para seleccionar alguna.</value>
+  </data>
+  <data name="HelpPicturePathExplore" xml:space="preserve">
+    <value>Clic para seleccionar la imagen a ser insertada en documento(s).</value>
+  </data>
+  <data name="HelpPlaceHolder" xml:space="preserve">
+    <value>Texto a ser buscado en documento y donde se insertará la imagen.</value>
+  </data>
+  <data name="HelpRelativeToPage" xml:space="preserve">
+    <value>Establece la referencia a las esquinas de la página. Solo para documentos PDF.</value>
+  </data>
+  <data name="HelpRelativeToText" xml:space="preserve">
+    <value>Establece la referencia al texto del marcador de posición en el documento.</value>
+  </data>
+  <data name="HelpSameFolder" xml:space="preserve">
+    <value>Guarda el PDF en la misma carpeta que el archivo original. Solo para documentos de Word.</value>
+  </data>
+  <data name="HelpSubFolder" xml:space="preserve">
+    <value>Guarda el PDF en una subcarpeta relativa al directorio del archivo actual.</value>
+  </data>
+  <data name="HelpSubFolderText" xml:space="preserve">
+    <value>Establece el nombre de la carpeta para guardar el archivo PDF generado.</value>
+  </data>
+  <data name="HelpTopLeft" xml:space="preserve">
+    <value>Establece la referencia de la página a la esquina superior izquierda de la página seleccionada.</value>
+  </data>
+  <data name="HelpTopRight" xml:space="preserve">
+    <value>Establece la referencia de la página a la esquina superior derecha de la página seleccionada.</value>
+  </data>
+  <data name="HelpWordSelection" xml:space="preserve">
+    <value>Selecciona Word como tipo de documento de entrada.</value>
+  </data>
   <data name="InfoCloseWord" xml:space="preserve">
     <value>Cerrando MS Word en segundo plano</value>
   </data>
@@ -173,6 +254,27 @@
   </data>
   <data name="InfoStartProgram" xml:space="preserve">
     <value>Iniciando programa</value>
+  </data>
+  <data name="InfoStatusFileExplorerOpen" xml:space="preserve">
+    <value>Explorador de archivos abierto.</value>
+  </data>
+  <data name="InfoStatusFolderExplorerOpen" xml:space="preserve">
+    <value>Explorador de carpetas abierto.</value>
+  </data>
+  <data name="InfoStatusNewDialogProcessing" xml:space="preserve">
+    <value>El procesamiento se está ejecutando en otro cuadro de diálogo.</value>
+  </data>
+  <data name="InfoStatusProcessingFinished" xml:space="preserve">
+    <value>El procesamiento ha finalizado.</value>
+  </data>
+  <data name="InfoStatusReady" xml:space="preserve">
+    <value>Preparado</value>
+  </data>
+  <data name="InfoStatusStartProcessing" xml:space="preserve">
+    <value>El procesamiento ha iniciado.</value>
+  </data>
+  <data name="InfoStatusValidationError" xml:space="preserve">
+    <value>Algunas validaciones no fueron exitosas. Por favor, verifique las alertas y corríjalas.</value>
   </data>
   <data name="InfoSummarySuccess" xml:space="preserve">
     <value>Total de documentos con imagen insertada satisfactoriamente: {0}/{1}</value>

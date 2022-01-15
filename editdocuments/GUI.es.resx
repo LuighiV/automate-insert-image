@@ -121,6 +121,9 @@
   <data name="statusStrip1.IconAlignment2" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
+  <data name="toolStripStatus.Text" xml:space="preserve">
+    <value>Preparado</value>
+  </data>
   <data name="menuStrip1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
@@ -1443,9 +1446,6 @@
   <data name="unitsLabel.Text" xml:space="preserve">
     <value>Unidades</value>
   </data>
-  <data name="comboBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
   <data name="bottomOffsetLabel.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
@@ -1490,9 +1490,6 @@
   </data>
   <data name="propertiesGroupBox.Text" xml:space="preserve">
     <value>Propiedades</value>
-  </data>
-  <data name="pictureBox1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
   </data>
   <data name="previewGroupBox.Text" xml:space="preserve">
     <value>Vista previa</value>

@@ -26,11 +26,13 @@ namespace editdocuments
 
         public bool SettingsHasChanged = false;
 
+        public string CurrentStatus;
+
         public GUI()
         {
             InitializeComponent();
-            this.comboBox1.DataSource = Globals.AvailableUnits;
-            this.comboBox1.DisplayMember = "Literal";
+            this.unitComboBox.DataSource = Globals.AvailableUnits;
+            this.unitComboBox.DisplayMember = "Literal";
             this.cultureInfo = CultureInfo.CurrentCulture;
 
             if(this.cultureInfo.Parent.Name == "es")
@@ -56,6 +58,7 @@ namespace editdocuments
                 fillPictureBox(this.picturePreviewBox, this.CurrentImage);
             }
 
+            SetStatus(Strings.InfoStatusReady);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -67,18 +70,22 @@ namespace editdocuments
         {
             if (this.Data.IsFilesSelected)
             {
+                SetStatus(Strings.InfoStatusFileExplorerOpen);
                 if (this.Data.Type == DocumentType.Word)
                     this.openWordFileDialog.ShowDialog();
                 else
                     this.openPDFFileDialog.ShowDialog();
+                SetStatus(Strings.InfoStatusReady);
             }
             else
             {
+                SetStatus(Strings.InfoStatusFolderExplorerOpen);
                 DialogResult result =  this.folderBrowserDialog1.ShowDialog();
+                SetStatus(Strings.InfoStatusReady);
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(this.folderBrowserDialog1.SelectedPath))
                 {
                     this.Data.InputPath = this.folderBrowserDialog1.SelectedPath;
-                    this.inputPathTextBox.Text = this.Data.InputPath;
+                    this.inputPathTextBox.Text = this.Data.InputPath;   
                 }
             }
         }
@@ -101,7 +108,9 @@ namespace editdocuments
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SetStatus(Strings.InfoStatusFileExplorerOpen);
             this.openImageFileDialog.ShowDialog();
+            SetStatus(Strings.InfoStatusReady);
         }
 
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
@@ -137,7 +146,7 @@ namespace editdocuments
 
         private void ConvertUnits()
         {
-            UnitStruct currentUnit = (UnitStruct) this.comboBox1.SelectedItem;
+            UnitStruct currentUnit = (UnitStruct) this.unitComboBox.SelectedItem;
             this.Data.Unit = currentUnit.Unit;
         }
 
@@ -210,10 +219,23 @@ namespace editdocuments
             this.Data.TextPlaceHolder = this.placeHolderTextBox.Text;
         }
 
+        private void SetStatus(string text)
+        {
+            this.toolStripStatus.Text = text;
+            this.CurrentStatus = text;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
+            SetStatus(string.Format(Strings.InfoStatusStartProcessing));
+
             if (!ValidateChildren(ValidationConstraints.Enabled))
+            {
+                SetStatus(string.Format(Strings.InfoStatusValidationError));
                 return;
+            }
+
+            this.toolStripProgressBar.Value = 30;
 
             try
             {
@@ -222,9 +244,13 @@ namespace editdocuments
                 this.Cursor = Cursors.WaitCursor;
                 Application.DoEvents();
                 var processForm = new ProcessDialog();
+                processForm.CloseForm += ProcessForm_CloseForm;
                 processForm.Show();
 
                 processForm.RunThreadProcess(this.Data);
+                SetStatus(string.Format(Strings.InfoStatusNewDialogProcessing));
+                this.toolStripProgressBar.Value = 100;
+
             }
             catch(Exception error)
             {
@@ -242,6 +268,12 @@ namespace editdocuments
 
             }
 
+        }
+
+        private void ProcessForm_CloseForm(object sender, EventArgs e)
+        {
+            SetStatus(string.Format(Strings.InfoStatusReady));
+            this.toolStripProgressBar.Value = 0;
         }
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
@@ -595,6 +627,276 @@ namespace editdocuments
             {
                 fillPictureBox(this.picturePreviewBox, this.CurrentImage);
             }
+        }
+
+        private void wordDocumentOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpWordSelection);
+        }
+
+        private void wordDocumentOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void pdfDocumentOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpPDFSelection);
+        }
+
+        private void pdfDocumentOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void filesOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpInputPathFiles);
+        }
+
+        private void filesOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void folderOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpInputPathFolder);
+        }
+
+        private void folderOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void inputPathTextBox_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpInputPath);
+        }
+
+        private void inputPathTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void exploreInputPathButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpInputPathExplore);
+        }
+
+        private void exploreInputPathButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void picturePathTextBox_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpPicturePath);
+        }
+
+        private void picturePathTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void explorePicturePathButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpPicturePathExplore);
+        }
+
+        private void explorePicturePathButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void keepAspectCheckBox_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpKeepAspectRatio);
+        }
+
+        private void keepAspectCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void unitComboBox_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpCurrentUnit);
+        }
+
+        private void unitComboBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void picturePreviewBox_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpImagePreview);
+        }
+
+        private void picturePreviewBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void relativeToTextOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpRelativeToText);
+        }
+
+        private void relativeToTextOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void relativeToPageOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpRelativeToPage);
+        }
+
+        private void relativeToPageOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void placeHolderTextBox_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpPlaceHolder);
+        }
+
+        private void placeHolderTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void topLeftOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpTopLeft);
+        }
+
+        private void topLeftOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void bottomLeftOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpBottomLeft);
+        }
+
+        private void bottomLeftOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void topRightOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpTopRight);
+        }
+
+        private void topRightOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void bottomRightOptionButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpBottomRight);
+        }
+
+        private void bottomRightOptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void sameFolderButtonOption_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpSameFolder);
+        }
+
+        private void sameFolderButtonOption_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void subFolderButtonOption_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpSubFolder);
+        }
+
+        private void subFolderButtonOption_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void subFolderTextBox_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpSubFolderText);
+        }
+
+        private void subFolderTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void generateButton_MouseHover(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpGenerate);
+        }
+
+        private void generateButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void imageWidthNumeric_Enter(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpImageWidth);
+        }
+
+        private void imageWidthNumeric_Leave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void imageHeightNumeric_Enter(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpImageHeight);
+        }
+
+        private void imageHeightNumeric_Leave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void imageLeftOffsetNumeric_Enter(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpImageLeftOffset);
+        }
+
+        private void imageLeftOffsetNumeric_Leave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void imageBottomOffsetNumeric_Enter(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpImageBottomOffset);
+        }
+
+        private void imageBottomOffsetNumeric_Leave(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void pageNumberNumeric_Enter(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = string.Format(Strings.HelpPageNumber);
+        }
+
+        private void pageNumberNumeric_FontChanged(object sender, EventArgs e)
+        {
+            this.toolStripStatus.Text = this.CurrentStatus;
         }
     }
 }

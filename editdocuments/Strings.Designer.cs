@@ -88,6 +88,249 @@ namespace editdocuments {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Set the page reference to the bottom left corner of the selected page..
+        /// </summary>
+        internal static string HelpBottomLeft {
+            get {
+                return ResourceManager.GetString("HelpBottomLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the page reference to the bottom right corner of the selected page..
+        /// </summary>
+        internal static string HelpBottomRight {
+            get {
+                return ResourceManager.GetString("HelpBottomRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Current unit for Width, Height, LeftOffset and BottomOffset. If changed, all values are updated to its equivalence..
+        /// </summary>
+        internal static string HelpCurrentUnit {
+            get {
+                return ResourceManager.GetString("HelpCurrentUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Click to insert the image in selected files and save resulting documents as PDFs..
+        /// </summary>
+        internal static string HelpGenerate {
+            get {
+                return ResourceManager.GetString("HelpGenerate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Distance from the reference point to the bottom side of the image. Measured in the selected unit..
+        /// </summary>
+        internal static string HelpImageBottomOffset {
+            get {
+                return ResourceManager.GetString("HelpImageBottomOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Current image height in the selected unit..
+        /// </summary>
+        internal static string HelpImageHeight {
+            get {
+                return ResourceManager.GetString("HelpImageHeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Distance from the reference point to the left side of the image. Measured in the selected unit..
+        /// </summary>
+        internal static string HelpImageLeftOffset {
+            get {
+                return ResourceManager.GetString("HelpImageLeftOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Image preview for current selected picture..
+        /// </summary>
+        internal static string HelpImagePreview {
+            get {
+                return ResourceManager.GetString("HelpImagePreview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Current image width in the selected unit..
+        /// </summary>
+        internal static string HelpImageWidth {
+            get {
+                return ResourceManager.GetString("HelpImageWidth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Current input file/folder path. Click on &quot;Explore&quot; to select one..
+        /// </summary>
+        internal static string HelpInputPath {
+            get {
+                return ResourceManager.GetString("HelpInputPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Click to select the files/folder to be processed..
+        /// </summary>
+        internal static string HelpInputPathExplore {
+            get {
+                return ResourceManager.GetString("HelpInputPathExplore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the input path as a list of files, separated by commas &quot;,&quot;.
+        /// </summary>
+        internal static string HelpInputPathFiles {
+            get {
+                return ResourceManager.GetString("HelpInputPathFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the input path as a folder..
+        /// </summary>
+        internal static string HelpInputPathFolder {
+            get {
+                return ResourceManager.GetString("HelpInputPathFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mantain the aspect ratio for the image. If modify width, the height is modified accordingly..
+        /// </summary>
+        internal static string HelpKeepAspectRatio {
+            get {
+                return ResourceManager.GetString("HelpKeepAspectRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Page number where the image is inserted..
+        /// </summary>
+        internal static string HelpPageNumber {
+            get {
+                return ResourceManager.GetString("HelpPageNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Select PDF as input document type..
+        /// </summary>
+        internal static string HelpPDFSelection {
+            get {
+                return ResourceManager.GetString("HelpPDFSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Current picture path. Click on &quot;Explore&quot; to select one..
+        /// </summary>
+        internal static string HelpPicturePath {
+            get {
+                return ResourceManager.GetString("HelpPicturePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Click to select the picture to be inserted in document(s)..
+        /// </summary>
+        internal static string HelpPicturePathExplore {
+            get {
+                return ResourceManager.GetString("HelpPicturePathExplore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Text to be searched in document and where the image will be placed..
+        /// </summary>
+        internal static string HelpPlaceHolder {
+            get {
+                return ResourceManager.GetString("HelpPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the reference to the corners in the page. Only for PDF documents..
+        /// </summary>
+        internal static string HelpRelativeToPage {
+            get {
+                return ResourceManager.GetString("HelpRelativeToPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the reference to a text placeholder in the document..
+        /// </summary>
+        internal static string HelpRelativeToText {
+            get {
+                return ResourceManager.GetString("HelpRelativeToText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save the PDF in the same folder as the original file. Only for Word documents..
+        /// </summary>
+        internal static string HelpSameFolder {
+            get {
+                return ResourceManager.GetString("HelpSameFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save the PDF in a subfolder relative to the directory of the current file..
+        /// </summary>
+        internal static string HelpSubFolder {
+            get {
+                return ResourceManager.GetString("HelpSubFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the subfolder name to save the generated PDF file..
+        /// </summary>
+        internal static string HelpSubFolderText {
+            get {
+                return ResourceManager.GetString("HelpSubFolderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the page reference to the top left corner of the selected page..
+        /// </summary>
+        internal static string HelpTopLeft {
+            get {
+                return ResourceManager.GetString("HelpTopLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Set the page reference to the top right corner of the selected page..
+        /// </summary>
+        internal static string HelpTopRight {
+            get {
+                return ResourceManager.GetString("HelpTopRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Select Word as input document type..
+        /// </summary>
+        internal static string HelpWordSelection {
+            get {
+                return ResourceManager.GetString("HelpWordSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Closing MS Word in background.
         /// </summary>
         internal static string InfoCloseWord {
@@ -228,6 +471,69 @@ namespace editdocuments {
         internal static string InfoStartProgram {
             get {
                 return ResourceManager.GetString("InfoStartProgram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a File explorer opened..
+        /// </summary>
+        internal static string InfoStatusFileExplorerOpen {
+            get {
+                return ResourceManager.GetString("InfoStatusFileExplorerOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Folder explorer opened..
+        /// </summary>
+        internal static string InfoStatusFolderExplorerOpen {
+            get {
+                return ResourceManager.GetString("InfoStatusFolderExplorerOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The processing is executing in another dialog..
+        /// </summary>
+        internal static string InfoStatusNewDialogProcessing {
+            get {
+                return ResourceManager.GetString("InfoStatusNewDialogProcessing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The processing has finished..
+        /// </summary>
+        internal static string InfoStatusProcessingFinished {
+            get {
+                return ResourceManager.GetString("InfoStatusProcessingFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ready.
+        /// </summary>
+        internal static string InfoStatusReady {
+            get {
+                return ResourceManager.GetString("InfoStatusReady", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The processing has started..
+        /// </summary>
+        internal static string InfoStatusStartProcessing {
+            get {
+                return ResourceManager.GetString("InfoStatusStartProcessing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Some validations were not successful. Please, check the blinking alerts and fix them..
+        /// </summary>
+        internal static string InfoStatusValidationError {
+            get {
+                return ResourceManager.GetString("InfoStatusValidationError", resourceCulture);
             }
         }
         
