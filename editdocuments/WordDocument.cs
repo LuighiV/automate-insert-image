@@ -79,9 +79,10 @@ namespace editdocuments
         {
 
             var LeftDistance = this.Range.Information[Word.WdInformation.wdHorizontalPositionRelativeToTextBoundary];
+            var BottomDistance = this.Range.Information[Word.WdInformation.wdVerticalPositionRelativeToTextBoundary];
             var shape = this.Document.Shapes.AddPicture(picture,
                 Left: LeftDistance + LeftOffset,
-                Top: -BottomOffset - Height,
+                Top: BottomDistance - (BottomOffset + Height),
                 Width: Width,
                 Height: Height,
                 Anchor: this.Range);
