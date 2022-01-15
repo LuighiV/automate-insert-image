@@ -35,7 +35,7 @@ namespace editdocuments
             this.unitComboBox.DisplayMember = "Literal";
             this.cultureInfo = CultureInfo.CurrentCulture;
 
-            if(this.cultureInfo.Parent.Name == "es")
+            if(this.cultureInfo.Parent.Name == "es" | this.cultureInfo.Name == "es")
             {
                 this.spanishToolStripMenuItem.Checked = true;
                 this.englishToolStripMenuItem.Checked = false;
@@ -623,7 +623,7 @@ namespace editdocuments
 
         private void pictureBox1_SizeChanged(object sender, EventArgs e)
         {
-            if (this.CurrentImage != null)
+            if (this.CurrentImage != null & this.picturePreviewBox.Width >0 & this.picturePreviewBox.Height > 0)
             {
                 fillPictureBox(this.picturePreviewBox, this.CurrentImage);
             }
