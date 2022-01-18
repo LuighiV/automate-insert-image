@@ -70,7 +70,7 @@ namespace editdocuments
         {
             Coords customReference = (reference == null) ? 
                 this.referencePoint:
-                new Coords(reference.rect.GetX(), reference.rect.GetY());
+                new Coords(reference.rect.GetX(), reference.rect.GetY() +reference.rect.GetHeight()); // set reference to top left point in text
 
             AddPictureInPageReference(picturePath,
                 customReference, LeftOffset, BottomOffset, Width, Height, page);
