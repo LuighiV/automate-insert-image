@@ -1,10 +1,13 @@
 # Insert image in Document
 
+![Insert image in Document interface](images/iid_main_interface_completed_en.png "Software Interface")
+
+
 ## About
 
-This is an open-source software developed to automate the insertion of images in a set of MS Word documents. It could be useful to insert a signature to various documents at a specific position in them.
+This is an open-source software developed to automate the insertion of images in a set of MS Word / PDF documents. It could be useful to insert a signature to various documents at a specific position in them.
 
-The software has the option to select a specific list of MS Word documents or a folder which contains those documents and insert the image to all of them. It also provides options to resize the image in different units of measurement and specify the relative position respect to a placeholder in the document (for example, the reference for the signature). In addition to this, the software exports the document with the image inserted to a PDF file which may be created in the same folder as the original document or in a subfolder.
+The software has the option to select a specific list of MS Word / PDF documents, or a folder which contains those documents and insert the image to all of them. It also provides options to resize the image in different units of measurement and specify the relative position respect to a placeholder in the document (for example, the reference for the signature) or to a corner in a specific page (only for PDF documents). In addition to this, the software exports the document with the image inserted to a PDF file which may be created in the same folder  as the original document (only for Word documents) or in a subfolder.
 
 ## License
 

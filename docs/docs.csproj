@@ -68,10 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="template\custom\partials\head.tmpl.partial" />
+    <Content Include="userdocs\en\releases\v1_0_0_4.md" />
     <None Include="userdocs\en\toc.yml" />
     <Content Include="favicon.ico" />
     <Content Include="logo.svg" />
     <Content Include="template\custom\styles\custom.css" />
+    <None Include="userdocs\en\releases\v1_0_0_3.md" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

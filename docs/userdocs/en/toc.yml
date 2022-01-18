@@ -5,6 +5,13 @@
     href: author.md
   - name: Download
     href: download.md
+    items:
+      - name: Releases
+        items:
+          - name: v1.0.0.4
+            href: releases/v1_0_0_4.md
+          - name: v1.0.0.3
+            href: releases/v1_0_0_3.md
   - name: Instructions
     href: instructions.md
   - name: Privacy
