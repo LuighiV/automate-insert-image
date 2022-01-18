@@ -27,6 +27,18 @@ namespace editdocuments
         /// </summary>
         class Options
         {
+            [Option('t', "type", Default = DocumentType.Word, HelpText = "Document type.")]
+            public DocumentType Type { get; set; }
+
+            [Option('A', "is-absolute", Default = false, HelpText = "The reference is absolute to the page.")]
+            public bool IsAbsolute { get; set; }
+
+            [Option('N', "page", Default = 1, HelpText = "Page number (valid for page reference type).")]
+            public int PageNumber { get; set; }
+
+            [Option('r', "page-reference", Default = PageReference.bottom_left, HelpText = "Page reference.")]
+            public PageReference Reference { get; set; }
+
             [Option('f', "filename", Default = null, HelpText = "Input files to be processed.")]
             public IEnumerable<string> InputFiles { get; set; }
 
@@ -129,20 +141,51 @@ namespace editdocuments
         /// <param name="opts"> Command line options to pass to the software</param>
         static void RunOptions(Options opts)
         {
-            var processor = new WordProcessor();
-            processor.RunProcess(opts.PicturePath,
-                opts.PlaceHolder,
-                opts.LeftOffset,
-                opts.BottomOffset,
-                opts.Width,
-                opts.Height,
-                opts.InputFolder,
-                opts.InputFiles,
-                opts.WordAppVisible,
-                opts.FolderSave,
-                opts.SubFolderSave,
-                opts.SaveFile,
-                opts.Verbose);
+            if(opts.Type == DocumentType.Word)
+            {
+                if (opts.Verbose)
+                {
+                    Console.WriteLine("Document type is set to Word");
+                }
+                var processor = new WordProcessor();
+                processor.RunProcess(opts.PicturePath,
+                    opts.PlaceHolder,
+                    opts.LeftOffset,
+                    opts.BottomOffset,
+                    opts.Width,
+                    opts.Height,
+                    opts.InputFolder,
+                    opts.InputFiles,
+                    opts.WordAppVisible,
+                    opts.FolderSave,
+                    opts.SubFolderSave,
+                    opts.SaveFile,
+                    opts.Verbose);
+            }
+
+            if (opts.Type == DocumentType.PDF)
+            {
+                if (opts.Verbose)
+                {
+                    Console.WriteLine("Document type is set to PDF");
+                }
+                var processor = new PDFProcessor();
+                processor.RunProcess(opts.PicturePath,
+                    opts.PlaceHolder,
+                    opts.LeftOffset,
+                    opts.BottomOffset,
+                    opts.Width,
+                    opts.Height,
+                    opts.InputFolder,
+                    opts.InputFiles,
+                    opts.FolderSave,
+                    opts.SubFolderSave,
+                    opts.IsAbsolute,
+                    opts.Reference,
+                    opts.PageNumber,
+                    opts.Verbose);
+            }
+
         }
     }
 }

@@ -166,7 +166,8 @@ namespace editdocuments
                               WordApp,
                               WordAppVisible,
                               FolderSave,
-                              SaveFile))
+                              SaveFile,
+                              Verbose))
                     {
                         count_success++;
                     }
