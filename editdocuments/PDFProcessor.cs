@@ -41,6 +41,10 @@ namespace editdocuments
                     else
                     {
                         TextNotFoundInDocument?.Invoke(this, new TextArg(TextPlaceHolder));
+                        if (Verbose)
+                        {
+                            Console.WriteLine(Strings.InfoTextNotFound, TextPlaceHolder);
+                        }
                         success = false;
                     }
                 }
@@ -53,13 +57,17 @@ namespace editdocuments
                     else
                     {
                         PageOutOfBounds?.Invoke(this, new IntArg(PageNumber));
+                        if (Verbose)
+                        {
+                            Console.WriteLine(Strings.InfoPageOutOfBounds, PageNumber);
+                        }
                         success = false;
                     }
                 }
 
                 //Console.ReadKey();
                 PDFSaved?.Invoke(this, new TextArg(OutputPath));
-                Document.Close();
+                Document.Close(Verbose);
 
                 if (Verbose)
                     Console.WriteLine(Strings.InfoFinishFile, InputPath);
@@ -176,7 +184,7 @@ namespace editdocuments
                         
                     if (Verbose)
                     {
-                        Console.WriteLine("\n\n");
+                        Console.WriteLine(Environment.NewLine);
                     }
                     index++;
                 }
@@ -186,9 +194,14 @@ namespace editdocuments
                 if (Verbose)
                 {
                     Console.WriteLine(Strings.InfoFinishProgram);
+                    Console.WriteLine();
                 }
                 FinishProcessing?.Invoke(this, EventArgs.Empty);
 
+                if (Verbose)
+                {
+                    Console.WriteLine(Strings.InfoSummarySuccess, count_success, totalElements);
+                }
                 SummarySuccess?.Invoke(this, new CounterArgs(count_success, totalElements));
             }
             catch (Exception e)

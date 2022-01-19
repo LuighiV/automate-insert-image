@@ -38,17 +38,21 @@ namespace editdocuments
             var WordDocument = new WordDocument(FilePath, WordAppVisible, WordApp);
             try
             {
-                if (WordDocument.GetRange(TextPlaceHolder))
+                if (WordDocument.GetRange(TextPlaceHolder, Verbose))
                 {
                     GotPlaceHolderPosition?.Invoke(this, new TextArg(TextPlaceHolder));
 
                     WordDocument.addPicture(PicturePath, LeftOffset, BottomOffset, Width, Height);
-                    string pdffilename = WordDocument.SaveAsPDF(FolderSave);
+                    string pdffilename = WordDocument.SaveAsPDF(FolderSave, Verbose);
                     PDFSaved?.Invoke(this, new TextArg(pdffilename));
                 }
                 else
                 {
                     TextNotFoundInDocument?.Invoke(this, new TextArg(TextPlaceHolder));
+                    if (Verbose)
+                    {
+                        Console.WriteLine(Strings.InfoTextNotFound, TextPlaceHolder);
+                    }
                     success = false;
                 }
 
@@ -174,7 +178,7 @@ namespace editdocuments
 
                     if (Verbose)
                     {
-                        Console.WriteLine("\n\n");
+                        Console.WriteLine(Environment.NewLine);
                     }
                     index++;
                 }
@@ -193,9 +197,14 @@ namespace editdocuments
                 if (Verbose)
                 {
                     Console.WriteLine(Strings.InfoFinishProgram);
+                    Console.WriteLine();
                 }
                 FinishProcessing?.Invoke(this, EventArgs.Empty);
 
+                if (Verbose)
+                {
+                    Console.WriteLine(Strings.InfoSummarySuccess, count_success, totalElements);
+                }
                 SummarySuccess?.Invoke(this, new CounterArgs(count_success, totalElements));
             }
             catch (Exception e)

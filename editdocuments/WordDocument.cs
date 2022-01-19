@@ -94,7 +94,7 @@ namespace editdocuments
             var range = this.Document.Content;
             range.Find.Execute(text);
             this.Range = range;
-            if (Verbose)
+            if (range.Find.Found & Verbose)
             {
                 Console.WriteLine(Strings.InfoPlaceholder, this.Range.Text);
             }

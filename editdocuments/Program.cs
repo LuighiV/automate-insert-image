@@ -27,19 +27,19 @@ namespace editdocuments
         /// </summary>
         class Options
         {
-            [Option('t', "type", Default = DocumentType.Word, HelpText = "Document type.")]
+            [Option('t', "type", Default = DocumentType.Word, HelpText = "Document type. Valid values: Word, PDF.")]
             public DocumentType Type { get; set; }
 
-            [Option('A', "is-absolute", Default = false, HelpText = "The reference is absolute to the page.")]
+            [Option('A', "is-absolute", Default = false, HelpText = "The reference is absolute to the page. When it is true uses a specific page and a corner in the page as reference (only for PDF type).")]
             public bool IsAbsolute { get; set; }
 
-            [Option('N', "page", Default = 1, HelpText = "Page number (valid for page reference type).")]
+            [Option('N', "page", Default = 1, HelpText = "Page number (used when --is-absolute is true).")]
             public int PageNumber { get; set; }
 
-            [Option('r', "page-reference", Default = PageReference.bottom_left, HelpText = "Page reference.")]
+            [Option('r', "page-reference", Default = PageReference.bottom_left, HelpText = "Page reference (used when --is-absolute is true). Valid values: bottom_left, top_left, top_right, bottom_right.")]
             public PageReference Reference { get; set; }
 
-            [Option('f', "filename", Default = null, HelpText = "Input files to be processed.")]
+            [Option('f', "inputfile", Default = null, HelpText = "Input files to be processed.")]
             public IEnumerable<string> InputFiles { get; set; }
 
             [Option('d', "inputfolder", Default = null, HelpText = "Input folder to be processed.")]
@@ -48,7 +48,7 @@ namespace editdocuments
             [Option('p', "picturepath", Default = null, HelpText = "Picture file to be inserted.")]
             public string PicturePath { get; set; }
 
-            [Option('H', "placeholder", Default = null, HelpText = "Placeholder where is inserted.")]
+            [Option('H', "placeholder", Default = null, HelpText = "Placeholder where the picture is inserted.")]
             public string PlaceHolder { get; set; }
 
             [Option(
@@ -58,7 +58,7 @@ namespace editdocuments
 
             [Option('V', "visible",
               Default = false,
-              HelpText = "Set MSWord Application visible.")]
+              HelpText = "Set MSWord Application visible (only for Word type).")]
             public bool WordAppVisible { get; set; }
 
             [Option('S', "foldersave",
@@ -78,22 +78,22 @@ namespace editdocuments
 
             [Option(
               Default = 0,
-              HelpText = "Left offset for picture.")]
+              HelpText = "Left offset for picture (in points).")]
             public double LeftOffset { get; set; }
 
             [Option(
               Default = 0,
-              HelpText = "Bottom offset for picture.")]
+              HelpText = "Bottom offset for picture (in points).")]
             public double BottomOffset { get; set; }
 
             [Option(
              Default = 200,
-             HelpText = "Width for picture.")]
+             HelpText = "Width for picture (in points).")]
             public double Width { get; set; }
 
             [Option(
               Default = 150,
-              HelpText = "Height for picture.")]
+              HelpText = "Height for picture (in points).")]
             public double Height { get; set; }
 
         }
@@ -101,13 +101,11 @@ namespace editdocuments
         [STAThread]
         static void Main(string[] args)
         {
-
             var handle = GetConsoleWindow();
-            //ShowWindow(handle, SW_SHOWMINIMIZED);
-            ShowWindow(handle, SW_HIDE);
 
             if (args.Length == 0)
             {
+                ShowWindow(handle, SW_HIDE);
                 var guiForm = new GUI();
                 guiForm.ShowDialog();
             }

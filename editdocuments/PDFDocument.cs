@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -140,17 +141,21 @@ namespace editdocuments
             string fulltext = chunks.Aggregate("", (accum, element) => accum + element.text);
             if (Verbose)
             {
-                Console.WriteLine(fulltext);
+                Debug.WriteLine(fulltext);
             }
 
             var found = fulltext.IndexOf(findText);
             if (Verbose)
             {
-                Console.WriteLine(found);
+                Debug.WriteLine(found);
             }
 
             if (found > 0)
             {
+                if (Verbose)
+                {
+                    Console.WriteLine(Strings.InfoPlaceholder, findText);
+                }
                 return chunks[found];
             }
             return null;
@@ -185,7 +190,7 @@ namespace editdocuments
                 {
 
                     string text = item.Aggregate("", (accum, element) => accum + element.text);
-                    Console.WriteLine(text);
+                    Debug.WriteLine(text);
                 }
             }
 
@@ -260,7 +265,7 @@ namespace editdocuments
         {
             foreach (textChunk chunk in objectResult)
             {
-                Console.WriteLine($"Text {chunk.text} found at ({chunk.rect.GetX()},{chunk.rect.GetY()})");
+                Debug.WriteLine($"Text {chunk.text} found at ({chunk.rect.GetX()},{chunk.rect.GetY()})");
             }
         }
         public List<textChunk> GetTextChunks()
