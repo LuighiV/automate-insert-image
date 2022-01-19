@@ -75,21 +75,21 @@
 	<Exec Command="msbuild &quot;..\editdocuments&quot; -p:Configuration=$(Configuration) -p:Platform=$(Platform)" />
 	  
     <!-- Get assembly version -->
-    <GetAssemblyIdentity AssemblyFiles="..\editdocuments\bin\$(Configuration)\editdocuments.exe">
+    <GetAssemblyIdentity AssemblyFiles="..\editdocuments\bin\$(Platform)\$(Configuration)\editdocuments.exe">
       <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
     </GetAssemblyIdentity>
     <!-- Define some variables we need -->
     <PropertyGroup>
-      <DefineConstants>BuildVersion=%(AssemblyVersion.Version);BasePath=..\editdocuments\bin\$(Configuration)</DefineConstants>
+      <DefineConstants>BuildVersion=%(AssemblyVersion.Version);BasePath=..\editdocuments\bin\$(Platform)\$(Configuration)</DefineConstants>
     </PropertyGroup>
     <!-- Harvest file components from publish folder -->
-    <Exec Command="&quot;$(WIX)bin\heat.exe&quot; dir &quot;..\editdocuments\bin\$(Configuration)&quot; -cg PublishedComponents -dr INSTALLFOLDER -sreg -srd -var var.BasePath -ag -sfrag -out &quot;ComponentsGenerated.wxs&quot;" />
+    <Exec Command="&quot;$(WIX)bin\heat.exe&quot; dir &quot;..\editdocuments\bin\$(Platform)\$(Configuration)&quot; -cg PublishedComponents -dr INSTALLFOLDER -sreg -srd -var var.BasePath -ag -sfrag -out &quot;ComponentsGenerated.wxs&quot;" />
     <!-- <HeatDirectory OutputFile="ComponentsGenerated.wxs" DirectoryRefId="INSTALLFOLDER" ComponentGroupName="PublishedComponents" SuppressCom="true" Directory="..\editdocuments\bin\$(Configuration)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" AutoGenerateGuids="false" GenerateGuidsNow="true" ToolPath="$(WixToolPath)" PreprocessorVariable="var.BasePath" />
   -->
   </Target>
   <Target Name="AfterBuild">
     <!-- Get assembly version -->
-    <GetAssemblyIdentity AssemblyFiles="..\editdocuments\bin\$(Configuration)\editdocuments.exe">
+    <GetAssemblyIdentity AssemblyFiles="..\editdocuments\bin\$(Platform)\$(Configuration)\editdocuments.exe">
       <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
     </GetAssemblyIdentity>
     <!-- Package the mst files into unique file: Avoit error transform failed
