@@ -59,6 +59,7 @@ namespace editdocuments
             }
 
             SetStatus(Strings.InfoStatusReady);
+            this.SettingsHasChanged = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -421,6 +422,8 @@ namespace editdocuments
             ComponentResourceManager resources = new ComponentResourceManager(typeof(GUI));
             resources.ApplyResources(this, "$this");
             applyResources(resources, this.Controls);
+
+            Properties.Settings.Default.Culture = cultureInfo.Name;
         }
 
         // reference https://stackoverflow.com/a/7558253
@@ -444,7 +447,6 @@ namespace editdocuments
         {
             Properties.Settings.Default.Save();
 
-            //Console.WriteLine(Properties.Settings.Default.PicturePath);
             this.saveCurrentValuesToolStripMenuItem.Enabled = false;
             this.SettingsHasChanged = false;
         }

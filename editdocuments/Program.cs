@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using Word = Microsoft.Office.Interop.Word;
 using CommandLine;
 using System.IO;
+using System.Globalization;
 
 namespace editdocuments
 {
@@ -106,6 +107,15 @@ namespace editdocuments
             if (args.Length == 0)
             {
                 ShowWindow(handle, SW_HIDE);
+
+                // Set the culture for the GUI before creating it
+                if (Properties.Settings.Default.Culture != String.Empty)
+                {
+                    var culture = new CultureInfo(Properties.Settings.Default.Culture);
+                    CultureInfo.CurrentCulture = culture;
+                    CultureInfo.DefaultThreadCurrentCulture = culture;
+                    CultureInfo.DefaultThreadCurrentUICulture = culture;
+                }
                 var guiForm = new GUI();
                 guiForm.ShowDialog();
             }
