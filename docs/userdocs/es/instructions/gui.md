@@ -195,6 +195,6 @@ A partir de aquí se continúa con los pasos 4 al 8 de [archivos individuales](#
 
 <img src="~/images/es/pdf_folder_page_progress.png" alt="Progreso de procesamiento" width="70%"/>
 
-Al abrir la carpeta, puede verificar los archivos generados (cada uno por documento pdf de entrada que se encuentra en la carpeta seleccionada).
+Al abrir la carpeta, puede verificar los archivos generados (cada uno por documento PDF de entrada que se encuentra en la carpeta seleccionada).
 
 ![Carpetas de documentos de entrada y salida](~/images/es/pdf_folder_diff.png "Carpetas de documentos de entrada y salida")

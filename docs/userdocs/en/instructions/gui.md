@@ -195,6 +195,6 @@ From here, it continues with the 4 to the 8 steps of [individual files](#for-ind
 
 <img src="~/images/pdf_folder_page_progress.png" alt="Progreso de procesamiento" width="70%"/>
 
-When opening the folder you can check the generated files (each one per input pdf document found in selected folder).
+When opening the folder you can check the generated files (each one per input PDF document found in selected folder).
 
 ![Input vs output document folders](~/images/pdf_folder_diff.png "Input vs output document folders")
