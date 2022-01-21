@@ -55,11 +55,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C200F8DC7C59F0D3CCBD7F91D68228B65B8970B5</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>825DE122C73EE4F7E6EE423CD8553713AE1C3F49</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>cert_iid.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -71,7 +70,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>editdocuments_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>cert_editdocuments.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -272,6 +271,7 @@
     <None Include="assets\about.rtf" />
     <None Include="assets\howToUse.es.rtf" />
     <None Include="assets\howToUse.rtf" />
+    <None Include="cert_editdocuments.pfx" />
     <None Include="editdocuments_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataInfo.datasource" />

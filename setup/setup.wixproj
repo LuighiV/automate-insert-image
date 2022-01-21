@@ -107,5 +107,10 @@
     <Exec Command="if not exist Installs mkdir Installs" />
     <Exec Command="move bin\$(Platform)\$(Configuration)\$(OutputName).msi Installs\IIDInstaller-%(AssemblyVersion.Version)-$(Configuration)-$(Platform).msi" />
     <Exec Command="move bin\$(Platform)\$(Configuration)\es-ES\$(OutputName).msi Installs\IIDInstaller-%(AssemblyVersion.Version)-$(Configuration)-$(Platform)-es-es.msi" />
+  
+    <!--Sign installers-->
+    <Exec Command="signtool sign  /f &quot;..\certs\cert_iid.pfx&quot; /p iid123 /d &quot;Installer for IID Software&quot; /fd SHA256 /t http://timestamp.digicert.com /v Installs\IIDInstaller-%(AssemblyVersion.Version)-$(Configuration)-$(Platform).msi" />
+	  
+    <Exec Command="signtool sign  /f &quot;..\certs\cert_iid.pfx&quot; /p iid123 /d &quot;Installer for IID Software&quot; /fd SHA256 /t http://timestamp.digicert.com /v Installs\IIDInstaller-%(AssemblyVersion.Version)-$(Configuration)-$(Platform)-es-es.msi" />
   </Target>
 </Project>
