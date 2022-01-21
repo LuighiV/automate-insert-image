@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,7 @@ namespace editdocuments
             }
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.BackColor = Color.FromKnownColor(KnownColor.White);
+            this.richTextBox1.DetectUrls = true;
         }
 
         public InfoDialog()
@@ -54,6 +56,11 @@ namespace editdocuments
         public void SetTitle(string title)
         {
             this.Text = title;
+        }
+
+        private void richTextBox1_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
         }
     }
 }
