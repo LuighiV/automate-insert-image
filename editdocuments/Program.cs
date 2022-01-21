@@ -106,7 +106,9 @@ namespace editdocuments
 
             if (args.Length == 0)
             {
+                #if !DEBUG
                 ShowWindow(handle, SW_HIDE);
+                #endif
 
                 // Set the culture for the GUI before creating it
                 if (Properties.Settings.Default.Culture != String.Empty)

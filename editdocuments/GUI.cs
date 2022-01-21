@@ -9,15 +9,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace editdocuments
 {
     public partial class GUI : Form
     {
 
-        public DataInfo Data = new DataInfo(fromSettings: true);
+        public DataInfo Data;
 
-        public bool SelectedFiles = true;
         public bool KeepAspect = true;
         public bool IgnoreTextChanged = false;
         public Image CurrentImage = null;
@@ -30,6 +30,7 @@ namespace editdocuments
 
         public GUI()
         {
+            this.Data = new DataInfo(fromSettings: true);
             InitializeComponent();
             this.unitComboBox.DataSource = Globals.AvailableUnits;
             this.unitComboBox.DisplayMember = "Literal";
@@ -60,6 +61,9 @@ namespace editdocuments
 
             SetStatus(Strings.InfoStatusReady);
             this.SettingsHasChanged = false;
+            #if DEBUG
+            Console.WriteLine("Finish initialization");
+            #endif
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -93,12 +97,7 @@ namespace editdocuments
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            this.Data.IsFilesSelected= true;
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            this.Data.IsFilesSelected = false;
+            this.Data.IsFilesSelected= this.filesOptionButton.Checked;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -395,13 +394,8 @@ namespace editdocuments
         private void subFolderButtonOption_CheckedChanged(object sender, EventArgs e)
         {
             this.subFolderErrorProvider.SetError(this.subFolderTextBox, String.Empty);
-            this.Data.IsSubFolderSelected = true;
+            this.Data.IsSubFolderSelected = this.subFolderButtonOption.Checked;
             enableSubFolderTextBox(this.subFolderButtonOption.Checked);
-        }
-
-        private void sameFolderButtonOption_CheckedChanged(object sender, EventArgs e)
-        {
-            this.Data.IsSubFolderSelected = false;
         }
 
         private void subFolderTextBox_TextChanged(object sender, EventArgs e)
@@ -454,8 +448,12 @@ namespace editdocuments
         private void resetToDefaultsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset();
-            this.picturePreviewBox.Image = null; 
-            //Console.WriteLine("Reset settings");
+            this.picturePreviewBox.Image = null;
+            // Reset data info with settings
+            this.Data = new DataInfo(fromSettings: true);
+            #if DEBUG
+            Console.WriteLine("Reset settings");
+            #endif
         }
 
         private void howToUseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -480,12 +478,16 @@ namespace editdocuments
         {
             this.SettingsHasChanged = true;
             this.saveCurrentValuesToolStripMenuItem.Enabled = true;
-            //Console.WriteLine($"{e.PropertyName}");
+            #if DEBUG
+            Console.WriteLine($"Property name: {e.PropertyName}, Value: {Properties.Settings.Default[e.PropertyName]}, Object: {sender.GetType()}");
+            #endif
         }
 
         private void Default_SettingsSaving(object sender, CancelEventArgs e)
         {
-            //Console.WriteLine("Saving settings");
+            #if DEBUG
+            Console.WriteLine("Saving settings");
+            #endif
         }
 
         private void GUI_FormClosing(object sender, FormClosingEventArgs e)
@@ -901,6 +903,26 @@ namespace editdocuments
         private void pageNumberNumeric_FontChanged(object sender, EventArgs e)
         {
             this.toolStripStatus.Text = this.CurrentStatus;
+        }
+
+        private void folderOptionButton_Click(object sender, EventArgs e)
+        {
+            this.folderOptionButton.Checked = true;
+        }
+
+        private void filesOptionButton_Click(object sender, EventArgs e)
+        {
+            this.filesOptionButton.Checked = true;
+        }
+
+        private void subFolderButtonOption_Click(object sender, EventArgs e)
+        {
+            this.subFolderButtonOption.Checked = true;
+        }
+
+        private void sameFolderButtonOption_Click(object sender, EventArgs e)
+        {
+            this.sameFolderButtonOption.Checked = true;
         }
     }
 }

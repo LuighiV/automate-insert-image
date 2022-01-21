@@ -274,5 +274,29 @@ namespace editdocuments.Properties {
                 this["Culture"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isFolderOptionSelected {
+            get {
+                return ((bool)(this["isFolderOptionSelected"]));
+            }
+            set {
+                this["isFolderOptionSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsSameFolderSelected {
+            get {
+                return ((bool)(this["IsSameFolderSelected"]));
+            }
+            set {
+                this["IsSameFolderSelected"] = value;
+            }
+        }
     }
 }
