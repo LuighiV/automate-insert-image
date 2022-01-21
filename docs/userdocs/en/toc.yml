@@ -13,7 +13,20 @@
           - name: v1.0.0.3
             href: releases/v1_0_0_3.md
   - name: Instructions
-    href: instructions.md
+    href: instructions/index.md
+    items:
+       - name: Installation
+         href: instructions/installation.md
+       - name: Use graphical interface
+         href: instructions/gui.md
+       - name: Use command line
+         href: instructions/command.md
+       - name: Troubleshooting
+         href: instructions/troubleshooting.md
+       - name: GUI Menus
+         href: instructions/menu.md
+       - name: Image position
+         href: instructions/position.md
   - name: Privacy
     href: privacy.md
   - name: Source code

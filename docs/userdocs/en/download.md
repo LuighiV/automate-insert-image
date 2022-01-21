@@ -6,7 +6,7 @@ the MS Word software from the Office 365 package installed in you computer.
 
 To download the latest version, please, click on the following link:
 
-<a href="https://github.com/LuighiV/automateword/releases/download/v1.0.0.3/IIDInstaller-1.0.0.3-Release-x64.msi" 
+<a href="https://github.com/LuighiV/automateword/releases/download/v1.0.0.4/IIDInstaller-1.0.0.4-Release-x64.msi" 
    class="downloadButton"> <i class="fa fa-download"></i> Download latest version </a> 
 
 
@@ -16,4 +16,4 @@ To download the latest version, please, click on the following link:
 
 ## Previous versions
 
-- Insert image in Document,  v1.0.0.3 ([See release notes](~/userdocs/en/releases/v1_0_0_3.md)).
+- Insert image in Document,  v1.0.0.3 ([See release notes](~/userdocs/en/releases/v1_0_0_3.md) | [Download](https://github.com/LuighiV/automateword/releases/download/v1.0.0.3/IIDInstaller-1.0.0.3-Release-x64.msi)).

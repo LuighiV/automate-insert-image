@@ -5,8 +5,28 @@
     href: author.md
   - name: Descarga
     href: download.md
+    items:
+      - name: Versiones
+        items:
+          - name: v1.0.0.4
+            href: releases/v1_0_0_4.md
+          - name: v1.0.0.3
+            href: releases/v1_0_0_3.md
   - name: Instrucciones
-    href: instructions.md
+    href: instructions/index.md
+    items:
+       - name: Instalación
+         href: instructions/installation.md
+       - name: Uso de interfaz gráfica
+         href: instructions/gui.md
+       - name: Uso de línea de comandos
+         href: instructions/command.md
+       - name: Solución de problemas
+         href: instructions/troubleshooting.md
+       - name: Menús de interfaz gráfica
+         href: instructions/menu.md
+       - name: Posición de la imagen
+         href: instructions/position.md
   - name: Privacidad
     href: privacy.md
   - name: Código fuente

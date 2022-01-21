@@ -30,5 +30,5 @@ Los materiales que aparecen en el sitio web de la aplicación o productos relaci
 El desarrollador no ha revisado todos los sitios vinculados a su sitio web o sus productos y no es responsable del contenido de dichos sitios vinculados. La inclusión de cualquier enlace no implica el respaldo del desarrollador del sitio. El uso de cualquier sitio web vinculado es por cuenta y riesgo del usuario.
 
  
-## 7. Ley aplicable
+## 6. Ley aplicable
 Estos términos y condiciones de uso se rigen e interpretan de acuerdo con las leyes del Perú y usted se somete irrevocablemente a la jurisdicción exclusiva de los tribunales de ese estado o ubicación.

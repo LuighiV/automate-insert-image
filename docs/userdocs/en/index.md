@@ -23,11 +23,11 @@ This software has the following features:
 2. Specify either the list of MS Word/PDF documents or a folder which contains them.
 
 3. A preview of the selected image and options to scale the dimentions keeping the aspect ratio, as well as 
-  offsets with respect to the placeholder, in different measurement units.
+  offsets with respect to the placeholder or the page, in different measurement units.
 
 4. Specify the placeholder which is a text where the image will be inserted.
 
-5. Specify the specific page and absolute reference in the page, if desired, for the image insertion (only for PDF).
+5. Specify the page and absolute reference in the page for the image insertion (only for PDF).
 
 6. Options to save the generated PDF file either in the same folder as the original document (only for Word) or a subfolder for 
   all the generated files.
@@ -39,7 +39,7 @@ This software has the following features:
 
 9. Help information with steps to work with the software.
 
-For instructions how to download, install and use this software, please refer to [Instructions](~/userdocs/en/instructions.md).
+For instructions how to download, install and use this software, please refer to [Instructions](~/userdocs/en/instructions/index.md).
 
 
 

@@ -30,5 +30,5 @@ The materials appearing on the website for the application or related products c
 The developer has not reviewed all the sites linked to its website or its products and is not responsible for the content of such linked sites. The inclusion of any link does not imply endorsement by the developer. Use of any linked website is at the user's own risk.
 
  
-## 7. Governing Law
+## 6. Governing Law
 These terms and conditions of use are governed by and construed in accordance with the laws of Peru and you irrevocably submit to the exclusive jurisdiction of the courts of that State or location.

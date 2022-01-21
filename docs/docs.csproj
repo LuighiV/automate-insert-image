@@ -69,6 +69,13 @@
   <ItemGroup>
     <Content Include="template\custom\partials\head.tmpl.partial" />
     <Content Include="userdocs\en\releases\v1_0_0_4.md" />
+    <Content Include="userdocs\en\instructions\gui.md" />
+    <Content Include="userdocs\en\instructions\index.md" />
+    <Content Include="userdocs\en\instructions\installation.md" />
+    <Content Include="userdocs\en\instructions\command.md" />
+    <Content Include="userdocs\en\instructions\troubleshooting.md" />
+    <Content Include="userdocs\en\instructions\menu.md" />
+    <Content Include="userdocs\en\instructions\position.md" />
     <None Include="userdocs\en\toc.yml" />
     <Content Include="favicon.ico" />
     <Content Include="logo.svg" />
@@ -84,6 +91,14 @@
     <Content Include="docfx.json" />
     <Content Include="userdocs\es\toc.yml" />
     <Content Include="userdocs\index.md" />
+    <Content Include="userdocs\es\releases\v1_0_0_3.md" />
+    <Content Include="userdocs\es\releases\v1_0_0_4.md" />
+    <Content Include="userdocs\es\instructions\index.md" />
+    <Content Include="userdocs\es\instructions\installation.md" />
+    <Content Include="userdocs\es\instructions\command.md" />
+    <Content Include="userdocs\es\instructions\troubleshooting.md" />
+    <Content Include="userdocs\es\instructions\menu.md" />
+    <Content Include="userdocs\es\instructions\position.md" />
     <None Include="userdocs\toc.yml" />
     <Content Include="api\index.md" />
     <None Include="packages.config" />
@@ -94,11 +109,10 @@
     <Content Include="userdocs\en\source-code.md" />
     <Content Include="userdocs\en\terms.md" />
     <Content Include="userdocs\en\download.md" />
-    <Content Include="userdocs\en\instructions.md" />
     <Content Include="userdocs\es\terms.md" />
     <Content Include="userdocs\es\download.md" />
     <Content Include="userdocs\es\index.md" />
-    <Content Include="userdocs\es\instructions.md" />
+    <Content Include="userdocs\es\instructions\gui.md" />
     <Content Include="userdocs\es\privacy.md" />
     <Content Include="userdocs\es\source-code.md" />
     <Content Include="userdocs\es\author.md" />
