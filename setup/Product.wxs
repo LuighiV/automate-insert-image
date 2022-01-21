@@ -27,7 +27,7 @@
 				 Description="!(loc.Description)"
 				 Keywords="!(loc.Keywords)"
 				 Comments="!(loc.Comments)"
-				 Languages="1033,3082"
+				 Languages="0"
 				 />
 
 		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
