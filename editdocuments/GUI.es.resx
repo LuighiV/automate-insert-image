@@ -1414,7 +1414,7 @@
     <value>Superior izquierda</value>
   </data>
   <data name="relativeToGroupBox.Text" xml:space="preserve">
-    <value>Relativo a</value>
+    <value>Relativo a esquina</value>
   </data>
   <data name="pageNumberLabel.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
