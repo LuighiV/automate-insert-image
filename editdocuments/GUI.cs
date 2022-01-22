@@ -518,6 +518,7 @@ namespace editdocuments
         private void pdfDocumentOptionButton_Click(object sender, EventArgs e)
         {
             this.pdfDocumentOptionButton.Checked = true;
+            this.sameFolderButtonOption.Checked = false;
             this.subFolderButtonOption.Checked = true;
             this.Data.Type = DocumentType.PDF;
         }

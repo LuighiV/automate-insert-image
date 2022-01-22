@@ -291,9 +291,13 @@ namespace editdocuments
                 try
                 {
                     this.IsProcessing = true;
+                    #if DEBUG
+                    this.BackgroundProcess.RunProcess(Data,true);
+                    #else
                     this.BackgroundProcess.RunProcess(Data);
+                    #endif
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     HandleError(e);
                 }

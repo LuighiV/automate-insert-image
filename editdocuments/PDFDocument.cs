@@ -141,16 +141,22 @@ namespace editdocuments
             string fulltext = chunks.Aggregate("", (accum, element) => accum + element.text);
             if (Verbose)
             {
-                Debug.WriteLine(fulltext);
+#if DEBUG
+                Console.WriteLine("Full text in page:");
+                Console.WriteLine(fulltext);
+#endif
             }
 
             var found = fulltext.IndexOf(findText);
             if (Verbose)
             {
-                Debug.WriteLine(found);
+#if DEBUG
+                Console.WriteLine("Index for text found:");
+                Console.WriteLine(found);
+#endif
             }
 
-            if (found > 0)
+            if (found >= 0)
             {
                 if (Verbose)
                 {
