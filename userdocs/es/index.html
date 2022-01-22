@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Insertar imagen en documento </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Insertar imagen en documento ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="description" content="Documentation page for the software Insert image in Document">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/custom.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta name="robots" content="follow, index">
+    <meta property="og:url" content="https://iid.projects.luighiviton.com">
+    <link rel="canonical" href="https://iid.projects.luighiviton.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="iid.projects.luighiviton.com">
+    <meta property="og:description" content="Documentation page for the software Insert image in Document">
+    <meta property="og:title" content="Insertar imagen en documento ">
+    <meta property="og:image" content="https://iid.projects.luighiviton.com/images/banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Insertar imagen en documento ">
+    <meta name="twitter:description" content="Documentation page for the software Insert image in Document">
+    <meta name="twitter:image" content="https://iid.projects.luighiviton.com/images/banner.png">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="insertar-imagen-en-documento">Insertar imagen en documento</h1>
+
+<p>Este proyecto surge de la necesidad de insertar una imagen en varios documentos de MS Word o PDF
+y exportarlos a archivos PDF.</p>
+<h2 id="motivación">Motivación</h2>
+<p>El software fue desarrollado en base a un requisito de mi madre, quien es profesora y directora encargada de su institución y requería
+insertar una imagen en un conjunto de documentos de MS Word o PDF en una posición específica. Entonces, como esta tarea puede llevar mucho tiempo,
+(o requerir herramientas especiales cuando el documento de entrada es PDF)
+desarrollé este software para facilitar la inserción de imágenes y la creación de archivos PDF basados ​​en los documentos modificados.</p>
+<p>Esta aplicación esta pensada para manipular ya sea documentos de Word o PDF a través de un script que proporciona una interfaz gráfica 
+para ingresar las rutas a los documentos y la imagen. También permite especificar las dimensiones y el marcador de posición donde
+se insertará la imagen y las opciones para guardar los archivos PDF generados.</p>
+<h2 id="características">Características</h2>
+<p>Este software tiene las siguientes características:</p>
+<ol>
+<li><p>Eligir entre documentos de Word o documentos PDF como formato de entrada.</p>
+</li>
+<li><p>Especificar la lista de documentos MS Word/PDF o una carpeta que los contenga.</p>
+</li>
+<li><p>Una vista previa de la imagen seleccionada y opciones para escalar las dimensiones manteniendo la relación de aspecto, así como
+desplazamientos respecto al marcador de posición o la página, en diferentes unidades de medida.</p>
+</li>
+<li><p>Especificar el marcador de posición, el cual es un texto donde se insertará la imagen.</p>
+</li>
+<li><p>Especificar la página y la referencia absoluta en la página para la inserción de la imagen (solo para PDF).</p>
+</li>
+<li><p>Opciones para guardar el archivo PDF generado en la misma carpeta que el documento original (solo para Word) o en una subcarpeta para
+todos los archivos generados.</p>
+</li>
+<li><p>Guardar las opciones actuales empleadas para generar el documento entre sesiones y restaurarlas
+a los valores predeterminados.</p>
+</li>
+<li><p>Interfaz completa en dos idiomas: inglés y español.</p>
+</li>
+<li><p>Información de ayuda con pasos para usar el software.</p>
+</li>
+</ol>
+<p>Para obtener instrucciones sobre cómo descargar, instalar y utilizar este software, consulte las <a href="instructions/index.html">Instrucciones</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LuighiV/automateword/blob/master/docs/userdocs/es/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright @ 2022 Luighi Viton-Zorrilla, <a href='mailto:lv@luighiviton.com'>lv@luighiviton.com</a><br>Generated with <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1857 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/automate-insert-image/automate-insert-image/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "AVf8iPHe2uegYBgIgJ6++B4AHWIANjW3CZJe3/+VZBI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/banner.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/banner.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/banner.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/banner.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/default.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/default.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/default.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/default.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/iid_main_interface_completed_es.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/iid_main_interface_completed_es.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/install_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/install_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/install_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/install_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/install_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/install_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/menu_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/menu_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/menu_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/menu_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/menu_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/menu_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/page_reference.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/page_reference.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/page_reference.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/page_reference.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_page_1_to_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_page_1_to_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_page_6_7.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_page_6_7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_page_9.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_page_9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_page_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_page_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_page_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_page_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_file_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_file_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_folder_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_folder_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_folder_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_folder_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_folder_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_folder_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_folder_page_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_folder_page_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/pdf_folder_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/pdf_folder_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/remove_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/remove_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/repair_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/repair_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/repair_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/repair_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/repair_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/repair_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/text_reference.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/text_reference.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/text_reference.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/text_reference.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/trouble_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/trouble_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/trouble_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/trouble_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/trouble_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/trouble_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/trouble_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/trouble_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/trouble_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/trouble_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_4_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_4_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_6.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_7.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_8.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_file_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_file_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_folder_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_folder_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_folder_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_folder_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_folder_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_folder_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/es/word_folder_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/es/word_folder_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/iid_main_interface_completed_en.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/iid_main_interface_completed_en.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/iid_main_interface_en.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/iid_main_interface_en.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/install_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/install_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/install_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/install_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/install_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/install_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/menu_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/menu_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/menu_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/menu_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/menu_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/menu_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/page_reference.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/page_reference.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/page_reference.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/page_reference.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_page_1_to_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_page_1_to_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_page_6_7.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_page_6_7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_page_9.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_page_9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_page_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_page_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_file_page_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_file_page_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_folder_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_folder_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_folder_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_folder_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_folder_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_folder_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_folder_page_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_folder_page_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pdf_folder_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pdf_folder_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/remove_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/remove_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/repair_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/repair_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/repair_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/repair_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/repair_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/repair_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/text_reference.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/text_reference.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/text_reference.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/text_reference.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/trouble_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/trouble_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/trouble_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/trouble_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/trouble_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/trouble_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/trouble_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/trouble_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/trouble_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/trouble_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_4_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_4_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_6.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_7.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_8.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_file_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_file_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_folder_1_2_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_folder_1_2_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_folder_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_folder_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_folder_diff.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_folder_diff.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/word_folder_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/word_folder_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "XNBou1oyi3PsEWL4WZZVZE1Hd+OWEwihsj6/j08UTRs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.ControlWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.ControlWriter.html",
+          "hash": "JmueophwyHP0Nn6pPfIcWS9S+NfnAQXen6P/LWy7C2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.Coords.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.Coords.html",
+          "hash": "pgTycjDhdtj0ho09jv9wDIiTFMrLjcdak5JeII2qA6w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.CounterArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.CounterArgs.html",
+          "hash": "S6NjFkwKyLtUzIyMb3umQAhrHNISZ5F0xXkC6V26jXQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.DataInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.DataInfo.html",
+          "hash": "lEEd/jEscvvxFdh/SGTnclGTqu3yQySATq97mx+3xvY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.DocumentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.DocumentType.html",
+          "hash": "ogOfrdKJMA6eN9hkOimBYxTrL+EV6UcLnKaDGDVgRls="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.GUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.GUI.html",
+          "hash": "Cuz9Tt5JE3k3Bi1uHOvZDFFIAnkzfhAw7qMElm6EIqY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.GUnits.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.GUnits.html",
+          "hash": "w2XLRylKbMCgyuHj5829aJpdckUqtJWxB3knntGmQCA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.Globals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.Globals.html",
+          "hash": "zSRYIY84RpTVLCN+tI7Z7i2iDDnWoxLPhbJ8HOrePTs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.InfoDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.InfoDialog.html",
+          "hash": "yxfDaaRgtVwzHa0PKuOBj0IR1Ordp28p1wYVFUgTu4I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.IntArg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.IntArg.html",
+          "hash": "w2aiXY88LnVZO6glfcoGnYlQJ3R73ep6jnkXgt//AXI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.PDFProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.PDFProcessor.html",
+          "hash": "ipq+fKOT1cIh4KxN+Fj63HkQjxJb+vUjTXko6Gad0rw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.PageReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.PageReference.html",
+          "hash": "1Zm48Oexr4H+G1guSdJicAddnWySWXzEy1yE7D/J2lA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.ProcessDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.ProcessDialog.html",
+          "hash": "2kLqAsodkv+FOlxLb2N3Je9fsHmBVqzZkeLWrUK0rnk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.Processor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.Processor.html",
+          "hash": "n+rYEb8NdVdbHx+xhFe5rNN5X51ykJkaJ/qb++SjA2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.Quantity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.Quantity.html",
+          "hash": "VYj9I+UQ55PW+lUCQYvfnfKHGVTz+YSeihiuCbZ5v4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.TextArg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.TextArg.html",
+          "hash": "CDycL+ieYb4IBTkKx1yLrfNUrHEn+JsLkqvPDpQh1HI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.TextLocationStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.TextLocationStrategy.html",
+          "hash": "ZS7+WRVQXo/kWMrzV/S5Am7+AEp0pkegzMyIjcUEqFE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.UnitStruct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.UnitStruct.html",
+          "hash": "vFVahH8/MfR/r3sg9ZyhGhq9OFYJ4+Xg322nsTGKIkk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.WordProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.WordProcessor.html",
+          "hash": "Vr1GBB4ZRTFKBkaVB5cPQL/iFl8EbZu43rU/L/KIOFk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.textChunk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.textChunk.html",
+          "hash": "7l8G4LHVAP3d1E2WYRlidHk7JB2bs75a5DNZFUkuDP0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/editdocuments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/editdocuments.html",
+          "hash": "22D8NIPQYUlo2XFqZiCjj8Tr6QmvN6C9KiJPvhoCvGU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "2zx4YfblV/1kepOgoZG7xcZChez5jq2xe/niFL27oGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "noDWxQUQbWq0Goblva/Lj6yqX9Mxyzp3HcGcHamRwbk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/author.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/author.html",
+          "hash": "5Vgyq2dXEd8SBvBywyEw9Xo6o6hpnjWr4UI1WUsaYcg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/download.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/download.html",
+          "hash": "GOAFTfkWNmaQ+Tv4WgG7HVnWeWBiFvYWKdclaX3KosI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/index.html",
+          "hash": "w7W4WYaPsfeLbe26mMFArZeCq4uHSqGXI7FdnTMAZBw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/instructions/command.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/instructions/command.html",
+          "hash": "IKK9wPU0Wb+9Km6f1fJ1qSQywSmL8oGa7udKysTJvPc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/instructions/gui.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/instructions/gui.html",
+          "hash": "qQABFEpNsovVANk1QT3t6gvKkKR+39n3L7GZ/M7siGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/instructions/index.html",
+          "hash": "rBDl6d+e/GIkGBl93E2kS7soz1PpnYnp1gyR+wZv+bA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/instructions/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/instructions/installation.html",
+          "hash": "CYjYBlb8nIf4n7PIoHrlhWvhNdfBLQJ4HzJvNunKum4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/instructions/menu.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/instructions/menu.html",
+          "hash": "gGmh5f7pFUC+ng6MjNhjp8RncET6a2Otvphp7DOAC8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/instructions/position.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/instructions/position.html",
+          "hash": "krbepHwGMkngTXz9slZIrtatfxS+NrLBHTl3OQsYUzw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/instructions/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/instructions/troubleshooting.html",
+          "hash": "HEbV8xikXrM2S970nAbAuDCS5MkI9nDhuHlJocpMjt4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/privacy.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/privacy.html",
+          "hash": "udF6W9f5dCUW52jvKiEJoIBtUL1+bYIBrt8i/oNad7A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/source-code.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/source-code.html",
+          "hash": "XPKddBGXC3DkheakQjgbLy/i4N85ms6WNbUn3TrSdDU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/en/terms.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/terms.html",
+          "hash": "9TKxkfVA/fwAZtZ/u9pK3bSCtyPQap23mp8LaLp1kaQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "userdocs/en/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/en/toc.html",
+          "hash": "P4i3CNMKjyis3AVwS7O9UjDN2D9FgbgMkMSBT3oScQ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/author.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/author.html",
+          "hash": "bwAVgch8hlCV2g/ywRIvwwN/vCsSLWQWmw8dI6hbiWM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/download.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/download.html",
+          "hash": "SKzoHBag5qL+Rv6sHEOz8u9QxuMfgy0GuGl+wCoTN1M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/index.html",
+          "hash": "sErgbN6OlioeFTDrSnvBESwQ3BHEX90poigqs1iwIrY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/instructions/command.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/instructions/command.html",
+          "hash": "MsTy/7j65UZpoDFFpBd0CEuQUSvE4vSgucGDumg+nNc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/instructions/gui.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/instructions/gui.html",
+          "hash": "5ZjxfBTHwtWd8HOmLh+MPkPZn9+M5zWhnjbWJ45Clic="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/instructions/index.html",
+          "hash": "ouC2HU6iZzHGEdHdmz2G7XrZ16KS0xXP1fQPCir58Jc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/instructions/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/instructions/installation.html",
+          "hash": "xfAQY4lyN+dzj4AtTKFSKiJYGgzhLvVwhpGZFy1w0Qc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/instructions/menu.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/instructions/menu.html",
+          "hash": "vF/SajykWtn185TQfCTPaqnRw0eRwYxGyx4+vrBOVSU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/instructions/position.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/instructions/position.html",
+          "hash": "Blg8j0CUbTRMAMFR/3LKI2TiFkm685Xm3bCs5hR1yo4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/instructions/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/instructions/troubleshooting.html",
+          "hash": "ngyOG+kRB95HZFnNewVFJSnaBQcQ4WbRbqWxl5dOO7c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/privacy.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/privacy.html",
+          "hash": "zMfmOyMEgc5pn2YZ9JRYK5k9CqDyBD4Whna5Aswbujg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/source-code.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/source-code.html",
+          "hash": "ZwyjESpCb2FUeHhl5Yq4p5L2UwShEoUK991ZbpCn248="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/es/terms.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/terms.html",
+          "hash": "A7tx9M6wLBooXlc47VTfCrnN0RdT9foUDQcxROXz2DQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "userdocs/es/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/es/toc.html",
+          "hash": "MZF2C433PboGRFjgilamykPWzCXCGy0Suy31wJpGiXk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "userdocs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/index.html",
+          "hash": "QNoj7q3fixc/ctH6yrCyG/FB7czlsel8yGf0wZgCbvM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "userdocs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "userdocs/toc.html",
+          "hash": "cVqUafmGZvAicKmJ3wF17SO5oGzKFqA98EJw2OLy+bQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 29,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 21,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

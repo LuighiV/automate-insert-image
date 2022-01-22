@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Use of the software as command line application </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Use of the software as command line application ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="description" content="Documentation page for the software Insert image in Document">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/custom.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta name="robots" content="follow, index">
+    <meta property="og:url" content="https://iid.projects.luighiviton.com">
+    <link rel="canonical" href="https://iid.projects.luighiviton.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="iid.projects.luighiviton.com">
+    <meta property="og:description" content="Documentation page for the software Insert image in Document">
+    <meta property="og:title" content="Use of the software as command line application ">
+    <meta property="og:image" content="https://iid.projects.luighiviton.com/images/banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Use of the software as command line application ">
+    <meta name="twitter:description" content="Documentation page for the software Insert image in Document">
+    <meta name="twitter:image" content="https://iid.projects.luighiviton.com/images/banner.png">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="use-of-the-software-as-command-line-application">Use of the software as command line application</h1>
+
+<p>This is the alternative mode of use for the software. It is useful when trying to use as part of a script. For use it, you should locate the executable, which should be under <code>C:\Program Files\InsertImageDocument</code>, and has the name <code>editdocuments.exe</code>. If you want, you can add this folder to the PATH environment variable or simply execute the file from this location.</p>
+<h2 id="usage">Usage</h2>
+<p>You should use the executable name followed by any of the following options. If no option is entered, the sofware will be lauch the graphical interface.</p>
+<pre><code>editdocuments.exe --option_1 value_1 --option_2 value_2 ... --option_n value_n
+</code></pre><p>Where <code>option</code> could be the following:</p>
+<ul>
+<li><p><code>-t, --type</code>              (Default: <code>Word</code>) Document type. Valid values: <code>Word</code>, <code>PDF</code>.</p>
+</li>
+<li><p><code>-A, --is-absolute</code>       (Default: <code>false</code>) The reference is absolute to the page. When it is true uses a specific page and a corner in the page as reference (only for PDF type).</p>
+</li>
+<li><p><code>-N, --page</code>              (Default: 1) Page number (used when <code>--is-absolute</code> is <code>true</code>).</p>
+</li>
+<li><p><code>-r, --page-reference</code>    (Default: <code>bottom_left</code>) Page reference (used when <code>--is-absolute</code> is <code>true</code>). Valid values: <code>bottom_left</code>, <code>top_left</code>, <code>top_right</code>, <code>bottom_right</code>.</p>
+</li>
+<li><p><code>-f, --inputfile</code>          Input files to be processed.</p>
+</li>
+<li><p><code>-d, --inputfolder</code>       Input folder to be processed.</p>
+</li>
+<li><p><code>-p, --picturepath</code>       Picture file to be inserted.</p>
+</li>
+<li><p><code>-H, --placeholder</code>       Placeholder where the picture is inserted.</p>
+</li>
+<li><p><code>--verbose</code>               (Default: <code>false</code>) Prints all messages to standard output.</p>
+</li>
+<li><p><code>-V, --visible</code>           (Default: <code>false</code>) Set MSWord Application visible (only for Word type).</p>
+</li>
+<li><p><code>-S, --foldersave</code>        Set folder to save PDF.</p>
+</li>
+<li><p><code>-u, --subfoldersave</code>     Save in subfolder relative to document path</p>
+</li>
+<li><p><code>-s, --save</code>              (Default: <code>false</code>) Save in file.</p>
+</li>
+<li><p><code>--leftoffset</code>            (Default: 0) Left offset for picture (in points).</p>
+</li>
+<li><p><code>--bottomoffset</code>          (Default: 0) Bottom offset for picture (in points).</p>
+</li>
+<li><p><code>--width</code>                 (Default: 200) Width for picture (in points).</p>
+</li>
+<li><p><code>--height</code>                (Default: 150) Height for picture (in points).</p>
+</li>
+<li><p><code>--help</code>                  Display this help screen.</p>
+</li>
+<li><p><code>--version</code>               Display version information.</p>
+</li>
+</ul>
+<p>Keep in mind that the equivalence for points is 72 points = 1 inch = 2.54 cm.</p>
+<h2 id="examples">Examples</h2>
+<p>There ara various cases of use for the software. In the following exampels we show the most common:</p>
+<h3 id="for-a-single-word-file">For a single Word file</h3>
+<p>This command receives the Word file as an input and insert the image in a position around the placeholder text. Its counterpart in the GUI mode is <a href="gui.html#for-individual-files">Inserting image in MS Word files (for individual files)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --inputfile &quot;D:\Luighi\Documents\test-iid\document_en.docx&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --placeholder &quot;signature&quot; --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-7&quot; --leftoffset &quot;-40&quot; --width &quot;140&quot; --height &quot;56&quot; --verbose true
+</code></pre><h3 id="for-a-folder-with-word-files">For a folder with Word files</h3>
+<p>This command insert the image to all the Word files in the specified input folder.  Its counterpart in the GUI mode is <a href="gui.html#for-a-folder-containing-word-files">Inserting image in MS Word files (for a folder containing Word files)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --inputfolder &quot;D:\Luighi\Documents\test-iid\test_folder&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --placeholder &quot;signature&quot; --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-7&quot; --leftoffset &quot;-40&quot; --width &quot;140&quot; --height &quot;56&quot; --verbose true
+</code></pre><h3 id="for-a-folder-with-pdf-files-relative-to-text">For a folder with PDF files (relative to text)</h3>
+<p>In this case, the image is inserted in all the PDF files in the specified input folder.  Its counterpart in the GUI mode is <a href="gui.html#for-a-folder-containing-pdf-files">Inserting image in PDF files (relative to text - for a folder containing PDF files)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --type PDF --inputfolder &quot;D:\Luighi\Documents\test-iid\test_folder_pdf&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --placeholder &quot;signature&quot; --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-7&quot; --leftoffset &quot;-40&quot; --width &quot;140&quot; --height &quot;56&quot; --verbose true
+</code></pre><h3 id="for-a-folder-with-pdf-files-relative-to-page">For a folder with PDF files (relative to page)</h3>
+<p>This command insert the image with a position relative to the page instead of the text. Its counterpart in the GUI mode is <a href="gui.html#for-a-folder-containing-pdf-files-1">Inserting image in MS Word files (relative to page - for a folder containing PDF files)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --type PDF --inputfolder &quot;D:\Luighi\Documents\test-iid\test_folder_pdf&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --is-absolute true --page 1 --page-reference top_left --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-80&quot; --leftoffset &quot;57&quot; --width &quot;85&quot; --height &quot;71&quot; --verbose true
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LuighiV/automateword/blob/master/docs/userdocs/en/instructions/command.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright @ 2022 Luighi Viton-Zorrilla, <a href='mailto:lv@luighiviton.com'>lv@luighiviton.com</a><br>Generated with <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

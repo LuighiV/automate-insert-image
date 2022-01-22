@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Uso del software como aplicaci&#243;n de l&#237;nea de comandos </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Uso del software como aplicaci&#243;n de l&#237;nea de comandos ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="description" content="Documentation page for the software Insert image in Document">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/custom.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta name="robots" content="follow, index">
+    <meta property="og:url" content="https://iid.projects.luighiviton.com">
+    <link rel="canonical" href="https://iid.projects.luighiviton.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="iid.projects.luighiviton.com">
+    <meta property="og:description" content="Documentation page for the software Insert image in Document">
+    <meta property="og:title" content="Uso del software como aplicaci&#243;n de l&#237;nea de comandos ">
+    <meta property="og:image" content="https://iid.projects.luighiviton.com/images/banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Uso del software como aplicaci&#243;n de l&#237;nea de comandos ">
+    <meta name="twitter:description" content="Documentation page for the software Insert image in Document">
+    <meta name="twitter:image" content="https://iid.projects.luighiviton.com/images/banner.png">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="uso-del-software-como-aplicación-de-línea-de-comandos">Uso del software como aplicación de línea de comandos</h1>
+
+<p>Este es el modo alternativo de uso del software. Es útil cuando se intenta utilizar como parte de un script. Para usarlo, debe ubicar el ejecutable, que debe estar en <code>C:\Program Files\InsertImageDocument</code>, y tiene el nombre <code>editdocuments.exe</code>. Si lo desea, puede agregar esta carpeta a la variable de entorno PATH o simplemente ejecutar el archivo desde esta ubicación.</p>
+<h2 id="uso">Uso</h2>
+<p>Debe usar el nombre del ejecutable seguido de cualquiera de las siguientes opciones. Si no se ingresa ninguna opción, el software iniciará la interfaz gráfica.</p>
+<pre><code>editdocuments.exe --opción_1 valor_1 --opción_2 valor_2 ... --opción_n valor_n
+</code></pre><p>Donde <code>opción</code> podría ser lo siguiente:</p>
+<ul>
+<li><p><code>-t, --type</code> (Predeterminado: <code>Word</code>) Tipo de documento. Valores válidos: <code>Word</code>, <code>PDF</code>.</p>
+</li>
+<li><p><code>-A, --is-absolute</code> (Predeterminado: <code>false</code>) La referencia es absoluta a la página. Cuando es cierto, utiliza una página específica y una esquina de la página como referencia (solo para tipo PDF).</p>
+</li>
+<li><p><code>-N, --page</code> (Predeterminado: 1) Número de página (usado cuando <code>--is-absolute</code> es <code>true</code>).</p>
+</li>
+<li><p><code>-r, --page-reference</code> (Predeterminado: <code>bottom_left</code>) Referencia de página (se usa cuando <code>--is-absolute</code> es <code>true</code>). Valores válidos: <code>bottom_left</code>, <code>top_left</code>, <code>top_right</code>, <code>bottom_right</code>.</p>
+</li>
+<li><p><code>-f, --inputfile</code> Archivos de entrada a procesar.</p>
+</li>
+<li><p><code>-d, --inputfolder</code> Carpeta de entrada a procesar.</p>
+</li>
+<li><p><code>-p, --picturepath</code> Archivo de imagen a insertar.</p>
+</li>
+<li><p><code>-H, --placeholder</code> Marcador de posición donde se inserta la imagen.</p>
+</li>
+<li><p><code>--verbose</code> (predeterminado: <code>false</code>) Imprime todos los mensajes en la salida estándar.</p>
+</li>
+<li><p><code>-V, --visible</code> (Predeterminado: <code>false</code>) Establecer la aplicación MSWord como visible (solo para el tipo Word).</p>
+</li>
+<li><p><code>-S, --foldersave</code> Establecer carpeta para guardar PDF.</p>
+</li>
+<li><p><code>-u, --subfoldersave</code> Guardar en subcarpeta relativa a la ruta del documento</p>
+</li>
+<li><p><code>-s, --save</code> (Predeterminado: <code>false</code>) Guardar en archivo.</p>
+</li>
+<li><p><code>--leftoffset</code> (Predeterminado: 0) Desplazamiento izquierdo de la imagen (en puntos).</p>
+</li>
+<li><p><code>--bottomoffset</code> (Predeterminado: 0) Desplazamiento inferior para la imagen (en puntos).</p>
+</li>
+<li><p><code>--width</code> (Predeterminado: 200) Ancho de la imagen (en puntos).</p>
+</li>
+<li><p><code>--height</code> (Predeterminado: 150) Altura de la imagen (en puntos).</p>
+</li>
+<li><p><code>--help</code> Muestra esta pantalla de ayuda.</p>
+</li>
+<li><p><code>--version</code> Muestra la información de la versión.</p>
+</li>
+</ul>
+<p>Ten en cuenta que la equivalencia de puntos es 72 puntos = 1 pulgada = 2.54 cm.</p>
+<h2 id="ejemplos">Ejemplos</h2>
+<p>Hay varios casos de uso del software. En los siguientes ejemplos mostramos los más comunes:</p>
+<h3 id="para-un-solo-archivo-de-word">Para un solo archivo de Word</h3>
+<p>Este comando recibe el archivo de Word como entrada e inserta la imagen en una posición alrededor del texto del marcador de posición. Su contraparte en el modo GUI es <a href="gui.html#para-archivos-individuales">Insertar imagen en archivos de MS Word (para archivos individuales)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --inputfile &quot;D:\Luighi\Documents\test-iid\document_en.docx&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --placeholder &quot;signature&quot; --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-7&quot; --leftoffset &quot;-40&quot; --width &quot;140&quot; --height &quot;56&quot; --verbose true
+</code></pre><h3 id="para-una-carpeta-con-archivos-de-word">Para una carpeta con archivos de Word</h3>
+<p>Este comando inserta la imagen en todos los archivos de Word en la carpeta de entrada especificada. Su equivalente en el modo GUI es <a href="gui.html#para-una-carpeta-que-contiene-archivos-de-word">Insertar imagen en archivos de MS Word (para una carpeta que contiene archivos de Word)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --inputfolder &quot;D:\Luighi\Documents\test-iid\test_folder&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --placeholder &quot;signature&quot; --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-7&quot; --leftoffset &quot;-40&quot; --width &quot;140&quot; --height &quot;56&quot; --verbose true
+</code></pre><h3 id="para-una-carpeta-con-archivos-pdf-relativo-al-texto">Para una carpeta con archivos PDF (relativo al texto)</h3>
+<p>En este caso, la imagen se inserta en todos los archivos PDF en la carpeta de entrada especificada. Su equivalente en el modo GUI es <a href="gui.html#para-una-carpeta-que-contiene-archivos-pdf">Insertar imagen en archivos PDF (en relación con el texto - para una carpeta que contiene archivos PDF)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --type PDF --inputfolder &quot;D:\Luighi\Documents\test-iid\test_folder_pdf&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --placeholder &quot;signature&quot; --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-7&quot; --leftoffset &quot;-40&quot; --width &quot;140&quot; --height &quot;56&quot; --verbose true
+</code></pre><h3 id="para-una-carpeta-con-archivos-pdf-relativo-a-la-página">Para una carpeta con archivos PDF (relativo a la página)</h3>
+<p>Este comando inserta la imagen con una posición relativa a la página en lugar del texto. Su contraparte en el modo GUI es <a href="gui.html#para-una-carpeta-que-contiene-archivos-pdf-1">Insertar imagen en archivos de MS Word (relativa a la página - para una carpeta que contiene archivos PDF)</a></p>
+<pre><code class="lang-bash">.\editdocuments.exe --type PDF --inputfolder &quot;D:\Luighi\Documents\test-iid\test_folder_pdf&quot; --picturepath &quot;D:\Luighi\Documents\test-iid\signature_hw.png&quot; --is-absolute true --page 1 --page-reference top_left --subfoldersave &quot;PDF&quot; --bottomoffset &quot;-80&quot; --leftoffset &quot;57&quot; --width &quot;85&quot; --height &quot;71&quot; --verbose true
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LuighiV/automateword/blob/master/docs/userdocs/es/instructions/command.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright @ 2022 Luighi Viton-Zorrilla, <a href='mailto:lv@luighiviton.com'>lv@luighiviton.com</a><br>Generated with <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+﻿a.downloadButton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #cdcdcd;
+    background-color: #222;
+    border-color: #080808;
+    border-radius: 5pt;
+    padding: 5pt;
+}
+
+a.downloadButton:hover {
+    color: #fff;
+}
